@@ -16,7 +16,7 @@ namespace QLPM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FDangNhap());
+            Application.Run(new FBS());
         }
     }
 }

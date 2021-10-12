@@ -96,55 +96,67 @@
     <Compile Include="BUS\BUS_QLYTa.cs" />
     <Compile Include="BUS\BUS_QLThuoc.cs" />
     <Compile Include="DAO\DAO_QLBenhNhan.cs" />
-    <Compile Include="FCTPhieuXetNghiem.cs">
+    <Compile Include="Form\FBS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FCTPhieuXetNghiem.Designer.cs">
+    <Compile Include="Form\FBS.Designer.cs">
+      <DependentUpon>FBS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FCTPhieuXetNghiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FCTPhieuXetNghiem.Designer.cs">
       <DependentUpon>FCTPhieuXetNghiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="FCTToaThuoc.cs">
+    <Compile Include="Form\FCTToaThuoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FCTToaThuoc.Designer.cs">
+    <Compile Include="Form\FCTToaThuoc.Designer.cs">
       <DependentUpon>FCTToaThuoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="FDangNhap.cs">
+    <Compile Include="Form\FDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FDangNhap.Designer.cs">
+    <Compile Include="Form\FDangNhap.Designer.cs">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\DAO_QLBacSi.cs" />
     <Compile Include="DAO\DAO_QLThuoc.cs" />
-    <Compile Include="FBacSi.cs">
+    <Compile Include="Form\FBacSi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FBacSi.Designer.cs">
+    <Compile Include="Form\FBacSi.Designer.cs">
       <DependentUpon>FBacSi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FKeToa.cs">
+    <Compile Include="Form\FKeToa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FKeToa.Designer.cs">
+    <Compile Include="Form\FKeToa.Designer.cs">
       <DependentUpon>FKeToa.cs</DependentUpon>
     </Compile>
-    <Compile Include="FKhamBenh.cs">
+    <Compile Include="Form\FKhamBenh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FKhamBenh.Designer.cs">
+    <Compile Include="Form\FKhamBenh.Designer.cs">
       <DependentUpon>FKhamBenh.cs</DependentUpon>
     </Compile>
-    <Compile Include="FQuanTri.cs">
+    <Compile Include="Form\FQuanTri.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FQuanTri.Designer.cs">
+    <Compile Include="Form\FQuanTri.Designer.cs">
       <DependentUpon>FQuanTri.cs</DependentUpon>
     </Compile>
-    <Compile Include="FYTa.cs">
+    <Compile Include="Form\FYTa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FYTa.Designer.cs">
+    <Compile Include="Form\FYTa.Designer.cs">
       <DependentUpon>FYTa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FQLBacSi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQLBacSi.Designer.cs">
+      <DependentUpon>FQLBacSi.cs</DependentUpon>
     </Compile>
     <Compile Include="LichKham.cs">
       <DependentUpon>QLPM.tt</DependentUpon>
@@ -158,6 +170,7 @@
     <Compile Include="LoaiXetNghiem.cs">
       <DependentUpon>QLPM.tt</DependentUpon>
     </Compile>
+    <Compile Include="Mau.cs" />
     <Compile Include="NguoiDung.cs">
       <DependentUpon>QLPM.tt</DependentUpon>
     </Compile>
@@ -199,29 +212,35 @@
     <Compile Include="YTa.cs">
       <DependentUpon>QLPM.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FBacSi.resx">
+    <EmbeddedResource Include="Form\FBacSi.resx">
       <DependentUpon>FBacSi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FCTPhieuXetNghiem.resx">
+    <EmbeddedResource Include="Form\FBS.resx">
+      <DependentUpon>FBS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FCTPhieuXetNghiem.resx">
       <DependentUpon>FCTPhieuXetNghiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FCTToaThuoc.resx">
+    <EmbeddedResource Include="Form\FCTToaThuoc.resx">
       <DependentUpon>FCTToaThuoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FDangNhap.resx">
+    <EmbeddedResource Include="Form\FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FKeToa.resx">
+    <EmbeddedResource Include="Form\FKeToa.resx">
       <DependentUpon>FKeToa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FKhamBenh.resx">
+    <EmbeddedResource Include="Form\FKhamBenh.resx">
       <DependentUpon>FKhamBenh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FQuanTri.resx">
+    <EmbeddedResource Include="Form\FQuanTri.resx">
       <DependentUpon>FQuanTri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FYTa.resx">
+    <EmbeddedResource Include="Form\FYTa.resx">
       <DependentUpon>FYTa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FQLBacSi.resx">
+      <DependentUpon>FQLBacSi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -280,6 +299,11 @@
       <DependentUpon>QLPM.edmx</DependentUpon>
       <LastGenOutput>QLPM.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\SEO-icon.png" />
+    <None Include="Resources\pill-icon.png" />
+    <None Include="Resources\People-Patient-Male-icon.png" />
+    <None Include="Resources\Nurse.png" />
+    <None Include="Resources\doctor-man-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
