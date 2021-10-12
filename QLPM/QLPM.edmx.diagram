@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d36b5a1328b04ca4a6f7f211856b2794" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.BacSi" Width="1.5" PointX="3" PointY="5.875" />
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.BenhNhan" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.ChiTietToaThuoc" Width="1.5" PointX="10.5" PointY="7.5" />
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.LichKham" Width="1.5" PointX="8.25" PointY="8.125" />
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.LoaiGioiTinh" Width="1.5" PointX="0.75" PointY="6.5" />
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.LoaiNhanVien" Width="1.5" PointX="0.75" PointY="10.5" />
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.LoaiXetNghiem" Width="1.5" PointX="3" PointY="13.625" />
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.NguoiDung" Width="1.5" PointX="0.75" PointY="13.625" />
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.PhieuKham" Width="1.5" PointX="8.25" PointY="4.125" />
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.TaiKhoan" Width="1.5" PointX="3" PointY="10.375" />
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.Thuoc" Width="1.5" PointX="8.25" PointY="11.625" />
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.ToaThuoc" Width="1.5" PointX="5.25" PointY="6.375" />
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.XetNghiem" Width="1.5" PointX="5.25" PointY="2.125" />
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.XetNghiem_PhieuKham" Width="1.5" PointX="10.5" PointY="3.25" />
+        <EntityTypeShape EntityType="QuanLyPhongMachModel.YTa" Width="1.5" PointX="6" PointY="10.125" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__BacSi__MaLNV__73BA3083" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__BacSi__MaLNV__74AE54BC" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__LichKham__MaBS__04AFB25B" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__PhieuKham__MaBS__625A9A57" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__ToaThuoc__MaBN__0880433F" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__XetNghiem__MaBS__7A3223E8" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__BenhNhan__MaLGT__3C34F16F" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__LichKham__NgayHe__02C769E9" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__PhieuKham__MaBN__634EBE90" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__ToaThuoc__MaBN__09746778" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__XetNghiem__MaBN__7B264821" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__ChiTietTo__MaThu__0C50D423" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__ChiTietTo__MaToa__0D44F85C" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__LichKham__MaYT__03BB8E22" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__YTa__MaLNV__787EE5A0" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__TaiKhoan__MaLNV__04E4BC85" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__YTa__MaLNV__797309D9" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__XetNghiem__MaLXN__7C1A6C5A" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__TaiKhoan__MaLNV__03F0984C" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__XetNghiem___MaPK__7FEAFD3E" />
+        <AssociationConnector Association="QuanLyPhongMachModel.FK__XetNghiem___MaXN__7EF6D905" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyPhongMachModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BacSi">
+    <Key>
+      <PropertyRef Name="MaBS" />
+    </Key>
+    <Property Name="MaBS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTenBS" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DienThoai" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaLGT" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="LoaiGioiTinh" Relationship="Self.FK__BacSi__MaLGT__440B1D61" FromRole="BacSi" ToRole="LoaiGioiTinh" />
+  </EntityType>
+  <EntityType Name="BenhNhan">
+    <Key>
+      <PropertyRef Name="MaBN" />
+    </Key>
+    <Property Name="MaBN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTenBN" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DienThoai" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaLGT" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="LoaiGioiTinh" Relationship="Self.FK__BenhNhan__MaLGT__49C3F6B7" FromRole="BenhNhan" ToRole="LoaiGioiTinh" />
+  </EntityType>
+  <EntityType Name="LoaiGioiTinh">
+    <Key>
+      <PropertyRef Name="MaLGT" />
+    </Key>
+    <Property Name="MaLGT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoaiGT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BacSis" Relationship="Self.FK__BacSi__MaLGT__440B1D61" FromRole="LoaiGioiTinh" ToRole="BacSi" />
+    <NavigationProperty Name="BenhNhans" Relationship="Self.FK__BenhNhan__MaLGT__49C3F6B7" FromRole="LoaiGioiTinh" ToRole="BenhNhan" />
+    <NavigationProperty Name="YTas" Relationship="Self.FK__YTa__MaLGT__46E78A0C" FromRole="LoaiGioiTinh" ToRole="YTa" />
+  </EntityType>
+  <EntityType Name="NguoiDung">
+    <Key>
+      <PropertyRef Name="MaND" />
+    </Key>
+    <Property Name="MaND" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenDangNhap" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="TaiKhoans" Relationship="Self.FK__TaiKhoan__MaND__2C3393D0" FromRole="NguoiDung" ToRole="TaiKhoan" />
+  </EntityType>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="MaTK" />
+    </Key>
+    <Property Name="MaTK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaND" Type="Int32" />
+    <Property Name="TenND" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LoaiTK" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="NguoiDung" Relationship="Self.FK__TaiKhoan__MaND__2C3393D0" FromRole="TaiKhoan" ToRole="NguoiDung" />
+  </EntityType>
+  <EntityType Name="Thuoc">
+    <Key>
+      <PropertyRef Name="MaThuoc" />
+    </Key>
+    <Property Name="MaThuoc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenThuoc" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="YTa">
+    <Key>
+      <PropertyRef Name="MaYT" />
+    </Key>
+    <Property Name="MaYT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTenYT" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DienThoai" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaLGT" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="LoaiGioiTinh" Relationship="Self.FK__YTa__MaLGT__46E78A0C" FromRole="YTa" ToRole="LoaiGioiTinh" />
+  </EntityType>
+  <Association Name="FK__BacSi__MaLGT__440B1D61">
+    <End Role="LoaiGioiTinh" Type="Self.LoaiGioiTinh" Multiplicity="1" />
+    <End Role="BacSi" Type="Self.BacSi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiGioiTinh">
+        <PropertyRef Name="MaLGT" />
+      </Principal>
+      <Dependent Role="BacSi">
+        <PropertyRef Name="MaLGT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BenhNhan__MaLGT__49C3F6B7">
+    <End Role="LoaiGioiTinh" Type="Self.LoaiGioiTinh" Multiplicity="1" />
+    <End Role="BenhNhan" Type="Self.BenhNhan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiGioiTinh">
+        <PropertyRef Name="MaLGT" />
+      </Principal>
+      <Dependent Role="BenhNhan">
+        <PropertyRef Name="MaLGT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__YTa__MaLGT__46E78A0C">
+    <End Role="LoaiGioiTinh" Type="Self.LoaiGioiTinh" Multiplicity="1" />
+    <End Role="YTa" Type="Self.YTa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiGioiTinh">
+        <PropertyRef Name="MaLGT" />
+      </Principal>
+      <Dependent Role="YTa">
+        <PropertyRef Name="MaLGT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TaiKhoan__MaND__2C3393D0">
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="0..1" />
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="MaND" />
+      </Principal>
+      <Dependent Role="TaiKhoan">
+        <PropertyRef Name="MaND" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyPhongMachEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BacSis" EntityType="Self.BacSi" />
+    <EntitySet Name="BenhNhans" EntityType="Self.BenhNhan" />
+    <EntitySet Name="LoaiGioiTinhs" EntityType="Self.LoaiGioiTinh" />
+    <EntitySet Name="NguoiDungs" EntityType="Self.NguoiDung" />
+    <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+    <EntitySet Name="Thuocs" EntityType="Self.Thuoc" />
+    <EntitySet Name="YTas" EntityType="Self.YTa" />
+    <AssociationSet Name="FK__BacSi__MaLGT__440B1D61" Association="Self.FK__BacSi__MaLGT__440B1D61">
+      <End Role="LoaiGioiTinh" EntitySet="LoaiGioiTinhs" />
+      <End Role="BacSi" EntitySet="BacSis" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BenhNhan__MaLGT__49C3F6B7" Association="Self.FK__BenhNhan__MaLGT__49C3F6B7">
+      <End Role="LoaiGioiTinh" EntitySet="LoaiGioiTinhs" />
+      <End Role="BenhNhan" EntitySet="BenhNhans" />
+    </AssociationSet>
+    <AssociationSet Name="FK__YTa__MaLGT__46E78A0C" Association="Self.FK__YTa__MaLGT__46E78A0C">
+      <End Role="LoaiGioiTinh" EntitySet="LoaiGioiTinhs" />
+      <End Role="YTa" EntitySet="YTas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TaiKhoan__MaND__2C3393D0" Association="Self.FK__TaiKhoan__MaND__2C3393D0">
+      <End Role="NguoiDung" EntitySet="NguoiDungs" />
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
