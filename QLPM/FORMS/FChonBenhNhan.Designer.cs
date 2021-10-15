@@ -249,7 +249,7 @@ namespace QLPM.FORMS
             this.Controls.Add(this.gVLK);
             this.Controls.Add(this.txtMaLK);
             this.Name = "FChonBenhNhan";
-            this.Text = "QUẢN LÝ LỊCH KHÁM";
+            this.Text = "LỊCH KHÁM";
             this.Load += new System.EventHandler(this.FChonBenhNhan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gVLK)).EndInit();
             this.ResumeLayout(false);

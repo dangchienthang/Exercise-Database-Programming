@@ -130,12 +130,9 @@ create table PhieuKham(
 create table XetNghiem(
 	MaXN int identity primary key not null,
 	TenXN nvarchar(100) not null,
-	MaBS int not null,
-	MaBN int not null,
 	MaLXN int not null,
+	MoTa nvarchar(100) not null
 
-	foreign key (MaBS) references dbo.BacSi(MaBS),
-	foreign key (MaBN) references dbo.BenhNhan(MaBN),
 	foreign key (MaLXN) references dbo.LoaiXetNghiem(MaLXN)
 )
 
@@ -147,7 +144,7 @@ create table XetNghiem_PhieuKham
 	NgayHenLayKQ date not null,
 	YeuCauXN nvarchar(100) not null,
 	KetQuaXN nvarchar(100) not null,
-	primary key (MaXN, MaPK),
+	primary key (MaXN, MaPK, NgayXN),
 
 	foreign key (MaXN) references dbo.XetNghiem(MaXN),
 	foreign key (MaPK) references dbo.PhieuKham(MaPK)

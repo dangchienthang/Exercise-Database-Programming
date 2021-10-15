@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace QLPM
 {
-    public partial class FCTToaThuoc : Form
+    public partial class FChiTietToa : Form
     {
         public int MaToa;
 
         BUS_ChiTietToa busToa;
 
-        public FCTToaThuoc()
+        public FChiTietToa()
         {
             InitializeComponent();
             busToa = new BUS_ChiTietToa();
@@ -100,11 +100,6 @@ namespace QLPM
         private void FCTToaThuoc_Activated(object sender, EventArgs e)
         {
             HienThiDSToa();
-        }
-
-        private void txtMaThuoc_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }   
 }

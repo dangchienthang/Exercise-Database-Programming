@@ -1,7 +1,7 @@
 ﻿
 namespace QLPM
 {
-    partial class FCTToaThuoc
+    partial class FChiTietToa
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace QLPM
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCTToaThuoc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FChiTietToa));
             this.btSuaTT = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gVToa = new System.Windows.Forms.DataGridView();
@@ -52,7 +52,9 @@ namespace QLPM
             // 
             // btSuaTT
             // 
-            this.btSuaTT.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btSuaTT.BackColor = System.Drawing.SystemColors.Control;
+            this.btSuaTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSuaTT.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btSuaTT.Image = global::QLPM.Properties.Resources.fix_it_icon;
             this.btSuaTT.Location = new System.Drawing.Point(718, 164);
             this.btSuaTT.Name = "btSuaTT";
@@ -88,7 +90,9 @@ namespace QLPM
             // 
             // btXoaTT
             // 
-            this.btXoaTT.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btXoaTT.BackColor = System.Drawing.SystemColors.Control;
+            this.btXoaTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btXoaTT.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btXoaTT.Image = global::QLPM.Properties.Resources.delete_file_icon;
             this.btXoaTT.Location = new System.Drawing.Point(837, 164);
             this.btXoaTT.Name = "btXoaTT";
@@ -101,7 +105,9 @@ namespace QLPM
             // 
             // btThemTT
             // 
-            this.btThemTT.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btThemTT.BackColor = System.Drawing.SystemColors.Control;
+            this.btThemTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThemTT.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btThemTT.Image = global::QLPM.Properties.Resources.Button_Add_icon;
             this.btThemTT.Location = new System.Drawing.Point(512, 164);
             this.btThemTT.Name = "btThemTT";
@@ -138,11 +144,9 @@ namespace QLPM
             this.txtMaThuoc.Name = "txtMaThuoc";
             this.txtMaThuoc.Size = new System.Drawing.Size(230, 20);
             this.txtMaThuoc.TabIndex = 2;
-            this.txtMaThuoc.TextChanged += new System.EventHandler(this.txtMaThuoc_TextChanged);
             // 
             // txtLD
             // 
-            this.txtLD.Enabled = false;
             this.txtLD.Location = new System.Drawing.Point(151, 110);
             this.txtLD.Margin = new System.Windows.Forms.Padding(2);
             this.txtLD.Name = "txtLD";
@@ -151,7 +155,6 @@ namespace QLPM
             // 
             // txtSL
             // 
-            this.txtSL.Enabled = false;
             this.txtSL.Location = new System.Drawing.Point(151, 84);
             this.txtSL.Margin = new System.Windows.Forms.Padding(2);
             this.txtSL.Name = "txtSL";
@@ -218,6 +221,7 @@ namespace QLPM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.btSuaTT);
             this.Controls.Add(this.groupBox1);
@@ -226,6 +230,7 @@ namespace QLPM
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label18);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FCTToaThuoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết toa thuốc";

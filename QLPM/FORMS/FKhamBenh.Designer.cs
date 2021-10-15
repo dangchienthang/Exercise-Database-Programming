@@ -30,24 +30,6 @@ namespace QLPM
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FKhamBenh));
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btSuaPXN = new System.Windows.Forms.Button();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.gVXN = new System.Windows.Forms.DataGridView();
-            this.btXoaPXN = new System.Windows.Forms.Button();
-            this.btThemPXN = new System.Windows.Forms.Button();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.txtTenBenhNhan = new System.Windows.Forms.TextBox();
-            this.txtTenBacSi = new System.Windows.Forms.TextBox();
-            this.txtTenXN = new System.Windows.Forms.TextBox();
-            this.cbLoaiXN = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtMaXN = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btSuaPK = new System.Windows.Forms.Button();
@@ -88,10 +70,6 @@ namespace QLPM
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.tabPage2.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gVXN)).BeginInit();
-            this.groupBox8.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -103,200 +81,11 @@ namespace QLPM
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.btSuaPXN);
-            this.tabPage2.Controls.Add(this.groupBox6);
-            this.tabPage2.Controls.Add(this.btXoaPXN);
-            this.tabPage2.Controls.Add(this.btThemPXN);
-            this.tabPage2.Controls.Add(this.groupBox8);
-            this.tabPage2.Controls.Add(this.label17);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1246, 672);
-            this.tabPage2.TabIndex = 2;
-            this.tabPage2.Text = "Xét nghiệm";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btSuaPXN
-            // 
-            this.btSuaPXN.Location = new System.Drawing.Point(880, 246);
-            this.btSuaPXN.Name = "btSuaPXN";
-            this.btSuaPXN.Size = new System.Drawing.Size(75, 58);
-            this.btSuaPXN.TabIndex = 8;
-            this.btSuaPXN.Text = "Sửa";
-            this.btSuaPXN.UseVisualStyleBackColor = true;
-            this.btSuaPXN.Click += new System.EventHandler(this.btSuaPXN_Click);
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox6.Controls.Add(this.gVXN);
-            this.groupBox6.Location = new System.Drawing.Point(185, 323);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(876, 300);
-            this.groupBox6.TabIndex = 23;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Phiếu xét nghiệm:";
-            // 
-            // gVXN
-            // 
-            this.gVXN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gVXN.Location = new System.Drawing.Point(23, 17);
-            this.gVXN.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.gVXN.Name = "gVXN";
-            this.gVXN.RowHeadersWidth = 62;
-            this.gVXN.RowTemplate.Height = 28;
-            this.gVXN.Size = new System.Drawing.Size(837, 267);
-            this.gVXN.TabIndex = 10;
-            this.gVXN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVXN_CellClick);
-            // 
-            // btXoaPXN
-            // 
-            this.btXoaPXN.Location = new System.Drawing.Point(986, 246);
-            this.btXoaPXN.Name = "btXoaPXN";
-            this.btXoaPXN.Size = new System.Drawing.Size(75, 58);
-            this.btXoaPXN.TabIndex = 7;
-            this.btXoaPXN.Text = "Xóa";
-            this.btXoaPXN.UseVisualStyleBackColor = true;
-            this.btXoaPXN.Click += new System.EventHandler(this.btXoaPXN_Click);
-            // 
-            // btThemPXN
-            // 
-            this.btThemPXN.Location = new System.Drawing.Point(735, 246);
-            this.btThemPXN.Name = "btThemPXN";
-            this.btThemPXN.Size = new System.Drawing.Size(110, 58);
-            this.btThemPXN.TabIndex = 6;
-            this.btThemPXN.Text = "Thêm phiếu xét nghiệm";
-            this.btThemPXN.UseVisualStyleBackColor = true;
-            this.btThemPXN.Click += new System.EventHandler(this.btThemPXN_Click);
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox8.Controls.Add(this.txtTenBenhNhan);
-            this.groupBox8.Controls.Add(this.txtTenBacSi);
-            this.groupBox8.Controls.Add(this.txtTenXN);
-            this.groupBox8.Controls.Add(this.cbLoaiXN);
-            this.groupBox8.Controls.Add(this.label10);
-            this.groupBox8.Controls.Add(this.label11);
-            this.groupBox8.Controls.Add(this.label13);
-            this.groupBox8.Controls.Add(this.txtMaXN);
-            this.groupBox8.Controls.Add(this.label14);
-            this.groupBox8.Controls.Add(this.label15);
-            this.groupBox8.Location = new System.Drawing.Point(185, 95);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(876, 132);
-            this.groupBox8.TabIndex = 21;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Thông tin";
-            // 
-            // txtTenBenhNhan
-            // 
-            this.txtTenBenhNhan.Enabled = false;
-            this.txtTenBenhNhan.Location = new System.Drawing.Point(151, 79);
-            this.txtTenBenhNhan.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTenBenhNhan.Name = "txtTenBenhNhan";
-            this.txtTenBenhNhan.Size = new System.Drawing.Size(230, 20);
-            this.txtTenBenhNhan.TabIndex = 23;
-            // 
-            // txtTenBacSi
-            // 
-            this.txtTenBacSi.Enabled = false;
-            this.txtTenBacSi.Location = new System.Drawing.Point(151, 53);
-            this.txtTenBacSi.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTenBacSi.Name = "txtTenBacSi";
-            this.txtTenBacSi.Size = new System.Drawing.Size(230, 20);
-            this.txtTenBacSi.TabIndex = 22;
-            // 
-            // txtTenXN
-            // 
-            this.txtTenXN.Location = new System.Drawing.Point(594, 28);
-            this.txtTenXN.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTenXN.Name = "txtTenXN";
-            this.txtTenXN.Size = new System.Drawing.Size(238, 20);
-            this.txtTenXN.TabIndex = 2;
-            // 
-            // cbLoaiXN
-            // 
-            this.cbLoaiXN.FormattingEnabled = true;
-            this.cbLoaiXN.Location = new System.Drawing.Point(594, 53);
-            this.cbLoaiXN.Margin = new System.Windows.Forms.Padding(2);
-            this.cbLoaiXN.Name = "cbLoaiXN";
-            this.cbLoaiXN.Size = new System.Drawing.Size(238, 21);
-            this.cbLoaiXN.TabIndex = 5;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(477, 56);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 13);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Loại xét nghiệm:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(43, 82);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 13);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Mã bệnh nhân:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(43, 56);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(59, 13);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Mã bác sĩ:";
-            // 
-            // txtMaXN
-            // 
-            this.txtMaXN.Enabled = false;
-            this.txtMaXN.Location = new System.Drawing.Point(151, 28);
-            this.txtMaXN.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMaXN.Name = "txtMaXN";
-            this.txtMaXN.Size = new System.Drawing.Size(230, 20);
-            this.txtMaXN.TabIndex = 1;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(43, 31);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 13);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Mã xét nghiệm:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(477, 31);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(83, 13);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "Tên xét nghiệm:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(573, 50);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(109, 20);
-            this.label17.TabIndex = 20;
-            this.label17.Text = "XÉT NGHIỆM";
-            // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -316,16 +105,20 @@ namespace QLPM
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1246, 672);
             this.tabPage1.TabIndex = 4;
-            this.tabPage1.Text = "Phiếu khám";
+            this.tabPage1.Text = "Phiếu khám bệnh";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btSuaPK
             // 
-            this.btSuaPK.Location = new System.Drawing.Point(873, 247);
+            this.btSuaPK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSuaPK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSuaPK.Image = global::QLPM.Properties.Resources.fix_it_icon;
+            this.btSuaPK.Location = new System.Drawing.Point(706, 251);
             this.btSuaPK.Name = "btSuaPK";
             this.btSuaPK.Size = new System.Drawing.Size(75, 58);
-            this.btSuaPK.TabIndex = 10;
+            this.btSuaPK.TabIndex = 9;
             this.btSuaPK.Text = "Sửa";
+            this.btSuaPK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btSuaPK.UseVisualStyleBackColor = true;
             this.btSuaPK.Click += new System.EventHandler(this.btSuaPK_Click);
             // 
@@ -333,7 +126,8 @@ namespace QLPM
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Controls.Add(this.gVPK);
-            this.groupBox2.Location = new System.Drawing.Point(185, 323);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(44, 315);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(876, 300);
             this.groupBox2.TabIndex = 19;
@@ -349,26 +143,35 @@ namespace QLPM
             this.gVPK.RowHeadersWidth = 62;
             this.gVPK.RowTemplate.Height = 28;
             this.gVPK.Size = new System.Drawing.Size(823, 267);
-            this.gVPK.TabIndex = 12;
+            this.gVPK.TabIndex = 11;
             this.gVPK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVPK_CellClick);
+            this.gVPK.DoubleClick += new System.EventHandler(this.gVPK_DoubleClick);
             // 
             // btXoaPK
             // 
-            this.btXoaPK.Location = new System.Drawing.Point(988, 247);
+            this.btXoaPK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btXoaPK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoaPK.Image = global::QLPM.Properties.Resources.delete_file_icon;
+            this.btXoaPK.Location = new System.Drawing.Point(821, 251);
             this.btXoaPK.Name = "btXoaPK";
             this.btXoaPK.Size = new System.Drawing.Size(75, 58);
-            this.btXoaPK.TabIndex = 9;
+            this.btXoaPK.TabIndex = 10;
             this.btXoaPK.Text = "Xóa";
+            this.btXoaPK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btXoaPK.UseVisualStyleBackColor = true;
             this.btXoaPK.Click += new System.EventHandler(this.btXoaPK_Click);
             // 
             // btThemPK
             // 
-            this.btThemPK.Location = new System.Drawing.Point(710, 247);
+            this.btThemPK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThemPK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThemPK.Image = global::QLPM.Properties.Resources.Button_Add_icon;
+            this.btThemPK.Location = new System.Drawing.Point(543, 251);
             this.btThemPK.Name = "btThemPK";
             this.btThemPK.Size = new System.Drawing.Size(110, 58);
             this.btThemPK.TabIndex = 8;
             this.btThemPK.Text = "Thêm phiếu khám";
+            this.btThemPK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btThemPK.UseVisualStyleBackColor = true;
             this.btThemPK.Click += new System.EventHandler(this.btThemPK_Click);
             // 
@@ -389,9 +192,10 @@ namespace QLPM
             this.groupBox5.Controls.Add(this.label6);
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.diaChiLabel);
-            this.groupBox5.Location = new System.Drawing.Point(185, 95);
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(44, 87);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(876, 132);
+            this.groupBox5.Size = new System.Drawing.Size(876, 148);
             this.groupBox5.TabIndex = 17;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thông tin";
@@ -399,25 +203,25 @@ namespace QLPM
             // txtTenBN
             // 
             this.txtTenBN.Enabled = false;
-            this.txtTenBN.Location = new System.Drawing.Point(107, 79);
+            this.txtTenBN.Location = new System.Drawing.Point(139, 82);
             this.txtTenBN.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenBN.Name = "txtTenBN";
             this.txtTenBN.Size = new System.Drawing.Size(230, 20);
-            this.txtTenBN.TabIndex = 19;
+            this.txtTenBN.TabIndex = 3;
             // 
             // txtTenBS
             // 
             this.txtTenBS.Enabled = false;
-            this.txtTenBS.Location = new System.Drawing.Point(107, 53);
+            this.txtTenBS.Location = new System.Drawing.Point(139, 56);
             this.txtTenBS.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenBS.Name = "txtTenBS";
             this.txtTenBS.Size = new System.Drawing.Size(230, 20);
-            this.txtTenBS.TabIndex = 18;
+            this.txtTenBS.TabIndex = 2;
             // 
             // dtpNgayTaiKham
             // 
             this.dtpNgayTaiKham.CustomFormat = "";
-            this.dtpNgayTaiKham.Location = new System.Drawing.Point(615, 103);
+            this.dtpNgayTaiKham.Location = new System.Drawing.Point(614, 112);
             this.dtpNgayTaiKham.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNgayTaiKham.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dtpNgayTaiKham.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
@@ -429,7 +233,7 @@ namespace QLPM
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(511, 106);
+            this.label9.Location = new System.Drawing.Point(510, 115);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 13);
             this.label9.TabIndex = 16;
@@ -438,7 +242,7 @@ namespace QLPM
             // dienThoaiLabel
             // 
             this.dienThoaiLabel.AutoSize = true;
-            this.dienThoaiLabel.Location = new System.Drawing.Point(19, 82);
+            this.dienThoaiLabel.Location = new System.Drawing.Point(51, 85);
             this.dienThoaiLabel.Name = "dienThoaiLabel";
             this.dienThoaiLabel.Size = new System.Drawing.Size(79, 13);
             this.dienThoaiLabel.TabIndex = 17;
@@ -472,7 +276,7 @@ namespace QLPM
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 56);
+            this.label5.Location = new System.Drawing.Point(51, 59);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 12;
@@ -481,7 +285,7 @@ namespace QLPM
             // txtMaPK
             // 
             this.txtMaPK.Enabled = false;
-            this.txtMaPK.Location = new System.Drawing.Point(107, 24);
+            this.txtMaPK.Location = new System.Drawing.Point(139, 27);
             this.txtMaPK.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaPK.Name = "txtMaPK";
             this.txtMaPK.Size = new System.Drawing.Size(230, 20);
@@ -502,7 +306,7 @@ namespace QLPM
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 27);
+            this.label6.Location = new System.Drawing.Point(51, 30);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 13);
             this.label6.TabIndex = 2;
@@ -531,7 +335,7 @@ namespace QLPM
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(573, 50);
+            this.label8.Location = new System.Drawing.Point(466, 34);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 20);
             this.label8.TabIndex = 16;
@@ -551,26 +355,34 @@ namespace QLPM
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1246, 672);
             this.tabPage3.TabIndex = 5;
-            this.tabPage3.Text = "Kê toa";
+            this.tabPage3.Text = "Kê toa thuốc";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // btHoanTat
             // 
-            this.btHoanTat.Location = new System.Drawing.Point(951, 596);
+            this.btHoanTat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btHoanTat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btHoanTat.Image = global::QLPM.Properties.Resources.Accept_icon;
+            this.btHoanTat.Location = new System.Drawing.Point(789, 230);
             this.btHoanTat.Name = "btHoanTat";
             this.btHoanTat.Size = new System.Drawing.Size(110, 58);
             this.btHoanTat.TabIndex = 9;
             this.btHoanTat.Text = "Hoàn tất khám bệnh";
+            this.btHoanTat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btHoanTat.UseVisualStyleBackColor = true;
             this.btHoanTat.Click += new System.EventHandler(this.btHoanTat_Click);
             // 
             // btSuaTT
             // 
-            this.btSuaTT.Location = new System.Drawing.Point(867, 209);
+            this.btSuaTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSuaTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSuaTT.Image = global::QLPM.Properties.Resources.fix_it_icon;
+            this.btSuaTT.Location = new System.Drawing.Point(584, 230);
             this.btSuaTT.Name = "btSuaTT";
             this.btSuaTT.Size = new System.Drawing.Size(75, 58);
             this.btSuaTT.TabIndex = 6;
             this.btSuaTT.Text = "Sửa";
+            this.btSuaTT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btSuaTT.UseVisualStyleBackColor = true;
             this.btSuaTT.Click += new System.EventHandler(this.btSuaTT_Click);
             // 
@@ -578,7 +390,8 @@ namespace QLPM
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.gVToa);
-            this.groupBox1.Location = new System.Drawing.Point(185, 284);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(39, 304);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(876, 300);
             this.groupBox1.TabIndex = 29;
@@ -600,21 +413,29 @@ namespace QLPM
             // 
             // btXoaTT
             // 
-            this.btXoaTT.Location = new System.Drawing.Point(986, 209);
+            this.btXoaTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btXoaTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoaTT.Image = global::QLPM.Properties.Resources.delete_file_icon;
+            this.btXoaTT.Location = new System.Drawing.Point(695, 230);
             this.btXoaTT.Name = "btXoaTT";
             this.btXoaTT.Size = new System.Drawing.Size(75, 58);
             this.btXoaTT.TabIndex = 7;
             this.btXoaTT.Text = "Xóa";
+            this.btXoaTT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btXoaTT.UseVisualStyleBackColor = true;
             this.btXoaTT.Click += new System.EventHandler(this.btXoaTT_Click);
             // 
             // btThemTT
             // 
-            this.btThemTT.Location = new System.Drawing.Point(722, 209);
+            this.btThemTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThemTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThemTT.Image = global::QLPM.Properties.Resources.Button_Add_icon;
+            this.btThemTT.Location = new System.Drawing.Point(444, 230);
             this.btThemTT.Name = "btThemTT";
             this.btThemTT.Size = new System.Drawing.Size(110, 58);
             this.btThemTT.TabIndex = 5;
             this.btThemTT.Text = "Thêm toa thuốc";
+            this.btThemTT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btThemTT.UseVisualStyleBackColor = true;
             this.btThemTT.Click += new System.EventHandler(this.btThemTT_Click);
             // 
@@ -629,7 +450,8 @@ namespace QLPM
             this.groupBox3.Controls.Add(this.txtMaToa);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Location = new System.Drawing.Point(185, 61);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(39, 81);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(876, 132);
             this.groupBox3.TabIndex = 28;
@@ -716,7 +538,7 @@ namespace QLPM
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Red;
-            this.label18.Location = new System.Drawing.Point(574, 23);
+            this.label18.Location = new System.Drawing.Point(456, 29);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(101, 20);
             this.label18.TabIndex = 27;
@@ -726,19 +548,14 @@ namespace QLPM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1254, 661);
+            this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FKhamBenh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khám bệnh";
             this.Load += new System.EventHandler(this.FKhamBenh_Load);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gVXN)).EndInit();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -757,23 +574,6 @@ namespace QLPM
         }
 
         #endregion
-
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.DataGridView gVXN;
-        private System.Windows.Forms.Button btSuaPXN;
-        private System.Windows.Forms.Button btXoaPXN;
-        private System.Windows.Forms.Button btThemPXN;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.TextBox txtTenXN;
-        private System.Windows.Forms.ComboBox cbLoaiXN;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtMaXN;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage3;
@@ -812,8 +612,6 @@ namespace QLPM
         private System.Windows.Forms.Button btHoanTat;
         private System.Windows.Forms.TextBox txtBN;
         private System.Windows.Forms.TextBox txtBS;
-        private System.Windows.Forms.TextBox txtTenBenhNhan;
-        private System.Windows.Forms.TextBox txtTenBacSi;
         private System.Windows.Forms.TextBox txtTenBN;
         private System.Windows.Forms.TextBox txtTenBS;
     }

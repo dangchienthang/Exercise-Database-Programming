@@ -156,9 +156,8 @@ namespace QLPM.DAO
             {
                 s.MaXN,
                 s.TenXN,
-                s.BacSi.HoTenBS,
-                s.BenhNhan.HoTenBN,
-                s.LoaiXetNghiem.TenLXN
+                s.LoaiXetNghiem.TenLXN,
+                s.MoTa
             }).ToList();
             return ds;
         }

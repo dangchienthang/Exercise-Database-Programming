@@ -76,20 +76,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BacSi.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="BenhNhan.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
+    <Compile Include="BUS\BUS_ChiTietPK.cs" />
     <Compile Include="BUS\BUS_ChiTietToa.cs" />
-    <Compile Include="BUS\BUS_CTPhieuXetNghiem.cs" />
+    <Compile Include="BUS\BUS_ToaThuoc.cs" />
+    <Compile Include="BUS\BUS_XetNghiem.cs" />
     <Compile Include="BUS\BUS_KhamBenh.cs" />
     <Compile Include="BUS\BUS_LichKham.cs" />
     <Compile Include="ChiTietToaThuoc.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAO\DAO_ChiTietPK.cs" />
     <Compile Include="DAO\DAO_ChiTIetToa.cs" />
-    <Compile Include="DAO\DAO_CTPhieuXetNghiem.cs" />
+    <Compile Include="DAO\DAO_ToaThuoc.cs" />
+    <Compile Include="DAO\DAO_XetNghiem.cs" />
     <Compile Include="DAO\DAO_KhamBenh.cs" />
     <Compile Include="DAO\DAO_LichKham.cs" />
     <Compile Include="DAO\DAO_QLYTa.cs" />
@@ -110,6 +114,12 @@
     <Compile Include="FORMS\FChonBenhNhan.Designer.cs">
       <DependentUpon>FChonBenhNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMS\FLoaiXetNghiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FLoaiXetNghiem.Designer.cs">
+      <DependentUpon>FLoaiXetNghiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\FQLLichKham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +138,18 @@
     <Compile Include="FORMS\FQLYTa.Designer.cs">
       <DependentUpon>FQLYTa.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMS\FToaThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FToaThuoc.Designer.cs">
+      <DependentUpon>FToaThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FXetNghiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FXetNghiem.Designer.cs">
+      <DependentUpon>FXetNghiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\FYTa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,17 +162,17 @@
     <Compile Include="FORMS\FAdmin.Designer.cs">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FCTPhieuXetNghiem.cs">
+    <Compile Include="FORMS\FChiTietPK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FCTPhieuXetNghiem.Designer.cs">
-      <DependentUpon>FCTPhieuXetNghiem.cs</DependentUpon>
+    <Compile Include="FORMS\FChiTietPK.Designer.cs">
+      <DependentUpon>FChiTietPK.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FCTToaThuoc.cs">
+    <Compile Include="FORMS\FChiTietToa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FCTToaThuoc.Designer.cs">
-      <DependentUpon>FCTToaThuoc.cs</DependentUpon>
+    <Compile Include="FORMS\FChiTietToa.Designer.cs">
+      <DependentUpon>FChiTietToa.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMS\FDangNhap.cs">
       <SubType>Form</SubType>
@@ -179,23 +201,23 @@
       <DependentUpon>FQLBacSi.cs</DependentUpon>
     </Compile>
     <Compile Include="LichKham.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="LoaiGioiTinh.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="LoaiNhanVien.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="LoaiXetNghiem.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="Mau.cs" />
     <Compile Include="NguoiDung.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="PhieuKham.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -205,44 +227,47 @@
     <Compile Include="FORMS\FQLBenhNhan.Designer.cs">
       <DependentUpon>FQLBenhNhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLPM.Context.cs">
+    <Compile Include="QuanLyPhongMach.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLPM.Context.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="QLPM.cs">
+    <Compile Include="QuanLyPhongMach.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
-    <Compile Include="QLPM.Designer.cs">
+    <Compile Include="QuanLyPhongMach.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLPM.edmx</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.edmx</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoan.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="Thuoc.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="ToaThuoc.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="XetNghiem.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="XetNghiem_PhieuKham.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="YTa.cs">
-      <DependentUpon>QLPM.tt</DependentUpon>
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FORMS\FBacSi.resx">
       <DependentUpon>FBacSi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FChonBenhNhan.resx">
       <DependentUpon>FChonBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FLoaiXetNghiem.resx">
+      <DependentUpon>FLoaiXetNghiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FQLLichKham.resx">
       <DependentUpon>FQLLichKham.cs</DependentUpon>
@@ -253,17 +278,23 @@
     <EmbeddedResource Include="FORMS\FQLYTa.resx">
       <DependentUpon>FQLYTa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FToaThuoc.resx">
+      <DependentUpon>FToaThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FXetNghiem.resx">
+      <DependentUpon>FXetNghiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FYTa.resx">
       <DependentUpon>FYTa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FAdmin.resx">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FCTPhieuXetNghiem.resx">
-      <DependentUpon>FCTPhieuXetNghiem.cs</DependentUpon>
+    <EmbeddedResource Include="FORMS\FChiTietPK.resx">
+      <DependentUpon>FChiTietPK.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FCTToaThuoc.resx">
-      <DependentUpon>FCTToaThuoc.cs</DependentUpon>
+    <EmbeddedResource Include="FORMS\FChiTietToa.resx">
+      <DependentUpon>FChiTietToa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
@@ -300,13 +331,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="QLPM.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QLPM.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="QLPM.edmx.diagram">
-      <DependentUpon>QLPM.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -327,16 +351,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="QLPM.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLPM.edmx</DependentUpon>
-      <LastGenOutput>QLPM.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="QLPM.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLPM.edmx</DependentUpon>
-      <LastGenOutput>QLPM.cs</LastGenOutput>
-    </Content>
+    <EntityDeploy Include="QuanLyPhongMach.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLyPhongMach.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QuanLyPhongMach.edmx.diagram">
+      <DependentUpon>QuanLyPhongMach.edmx</DependentUpon>
+    </None>
+    <None Include="Resources\Accept-icon.png" />
     <None Include="Resources\Start-icon.png" />
     <None Include="Resources\Refresh-icon.png" />
     <None Include="Resources\Close-icon.png" />
@@ -353,6 +375,17 @@
     <None Include="Resources\Nurse.png" />
     <None Include="Resources\doctor-man-icon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="QuanLyPhongMach.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyPhongMach.edmx</DependentUpon>
+      <LastGenOutput>QuanLyPhongMach.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QuanLyPhongMach.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyPhongMach.edmx</DependentUpon>
+      <LastGenOutput>QuanLyPhongMach.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

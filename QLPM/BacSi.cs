@@ -20,7 +20,6 @@ namespace QLPM
             this.LichKhams = new HashSet<LichKham>();
             this.PhieuKhams = new HashSet<PhieuKham>();
             this.ToaThuocs = new HashSet<ToaThuoc>();
-            this.XetNghiems = new HashSet<XetNghiem>();
         }
     
         public int MaBS { get; set; }
@@ -38,7 +37,5 @@ namespace QLPM
         public virtual ICollection<PhieuKham> PhieuKhams { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ToaThuoc> ToaThuocs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<XetNghiem> XetNghiems { get; set; }
     }
 }

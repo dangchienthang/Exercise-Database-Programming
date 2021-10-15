@@ -47,27 +47,6 @@ namespace QLPM.BUS
             }
         }
 
-        public void LayDSTenBS(ComboBox cb)
-        {
-            cb.DataSource = dPK.LayDSTenBS();
-            cb.DisplayMember = "HoTenBS";
-            cb.ValueMember = "MaBS";
-        }
-
-        public void LayDSTenBN(ComboBox cb)
-        {
-            cb.DataSource = dPK.LayDSTenBN();
-            cb.DisplayMember = "HoTenBN";
-            cb.ValueMember = "MaBN";
-        }
-
-        public void LayDSLoaiXN(ComboBox cb)
-        {
-            cb.DataSource = dPK.LayDSLoaiXN();
-            cb.DisplayMember = "TenLXN";
-            cb.ValueMember = "MaLXN";
-        }
-
         public bool TaoPhieuKham(PhieuKham pk)
         {
             try
@@ -112,78 +91,6 @@ namespace QLPM.BUS
             else
             {
                 MessageBox.Show("Không thấy phiếu khám để xóa");
-            }
-        }
-
-        private DataTable InitDG()
-        {
-            DataTable dtXN = new DataTable();
-
-            dtXN.Columns.Add("MaXN");
-            dtXN.Columns.Add("TenXN");
-            dtXN.Columns.Add("MaBS");
-            dtXN.Columns.Add("MaBN");
-            dtXN.Columns.Add("MaLXN");
-
-            return dtXN;
-        }
-
-        public void LayDSPhieuXetNghiem(DataGridView dg, int maBenhNhan, int maBacSi)
-        {
-            var ds = dPK.LayDSPhieuXetNghiem(maBenhNhan, maBacSi);
-            if (ds != null)
-            {
-                dg.DataSource = ds;
-            }
-            else
-            {
-                dg.DataSource = InitDG();
-            }
-        }
-
-        public bool TaoPhieuXetNghiem(XetNghiem xn)
-        {
-            try
-            {
-                dPK.ThemPhieuXetNghiem(xn);
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
-        public bool SuaPhieuXetNghiem(XetNghiem xn)
-        {
-            if (dPK.KTPhieuXetNghiem(xn))
-            {
-                try
-                {
-                    dPK.SuaPhieuXetNghiem(xn);
-                    return true;
-                }
-                catch (DbUpdateException ex)
-                {
-                    MessageBox.Show(ex.Message);
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public void XoaPhieuXetNghiem(int maXN)
-        {
-            if (dPK.XoaPhieuXetNGhiem(maXN))
-            {
-                MessageBox.Show("Xóa phiếu xét nghiệm thành công");
-            }
-            else
-            {
-                MessageBox.Show("Không thấy phiếu xét nghiệm để xóa");
             }
         }
 
@@ -257,7 +164,5 @@ namespace QLPM.BUS
                 MessageBox.Show("Không thấy toa thuốc để xóa");
             }
         }
-
-        
     }
 }

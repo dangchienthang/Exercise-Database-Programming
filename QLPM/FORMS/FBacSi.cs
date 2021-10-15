@@ -104,14 +104,24 @@ namespace QLPM.FORMS
             MoFormCon(new FChonBenhNhan(), sender);
         }
 
-        private void btPXN_Click(object sender, EventArgs e)
-        {
-            MoFormCon(new FChonBenhNhan(), sender);
-        }
-
         private void btTT_Click(object sender, EventArgs e)
         {
-            MoFormCon(new FChonBenhNhan(), sender);
+            MoFormCon(new FToaThuoc(), sender);
+        }
+
+        private void btLXN_Click(object sender, EventArgs e)
+        {
+            MoFormCon(new FLoaiXetNghiem(), sender);
+        }
+
+        private void btXN_Click(object sender, EventArgs e)
+        {
+            MoFormCon(new FXetNghiem(), sender);
+        }
+
+        private void btT_Click(object sender, EventArgs e)
+        {
+            MoFormCon(new FQLThuoc(), sender);
         }
     }
 }

@@ -30,28 +30,6 @@ namespace QLPM.DAO
             return ds;
         }
 
-        public dynamic LayDSTenBS()
-        {
-            var ds = db.BacSis.Select(s => new
-            {
-                s.MaBS,
-                s.HoTenBS
-            }).ToList();
-
-            return ds;
-        }
-
-        public dynamic LayDSTenBN()
-        {
-            var ds = db.BenhNhans.Select(s => new
-            {
-                s.MaBN,
-                s.HoTenBN
-            }).ToList();
-
-            return ds;
-        }
-
         public void ThemPhieuKham(PhieuKham pk)
         {
             db.PhieuKhams.Add(pk);
@@ -93,83 +71,6 @@ namespace QLPM.DAO
                 if (pk != null)
                 {
                     db.PhieuKhams.Remove(pk);
-                    db.SaveChanges();
-
-                    tinhTrang = true;
-                }
-                else
-                    tinhTrang = false;
-            }
-            catch (Exception)
-            {
-                tinhTrang = false;
-            }
-            return tinhTrang;
-        }
-
-        public dynamic LayDSPhieuXetNghiem(int maBenhNhan, int maBacSi)
-        {
-            var ds = db.XetNghiems.Where(s => s.MaBN == maBenhNhan && s.MaBS == maBacSi).Select(s => new
-            {
-                s.MaXN,
-                s.TenXN,
-                s.MaBS,
-                s.MaBN,
-                s.LoaiXetNghiem.TenLXN
-            }).ToList();
-            return ds;
-        }
-
-        public dynamic LayDSLoaiXN()
-        {
-            var ds = db.LoaiXetNghiems.Select(s => new
-            {
-                s.MaLXN,
-                s.TenLXN
-            }).ToList();
-
-            return ds;
-        }
-
-        public void ThemPhieuXetNghiem(XetNghiem xn)
-        {
-            db.XetNghiems.Add(xn);
-            db.SaveChanges();
-        }
-
-        public bool KTPhieuXetNghiem(XetNghiem xetnghiem)
-        {
-            XetNghiem xn = db.XetNghiems.Find(xetnghiem.MaXN);
-            if (xn != null)
-            {
-                return true;
-            }
-            else
-                return false;
-        }
-
-        public void SuaPhieuXetNghiem(XetNghiem xetnghiem)
-        {
-            XetNghiem xn = db.XetNghiems.Find(xetnghiem.MaXN);
-
-            xn.MaBS = xetnghiem.MaBS;
-            xn.TenXN = xetnghiem.TenXN;
-            xn.MaBN = xetnghiem.MaBN;
-            xn.LoaiXetNghiem = xetnghiem.LoaiXetNghiem;
-
-            db.SaveChanges();
-        }
-
-        public bool XoaPhieuXetNGhiem(int maXN)
-        {
-            bool tinhTrang = true;
-            try
-            {
-                // Xoa phieu xet nghiem co MaXN = maXN
-                XetNghiem xn = db.XetNghiems.Find(maXN);
-                if (xn != null)
-                {
-                    db.XetNghiems.Remove(xn);
                     db.SaveChanges();
 
                     tinhTrang = true;

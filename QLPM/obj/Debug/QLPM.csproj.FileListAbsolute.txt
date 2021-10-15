@@ -27,8 +27,6 @@ D:\Study\DA\BT\QLPM\bin\Debug\EntityFramework.dll
 D:\Study\DA\BT\QLPM\bin\Debug\EntityFramework.SqlServer.dll
 D:\Study\DA\BT\QLPM\bin\Debug\EntityFramework.xml
 D:\Study\DA\BT\QLPM\bin\Debug\EntityFramework.SqlServer.xml
-D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FCTPhieuXetNghiem.resources
-D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FCTToaThuoc.resources
 D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FDangNhap.resources
 D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FKeToa.resources
 D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FKhamBenh.resources
@@ -45,5 +43,10 @@ D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FORMS.FQLYTa.resources
 D:\Study\DA\BT\QLPM\obj\Debug\QLPM.csproj.AssemblyReference.cache
 D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FORMS.FQLLichKham.resources
 D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FORMS.FYTa.resources
-D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FORMS.FBS.resources
 D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FORMS.FChonBenhNhan.resources
+D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FORMS.FBacSi.resources
+D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FORMS.FToaThuoc.resources
+D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FORMS.FXetNghiem.resources
+D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FORMS.FLoaiXetNghiem.resources
+D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FChiTietPK.resources
+D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FChiTietToa.resources

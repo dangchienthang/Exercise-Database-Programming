@@ -66,7 +66,7 @@ namespace QLPM.FORMS
             {
                 if (nutTruoc.GetType() == typeof(Button))
                 {
-                    nutTruoc.BackColor = Color.FromArgb(51, 51, 76);
+                    nutTruoc.BackColor = Color.FromArgb(69, 69, 69);
                     nutTruoc.ForeColor = Color.Gainsboro;
                     nutTruoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }

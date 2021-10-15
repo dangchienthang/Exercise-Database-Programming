@@ -29,6 +29,7 @@ namespace QLPM
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FKeToa));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtMaThuoc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,7 +67,7 @@ namespace QLPM
             this.groupBox3.Controls.Add(this.txtMaToa);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Location = new System.Drawing.Point(12, 101);
+            this.groupBox3.Location = new System.Drawing.Point(94, 96);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(776, 132);
             this.groupBox3.TabIndex = 29;
@@ -172,47 +173,62 @@ namespace QLPM
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(389, 44);
+            this.label1.Location = new System.Drawing.Point(427, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 20);
+            this.label1.Size = new System.Drawing.Size(126, 20);
             this.label1.TabIndex = 30;
-            this.label1.Text = "KÊ TOA";
+            this.label1.Text = "KÊ TOA THUỐC";
             // 
             // btSuaTT
             // 
-            this.btSuaTT.Location = new System.Drawing.Point(619, 268);
+            this.btSuaTT.BackColor = System.Drawing.SystemColors.Control;
+            this.btSuaTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSuaTT.ForeColor = System.Drawing.Color.Black;
+            this.btSuaTT.Image = global::QLPM.Properties.Resources.fix_it_icon;
+            this.btSuaTT.Location = new System.Drawing.Point(678, 263);
             this.btSuaTT.Name = "btSuaTT";
             this.btSuaTT.Size = new System.Drawing.Size(75, 58);
             this.btSuaTT.TabIndex = 7;
             this.btSuaTT.Text = "Sửa";
-            this.btSuaTT.UseVisualStyleBackColor = true;
+            this.btSuaTT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btSuaTT.UseVisualStyleBackColor = false;
             this.btSuaTT.Click += new System.EventHandler(this.btSuaTT_Click);
             // 
             // btXoaTT
             // 
-            this.btXoaTT.Location = new System.Drawing.Point(721, 268);
+            this.btXoaTT.BackColor = System.Drawing.SystemColors.Control;
+            this.btXoaTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btXoaTT.ForeColor = System.Drawing.Color.Black;
+            this.btXoaTT.Image = global::QLPM.Properties.Resources.delete_file_icon;
+            this.btXoaTT.Location = new System.Drawing.Point(775, 263);
             this.btXoaTT.Name = "btXoaTT";
-            this.btXoaTT.Size = new System.Drawing.Size(67, 58);
+            this.btXoaTT.Size = new System.Drawing.Size(73, 58);
             this.btXoaTT.TabIndex = 8;
             this.btXoaTT.Text = "Xóa";
-            this.btXoaTT.UseVisualStyleBackColor = true;
+            this.btXoaTT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btXoaTT.UseVisualStyleBackColor = false;
             this.btXoaTT.Click += new System.EventHandler(this.btXoaTT_Click);
             // 
             // btThemTT
             // 
-            this.btThemTT.Location = new System.Drawing.Point(510, 268);
+            this.btThemTT.BackColor = System.Drawing.SystemColors.Control;
+            this.btThemTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThemTT.ForeColor = System.Drawing.Color.Black;
+            this.btThemTT.Image = global::QLPM.Properties.Resources.Button_Add_icon;
+            this.btThemTT.Location = new System.Drawing.Point(575, 263);
             this.btThemTT.Name = "btThemTT";
             this.btThemTT.Size = new System.Drawing.Size(80, 58);
             this.btThemTT.TabIndex = 6;
             this.btThemTT.Text = "Thêm";
-            this.btThemTT.UseVisualStyleBackColor = true;
+            this.btThemTT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btThemTT.UseVisualStyleBackColor = false;
             this.btThemTT.Click += new System.EventHandler(this.btThemTT_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.dGToa);
-            this.groupBox1.Location = new System.Drawing.Point(12, 353);
+            this.groupBox1.Location = new System.Drawing.Point(94, 348);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 221);
             this.groupBox1.TabIndex = 34;
@@ -232,11 +248,13 @@ namespace QLPM
             // 
             // btTaoToa
             // 
-            this.btTaoToa.Location = new System.Drawing.Point(699, 596);
+            this.btTaoToa.Image = global::QLPM.Properties.Resources.Accept_icon;
+            this.btTaoToa.Location = new System.Drawing.Point(781, 596);
             this.btTaoToa.Name = "btTaoToa";
             this.btTaoToa.Size = new System.Drawing.Size(89, 55);
             this.btTaoToa.TabIndex = 10;
             this.btTaoToa.Text = "Kê toa";
+            this.btTaoToa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btTaoToa.UseVisualStyleBackColor = true;
             this.btTaoToa.Click += new System.EventHandler(this.btTaoToa_Click);
             // 
@@ -244,7 +262,7 @@ namespace QLPM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 691);
+            this.ClientSize = new System.Drawing.Size(984, 691);
             this.Controls.Add(this.btTaoToa);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btSuaTT);
@@ -252,9 +270,11 @@ namespace QLPM
             this.Controls.Add(this.btThemTT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FKeToa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FKeToa";
+            this.Text = "Kê toa thuốc";
             this.Load += new System.EventHandler(this.FKeToa_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

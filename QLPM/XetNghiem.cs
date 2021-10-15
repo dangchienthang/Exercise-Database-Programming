@@ -22,12 +22,9 @@ namespace QLPM
     
         public int MaXN { get; set; }
         public string TenXN { get; set; }
-        public int MaBS { get; set; }
-        public int MaBN { get; set; }
         public int MaLXN { get; set; }
+        public string MoTa { get; set; }
     
-        public virtual BacSi BacSi { get; set; }
-        public virtual BenhNhan BenhNhan { get; set; }
         public virtual LoaiXetNghiem LoaiXetNghiem { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<XetNghiem_PhieuKham> XetNghiem_PhieuKham { get; set; }

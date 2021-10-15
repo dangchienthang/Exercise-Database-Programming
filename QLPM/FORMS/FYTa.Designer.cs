@@ -45,7 +45,7 @@ namespace QLPM.FORMS
             // 
             // panelDanhMuc
             // 
-            this.panelDanhMuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelDanhMuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.panelDanhMuc.Controls.Add(this.btLK);
             this.panelDanhMuc.Controls.Add(this.btQuayLai);
             this.panelDanhMuc.Controls.Add(this.btThoat);
@@ -59,7 +59,7 @@ namespace QLPM.FORMS
             // 
             // btLK
             // 
-            this.btLK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btLK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.btLK.Dock = System.Windows.Forms.DockStyle.Top;
             this.btLK.FlatAppearance.BorderSize = 0;
             this.btLK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -79,7 +79,7 @@ namespace QLPM.FORMS
             // 
             // btQuayLai
             // 
-            this.btQuayLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btQuayLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.btQuayLai.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btQuayLai.FlatAppearance.BorderSize = 0;
             this.btQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -98,7 +98,7 @@ namespace QLPM.FORMS
             // 
             // btThoat
             // 
-            this.btThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.btThoat.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btThoat.FlatAppearance.BorderSize = 0;
             this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -118,7 +118,7 @@ namespace QLPM.FORMS
             // 
             // bTBN
             // 
-            this.bTBN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.bTBN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.bTBN.Dock = System.Windows.Forms.DockStyle.Top;
             this.bTBN.FlatAppearance.BorderSize = 0;
             this.bTBN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -138,7 +138,7 @@ namespace QLPM.FORMS
             // 
             // panelLogo
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
@@ -159,7 +159,7 @@ namespace QLPM.FORMS
             // 
             this.labelTieuDe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTieuDe.AutoSize = true;
-            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.labelTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTieuDe.ForeColor = System.Drawing.Color.White;
             this.labelTieuDe.Location = new System.Drawing.Point(448, 29);
@@ -170,7 +170,7 @@ namespace QLPM.FORMS
             // 
             // panelTieuDe
             // 
-            this.panelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.panelTieuDe.Controls.Add(this.labelTieuDe);
             this.panelTieuDe.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTieuDe.Location = new System.Drawing.Point(170, 0);

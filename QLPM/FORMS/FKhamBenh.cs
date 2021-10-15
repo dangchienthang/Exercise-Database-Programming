@@ -1,4 +1,5 @@
 ﻿using QLPM.BUS;
+using QLPM.FORMS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,6 @@ namespace QLPM
 {
     public partial class FKhamBenh : Form
     {
-        BUS_LichKham busLK;
         BUS_KhamBenh busKB;
 
         public int maBenhNhan;
@@ -24,20 +24,13 @@ namespace QLPM
         {
             InitializeComponent();
             //MaTK = ma;
-            busLK = new BUS_LichKham();
             busKB = new BUS_KhamBenh();
         }
 
         private void FKhamBenh_Load(object sender, EventArgs e)
         {
-            HienThiDSPhieuXetNghiem();
-            busKB.LayDSLoaiXN(cbLoaiXN);
-
             HienThiDSPhieuKham();
             HienThiDSToa();
-
-            txtTenBacSi.Text = maBenhNhan.ToString();
-            txtTenBenhNhan.Text = maBacSi.ToString();
 
             txtTenBN.Text = maBenhNhan.ToString();
             txtTenBS.Text = maBacSi.ToString();
@@ -69,17 +62,6 @@ namespace QLPM
             gVPK.Columns[6].Width = (int)(gVPK.Width * 0.15);
         }
 
-        public void HienThiDSPhieuXetNghiem()
-        {
-            gVXN.DataSource = null;
-            busKB.LayDSPhieuXetNghiem(gVXN, maBenhNhan, maBacSi);
-            gVXN.Columns[0].Width = (int)(gVXN.Width * 0.1);
-            gVXN.Columns[1].Width = (int)(gVXN.Width * 0.2);
-            gVXN.Columns[2].Width = (int)(gVXN.Width * 0.2);
-            gVXN.Columns[3].Width = (int)(gVXN.Width * 0.2);
-            gVXN.Columns[4].Width = (int)(gVXN.Width * 0.3);
-        }
-
         public void HienThiDSToa()
         {
             gVToa.DataSource = null;
@@ -100,16 +82,6 @@ namespace QLPM
             HienThiDSPhieuKham();
         }
 
-        public void CapNhatDGPXN()
-        {
-            //Cập nhật lại textbox sau khi thực hiện hành động thêm, sửa hoặc xóa
-            txtMaXN.Text = "";
-
-            //Cập nhật DataGridView
-            gVXN.Columns.Clear();
-            HienThiDSPhieuXetNghiem();
-        }
-
         public void CapNhatDGTT()
         {
             //Cập nhật lại textbox sau khi thực hiện hành động thêm, sửa hoặc xóa
@@ -120,85 +92,6 @@ namespace QLPM
             HienThiDSToa();
         }
 
-        private void gVXN_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.RowIndex < gVXN.Rows.Count)
-            {
-                txtMaXN.Text = gVXN.Rows[e.RowIndex].Cells["MaXN"].Value.ToString();
-                txtTenXN.Text = gVXN.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtTenBacSi.Text = gVXN.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtTenBenhNhan.Text = gVXN.Rows[e.RowIndex].Cells[3].Value.ToString();
-                cbLoaiXN.Text = gVXN.Rows[e.RowIndex].Cells[4].Value.ToString();
-            }
-        }
-
-        private void btThemPXN_Click(object sender, EventArgs e)
-        {
-            if (txtTenXN.Text == "")
-                MessageBox.Show("Điền đủ thông tin trước khi thêm!");
-            else
-            {
-                XetNghiem xn = new XetNghiem();
-
-                xn.TenXN = txtTenXN.Text;
-                xn.MaBS = Int32.Parse(txtTenBacSi.Text);
-                xn.MaBN = Int32.Parse(txtTenBenhNhan.Text);
-                xn.MaLXN = Int32.Parse(cbLoaiXN.SelectedValue.ToString());
-
-                if (busKB.TaoPhieuXetNghiem(xn))
-                {
-                    MessageBox.Show("Tạo phiếu xét nghiệm thành công");
-                    busKB.LayDSPhieuXetNghiem(gVXN, maBenhNhan, maBacSi);
-                    CapNhatDGPXN();
-                }
-                else
-                {
-                    MessageBox.Show("Tạo phiếu khám thất bại");
-                }
-            }
-        }
-
-        private void btXoaPXN_Click(object sender, EventArgs e)
-        {
-            if (txtMaXN.Text != "")
-            {
-                busKB.XoaPhieuXetNghiem(Int32.Parse(txtMaXN.Text));
-                busKB.LayDSPhieuXetNghiem(gVXN, maBenhNhan, maBacSi);
-                CapNhatDGPXN();
-            }
-            else
-            {
-                MessageBox.Show("Chưa chọn phiếu để xóa");
-            }
-        }
-
-        private void btSuaPXN_Click(object sender, EventArgs e)
-        {
-            if (txtMaXN.Text == "")
-                MessageBox.Show("Vui lòng chọn hàng dữ liệu cần sửa!");
-            else
-            {
-                XetNghiem xn = new XetNghiem();
-
-                xn.MaXN = int.Parse(txtMaXN.Text);
-                xn.TenXN = txtTenXN.Text;
-                xn.MaBS = int.Parse(txtTenBacSi.Text);
-                xn.MaBN = int.Parse(txtTenBenhNhan.Text);
-                xn.MaLXN = int.Parse(cbLoaiXN.SelectedValue.ToString());
-
-                if (busKB.SuaPhieuXetNghiem(xn))
-                {
-                    MessageBox.Show("Sửa thành công");
-                    busKB.SuaPhieuXetNghiem(xn);
-                    busKB.LayDSPhieuXetNghiem(gVXN, maBenhNhan, maBacSi);
-                    CapNhatDGPXN();
-                }
-                else
-                {
-                    MessageBox.Show("Sửa thất bại");
-                }
-            }
-        }
 
         private void gVPK_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -366,7 +259,7 @@ namespace QLPM
             int maToa;
             maToa = int.Parse(gVToa.CurrentRow.Cells["MaToa"].Value.ToString());
             //goi Form
-            FCTToaThuoc f = new FCTToaThuoc();
+            FChiTietToa f = new FChiTietToa();
             //truyen bien
             f.MaToa = maToa;
             f.ShowDialog();
@@ -375,6 +268,17 @@ namespace QLPM
         private void btHoanTat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void gVPK_DoubleClick(object sender, EventArgs e)
+        {
+            int maPK;
+            maPK = int.Parse(gVPK.CurrentRow.Cells["MaPK"].Value.ToString());
+            //goi Form
+            FChiTietPK f = new FChiTietPK();
+            //truyen bien
+            f.MaPK = maPK;
+            f.ShowDialog();
         }
     }
 }

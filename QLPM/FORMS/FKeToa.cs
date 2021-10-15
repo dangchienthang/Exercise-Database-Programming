@@ -90,13 +90,19 @@ namespace QLPM
 
             if (kiemtra)
             {
-                DataRow r = dtToaThuoc.NewRow();
+                if (txtLieuDung.Text != "")
+                {
+                    DataRow r = dtToaThuoc.NewRow();
 
-                r[0] = cbThuoc.SelectedValue.ToString();
-                r[1] = numSoLuong.Value.ToString();
-                r[2] = txtLieuDung.Text;
+                    r[0] = cbThuoc.SelectedValue.ToString();
+                    r[1] = numSoLuong.Value.ToString();
+                    r[2] = txtLieuDung.Text;
 
-                dtToaThuoc.Rows.Add(r);
+                    dtToaThuoc.Rows.Add(r);
+                }
+                else
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
+                
             }
         }
 
@@ -108,7 +114,7 @@ namespace QLPM
                 dem++;
                 if (dem == dGToa.CurrentCell.RowIndex)
                 {
-                    item[1] = int.Parse(numSoLuong.Value.ToString()); ;
+                    item[1] = int.Parse(numSoLuong.Value.ToString());
                     item[2] = txtLieuDung.Text;
                     break;
                 }
@@ -137,5 +143,6 @@ namespace QLPM
                 MessageBox.Show("Đặt hàng thất bại");
             }
         }
+
     }
 }

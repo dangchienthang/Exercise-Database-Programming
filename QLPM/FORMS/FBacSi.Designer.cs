@@ -31,9 +31,11 @@ namespace QLPM.FORMS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBacSi));
             this.panelDanhMuc = new System.Windows.Forms.Panel();
-            this.btTT = new System.Windows.Forms.Button();
-            this.btPXN = new System.Windows.Forms.Button();
             this.btPK = new System.Windows.Forms.Button();
+            this.btTT = new System.Windows.Forms.Button();
+            this.btT = new System.Windows.Forms.Button();
+            this.btXN = new System.Windows.Forms.Button();
+            this.btLXN = new System.Windows.Forms.Button();
             this.btQuayLai = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
             this.btLK = new System.Windows.Forms.Button();
@@ -48,9 +50,11 @@ namespace QLPM.FORMS
             // panelDanhMuc
             // 
             this.panelDanhMuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.panelDanhMuc.Controls.Add(this.btTT);
-            this.panelDanhMuc.Controls.Add(this.btPXN);
             this.panelDanhMuc.Controls.Add(this.btPK);
+            this.panelDanhMuc.Controls.Add(this.btTT);
+            this.panelDanhMuc.Controls.Add(this.btT);
+            this.panelDanhMuc.Controls.Add(this.btXN);
+            this.panelDanhMuc.Controls.Add(this.btLXN);
             this.panelDanhMuc.Controls.Add(this.btQuayLai);
             this.panelDanhMuc.Controls.Add(this.btThoat);
             this.panelDanhMuc.Controls.Add(this.btLK);
@@ -62,46 +66,6 @@ namespace QLPM.FORMS
             this.panelDanhMuc.Size = new System.Drawing.Size(170, 661);
             this.panelDanhMuc.TabIndex = 0;
             // 
-            // btTT
-            // 
-            this.btTT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.btTT.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btTT.FlatAppearance.BorderSize = 0;
-            this.btTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTT.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btTT.Image = global::QLPM.Properties.Resources.App_lists_icon;
-            this.btTT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTT.Location = new System.Drawing.Point(0, 252);
-            this.btTT.Name = "btTT";
-            this.btTT.Size = new System.Drawing.Size(170, 53);
-            this.btTT.TabIndex = 10;
-            this.btTT.Text = "  Toa thuốc";
-            this.btTT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btTT.UseVisualStyleBackColor = false;
-            this.btTT.Click += new System.EventHandler(this.btTT_Click);
-            // 
-            // btPXN
-            // 
-            this.btPXN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.btPXN.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btPXN.FlatAppearance.BorderSize = 0;
-            this.btPXN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btPXN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btPXN.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btPXN.Image = global::QLPM.Properties.Resources.Filter_List_icon;
-            this.btPXN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btPXN.Location = new System.Drawing.Point(0, 199);
-            this.btPXN.Name = "btPXN";
-            this.btPXN.Size = new System.Drawing.Size(170, 53);
-            this.btPXN.TabIndex = 9;
-            this.btPXN.Text = "  Phiếu xét nghiệm";
-            this.btPXN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btPXN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btPXN.UseVisualStyleBackColor = false;
-            this.btPXN.Click += new System.EventHandler(this.btPXN_Click);
-            // 
             // btPK
             // 
             this.btPK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
@@ -112,15 +76,95 @@ namespace QLPM.FORMS
             this.btPK.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btPK.Image = global::QLPM.Properties.Resources.Apps_preferences_contact_list_icon;
             this.btPK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btPK.Location = new System.Drawing.Point(0, 146);
+            this.btPK.Location = new System.Drawing.Point(0, 358);
             this.btPK.Name = "btPK";
             this.btPK.Size = new System.Drawing.Size(170, 53);
-            this.btPK.TabIndex = 8;
+            this.btPK.TabIndex = 17;
             this.btPK.Text = "  Phiếu khám bệnh";
             this.btPK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btPK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btPK.UseVisualStyleBackColor = false;
             this.btPK.Click += new System.EventHandler(this.btPK_Click);
+            // 
+            // btTT
+            // 
+            this.btTT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.btTT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btTT.FlatAppearance.BorderSize = 0;
+            this.btTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTT.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btTT.Image = global::QLPM.Properties.Resources.App_lists_icon;
+            this.btTT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTT.Location = new System.Drawing.Point(0, 305);
+            this.btTT.Name = "btTT";
+            this.btTT.Size = new System.Drawing.Size(170, 53);
+            this.btTT.TabIndex = 16;
+            this.btTT.Text = "  Toa thuốc";
+            this.btTT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btTT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btTT.UseVisualStyleBackColor = false;
+            this.btTT.Click += new System.EventHandler(this.btTT_Click);
+            // 
+            // btT
+            // 
+            this.btT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.btT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btT.FlatAppearance.BorderSize = 0;
+            this.btT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btT.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btT.Image = global::QLPM.Properties.Resources.App_lists_icon;
+            this.btT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btT.Location = new System.Drawing.Point(0, 252);
+            this.btT.Name = "btT";
+            this.btT.Size = new System.Drawing.Size(170, 53);
+            this.btT.TabIndex = 15;
+            this.btT.Text = "  Thuốc";
+            this.btT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btT.UseVisualStyleBackColor = false;
+            this.btT.Click += new System.EventHandler(this.btT_Click);
+            // 
+            // btXN
+            // 
+            this.btXN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.btXN.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btXN.FlatAppearance.BorderSize = 0;
+            this.btXN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btXN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXN.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btXN.Image = global::QLPM.Properties.Resources.Filter_List_icon;
+            this.btXN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btXN.Location = new System.Drawing.Point(0, 199);
+            this.btXN.Name = "btXN";
+            this.btXN.Size = new System.Drawing.Size(170, 53);
+            this.btXN.TabIndex = 13;
+            this.btXN.Text = "  Xét nghiệm";
+            this.btXN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btXN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btXN.UseVisualStyleBackColor = false;
+            this.btXN.Click += new System.EventHandler(this.btXN_Click);
+            // 
+            // btLXN
+            // 
+            this.btLXN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.btLXN.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btLXN.FlatAppearance.BorderSize = 0;
+            this.btLXN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLXN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLXN.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btLXN.Image = global::QLPM.Properties.Resources.Filter_List_icon;
+            this.btLXN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLXN.Location = new System.Drawing.Point(0, 146);
+            this.btLXN.Name = "btLXN";
+            this.btLXN.Size = new System.Drawing.Size(170, 53);
+            this.btLXN.TabIndex = 12;
+            this.btLXN.Text = "  Loại xét nghiệm";
+            this.btLXN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLXN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btLXN.UseVisualStyleBackColor = false;
+            this.btLXN.Click += new System.EventHandler(this.btLXN_Click);
             // 
             // btQuayLai
             // 
@@ -225,7 +269,7 @@ namespace QLPM.FORMS
             this.panelTieuDe.Size = new System.Drawing.Size(1064, 93);
             this.panelTieuDe.TabIndex = 1;
             // 
-            // FBS
+            // FBacSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -235,7 +279,7 @@ namespace QLPM.FORMS
             this.Controls.Add(this.panelDanhMuc);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FBS";
+            this.Name = "FBacSi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang bác sĩ";
             this.panelDanhMuc.ResumeLayout(false);
@@ -255,8 +299,10 @@ namespace QLPM.FORMS
         private System.Windows.Forms.Panel panelTieuDe;
         private System.Windows.Forms.Button btThoat;
         private System.Windows.Forms.Button btQuayLai;
-        private System.Windows.Forms.Button btPK;
         private System.Windows.Forms.Button btTT;
-        private System.Windows.Forms.Button btPXN;
+        private System.Windows.Forms.Button btT;
+        private System.Windows.Forms.Button btXN;
+        private System.Windows.Forms.Button btLXN;
+        private System.Windows.Forms.Button btPK;
     }
 }
