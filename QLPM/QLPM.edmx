@@ -510,6 +510,10 @@
     <edmx:ConceptualModels>
       <Schema Namespace="QuanLyPhongMachModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="QuanLyPhongMachEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_KiemTraThuoc" ReturnType="Collection(Int32)">
+            <Parameter Name="MaToa" Mode="In" Type="Int32" />
+            <Parameter Name="MaThuoc" Mode="In" Type="Int32" />
+          </FunctionImport>
           <EntitySet Name="BacSis" EntityType="QuanLyPhongMachModel.BacSi" />
           <EntitySet Name="BenhNhans" EntityType="QuanLyPhongMachModel.BenhNhan" />
           <EntitySet Name="ChiTietToaThuocs" EntityType="QuanLyPhongMachModel.ChiTietToaThuoc" />
@@ -609,10 +613,6 @@
             <End Role="XetNghiem" EntitySet="XetNghiems" />
             <End Role="XetNghiem_PhieuKham" EntitySet="XetNghiem_PhieuKham" />
           </AssociationSet>
-          <FunctionImport Name="sp_KiemTraThuoc" ReturnType="Collection(Int32)">
-            <Parameter Name="MaToa" Mode="In" Type="Int32" />
-            <Parameter Name="MaThuoc" Mode="In" Type="Int32" />
-          </FunctionImport>
         </EntityContainer>
         <EntityType Name="BacSi">
           <Key>
@@ -1057,6 +1057,7 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="QuanLyPhongMachModelStoreContainer" CdmEntityContainer="QuanLyPhongMachEntities">
+          <FunctionImportMapping FunctionImportName="sp_KiemTraThuoc" FunctionName="QuanLyPhongMachModel.Store.sp_KiemTraThuoc" />
           <EntitySetMapping Name="BacSis">
             <EntityTypeMapping TypeName="QuanLyPhongMachModel.BacSi">
               <MappingFragment StoreEntitySet="BacSi">
@@ -1213,7 +1214,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="sp_KiemTraThuoc" FunctionName="QuanLyPhongMachModel.Store.sp_KiemTraThuoc" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

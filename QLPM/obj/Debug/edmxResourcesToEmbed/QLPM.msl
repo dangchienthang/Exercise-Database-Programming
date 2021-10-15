@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="QuanLyPhongMachModelStoreContainer" CdmEntityContainer="QuanLyPhongMachEntities">
+    <FunctionImportMapping FunctionImportName="sp_KiemTraThuoc" FunctionName="QuanLyPhongMachModel.Store.sp_KiemTraThuoc" />
     <EntitySetMapping Name="BacSis">
       <EntityTypeMapping TypeName="QuanLyPhongMachModel.BacSi">
         <MappingFragment StoreEntitySet="BacSi">
@@ -157,6 +158,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="sp_KiemTraThuoc" FunctionName="QuanLyPhongMachModel.Store.sp_KiemTraThuoc" />
   </EntityContainerMapping>
 </Mapping>
