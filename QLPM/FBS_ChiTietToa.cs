@@ -13,7 +13,7 @@ namespace QLPM
 {
     public partial class FChiTietToa : Form
     {
-        public int MaToa;
+        public int maToa;
 
         BUS_ChiTietToa busToa;
 
@@ -26,7 +26,7 @@ namespace QLPM
         private void HienThiDSToa()
         {
             gVToa.DataSource = null;
-            busToa.HienThiDSCTDH(gVToa, MaToa);
+            busToa.HienThiDSCTDH(gVToa, maToa);
             gVToa.Columns[0].Width = (int)(0.2 * gVToa.Width);
             gVToa.Columns[1].Width = (int)(0.2 * gVToa.Width);
             gVToa.Columns[2].Width = (int)(0.3 * gVToa.Width);
@@ -44,7 +44,7 @@ namespace QLPM
 
         private void FCTToaThuoc_Load(object sender, EventArgs e)
         {
-            txtMaToa.Text = MaToa.ToString();
+            txtMaToa.Text = maToa.ToString();
         }
 
         private void btSuaTT_Click(object sender, EventArgs e)
@@ -81,8 +81,8 @@ namespace QLPM
 
         private void btThemTT_Click(object sender, EventArgs e)
         {
-            FKeToa f = new FKeToa();
-            f.MaToa = MaToa;
+            FBS_KeToa f = new FBS_KeToa();
+            f.maToa = maToa;
             f.ShowDialog();
         }
 

@@ -1,5 +1,5 @@
 ﻿
-namespace QLPM.FORMS
+namespace QLPM
 {
     partial class FQLThuoc
     {

@@ -123,7 +123,6 @@
     <Key>
       <PropertyRef Name="MaXN" />
       <PropertyRef Name="MaPK" />
-      <PropertyRef Name="NgayXN" />
     </Key>
     <Property Name="MaXN" Type="int" Nullable="false" />
     <Property Name="MaPK" Type="int" Nullable="false" />
@@ -311,7 +310,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__XetNghiem___MaPK__3A179ED3">
+  <Association Name="FK__XetNghiem___MaPK__55BFB948">
     <End Role="PhieuKham" Type="Self.PhieuKham" Multiplicity="1" />
     <End Role="XetNghiem_PhieuKham" Type="Self.XetNghiem_PhieuKham" Multiplicity="*" />
     <ReferentialConstraint>
@@ -323,7 +322,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__XetNghiem___MaXN__39237A9A">
+  <Association Name="FK__XetNghiem___MaXN__54CB950F">
     <End Role="XetNghiem" Type="Self.XetNghiem" Multiplicity="1" />
     <End Role="XetNghiem_PhieuKham" Type="Self.XetNghiem_PhieuKham" Multiplicity="*" />
     <ReferentialConstraint>
@@ -374,6 +373,10 @@
   <Function Name="sp_KiemTraThuoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaToa" Type="int" Mode="In" />
     <Parameter Name="MaThuoc" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_KiemTraXetNghiem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaPK" Type="int" Mode="In" />
+    <Parameter Name="MaXN" Type="int" Mode="In" />
   </Function>
   <EntityContainer Name="QuanLyPhongMachModelStoreContainer">
     <EntitySet Name="BacSi" EntityType="Self.BacSi" Schema="dbo" store:Type="Tables" />
@@ -447,11 +450,11 @@
       <End Role="BenhNhan" EntitySet="BenhNhan" />
       <End Role="ToaThuoc" EntitySet="ToaThuoc" />
     </AssociationSet>
-    <AssociationSet Name="FK__XetNghiem___MaPK__3A179ED3" Association="Self.FK__XetNghiem___MaPK__3A179ED3">
+    <AssociationSet Name="FK__XetNghiem___MaPK__55BFB948" Association="Self.FK__XetNghiem___MaPK__55BFB948">
       <End Role="PhieuKham" EntitySet="PhieuKham" />
       <End Role="XetNghiem_PhieuKham" EntitySet="XetNghiem_PhieuKham" />
     </AssociationSet>
-    <AssociationSet Name="FK__XetNghiem___MaXN__39237A9A" Association="Self.FK__XetNghiem___MaXN__39237A9A">
+    <AssociationSet Name="FK__XetNghiem___MaXN__54CB950F" Association="Self.FK__XetNghiem___MaXN__54CB950F">
       <End Role="XetNghiem" EntitySet="XetNghiem" />
       <End Role="XetNghiem_PhieuKham" EntitySet="XetNghiem_PhieuKham" />
     </AssociationSet>

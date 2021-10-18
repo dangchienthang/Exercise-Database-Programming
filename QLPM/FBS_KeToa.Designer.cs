@@ -1,7 +1,7 @@
 ﻿
 namespace QLPM
 {
-    partial class FKeToa
+    partial class FBS_KeToa
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace QLPM
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FKeToa));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBS_KeToa));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtMaThuoc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();

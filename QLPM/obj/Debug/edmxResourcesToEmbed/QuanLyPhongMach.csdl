@@ -5,6 +5,10 @@
       <Parameter Name="MaToa" Mode="In" Type="Int32" />
       <Parameter Name="MaThuoc" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="sp_KiemTraXetNghiem" ReturnType="Collection(Int32)">
+      <Parameter Name="MaPK" Mode="In" Type="Int32" />
+      <Parameter Name="MaXN" Mode="In" Type="Int32" />
+    </FunctionImport>
     <EntitySet Name="BacSis" EntityType="QuanLyPhongMachModel.BacSi" />
     <EntitySet Name="BenhNhans" EntityType="QuanLyPhongMachModel.BenhNhan" />
     <EntitySet Name="ChiTietToaThuocs" EntityType="QuanLyPhongMachModel.ChiTietToaThuoc" />
@@ -88,11 +92,11 @@
       <End Role="NguoiDung" EntitySet="NguoiDungs" />
       <End Role="TaiKhoan" EntitySet="TaiKhoans" />
     </AssociationSet>
-    <AssociationSet Name="FK__XetNghiem___MaPK__3A179ED3" Association="QuanLyPhongMachModel.FK__XetNghiem___MaPK__3A179ED3">
+    <AssociationSet Name="FK__XetNghiem___MaPK__55BFB948" Association="QuanLyPhongMachModel.FK__XetNghiem___MaPK__55BFB948">
       <End Role="PhieuKham" EntitySet="PhieuKhams" />
       <End Role="XetNghiem_PhieuKham" EntitySet="XetNghiem_PhieuKham" />
     </AssociationSet>
-    <AssociationSet Name="FK__XetNghiem___MaXN__39237A9A" Association="QuanLyPhongMachModel.FK__XetNghiem___MaXN__39237A9A">
+    <AssociationSet Name="FK__XetNghiem___MaXN__54CB950F" Association="QuanLyPhongMachModel.FK__XetNghiem___MaXN__54CB950F">
       <End Role="XetNghiem" EntitySet="XetNghiems" />
       <End Role="XetNghiem_PhieuKham" EntitySet="XetNghiem_PhieuKham" />
     </AssociationSet>
@@ -203,7 +207,7 @@
     <Property Name="NgayTaiKham" Type="DateTime" Precision="0" />
     <NavigationProperty Name="BacSi" Relationship="QuanLyPhongMachModel.FK__PhieuKham__MaBS__625A9A57" FromRole="PhieuKham" ToRole="BacSi" />
     <NavigationProperty Name="BenhNhan" Relationship="QuanLyPhongMachModel.FK__PhieuKham__MaBN__634EBE90" FromRole="PhieuKham" ToRole="BenhNhan" />
-    <NavigationProperty Name="XetNghiem_PhieuKham" Relationship="QuanLyPhongMachModel.FK__XetNghiem___MaPK__3A179ED3" FromRole="PhieuKham" ToRole="XetNghiem_PhieuKham" />
+    <NavigationProperty Name="XetNghiem_PhieuKham" Relationship="QuanLyPhongMachModel.FK__XetNghiem___MaPK__55BFB948" FromRole="PhieuKham" ToRole="XetNghiem_PhieuKham" />
   </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -247,13 +251,12 @@
     <Property Name="MaLXN" Type="Int32" Nullable="false" />
     <Property Name="MoTa" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="LoaiXetNghiem" Relationship="QuanLyPhongMachModel.FK__XetNghiem__MoTa__2EA5EC27" FromRole="XetNghiem" ToRole="LoaiXetNghiem" />
-    <NavigationProperty Name="XetNghiem_PhieuKham" Relationship="QuanLyPhongMachModel.FK__XetNghiem___MaXN__39237A9A" FromRole="XetNghiem" ToRole="XetNghiem_PhieuKham" />
+    <NavigationProperty Name="XetNghiem_PhieuKham" Relationship="QuanLyPhongMachModel.FK__XetNghiem___MaXN__54CB950F" FromRole="XetNghiem" ToRole="XetNghiem_PhieuKham" />
   </EntityType>
   <EntityType Name="XetNghiem_PhieuKham">
     <Key>
       <PropertyRef Name="MaXN" />
       <PropertyRef Name="MaPK" />
-      <PropertyRef Name="NgayXN" />
     </Key>
     <Property Name="MaXN" Type="Int32" Nullable="false" />
     <Property Name="MaPK" Type="Int32" Nullable="false" />
@@ -261,8 +264,8 @@
     <Property Name="NgayHenLayKQ" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="YeuCauXN" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="KetQuaXN" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="PhieuKham" Relationship="QuanLyPhongMachModel.FK__XetNghiem___MaPK__3A179ED3" FromRole="XetNghiem_PhieuKham" ToRole="PhieuKham" />
-    <NavigationProperty Name="XetNghiem" Relationship="QuanLyPhongMachModel.FK__XetNghiem___MaXN__39237A9A" FromRole="XetNghiem_PhieuKham" ToRole="XetNghiem" />
+    <NavigationProperty Name="PhieuKham" Relationship="QuanLyPhongMachModel.FK__XetNghiem___MaPK__55BFB948" FromRole="XetNghiem_PhieuKham" ToRole="PhieuKham" />
+    <NavigationProperty Name="XetNghiem" Relationship="QuanLyPhongMachModel.FK__XetNghiem___MaXN__54CB950F" FromRole="XetNghiem_PhieuKham" ToRole="XetNghiem" />
   </EntityType>
   <EntityType Name="YTa">
     <Key>
@@ -482,7 +485,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__XetNghiem___MaPK__3A179ED3">
+  <Association Name="FK__XetNghiem___MaPK__55BFB948">
     <End Type="QuanLyPhongMachModel.PhieuKham" Role="PhieuKham" Multiplicity="1" />
     <End Type="QuanLyPhongMachModel.XetNghiem_PhieuKham" Role="XetNghiem_PhieuKham" Multiplicity="*" />
     <ReferentialConstraint>
@@ -494,7 +497,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__XetNghiem___MaXN__39237A9A">
+  <Association Name="FK__XetNghiem___MaXN__54CB950F">
     <End Type="QuanLyPhongMachModel.XetNghiem" Role="XetNghiem" Multiplicity="1" />
     <End Type="QuanLyPhongMachModel.XetNghiem_PhieuKham" Role="XetNghiem_PhieuKham" Multiplicity="*" />
     <ReferentialConstraint>

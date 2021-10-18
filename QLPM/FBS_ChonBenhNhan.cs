@@ -8,15 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLPM.FORMS;
 
-namespace QLPM.FORMS
+namespace QLPM
 {
-    public partial class FChonBenhNhan : Form
+    public partial class FBS_ChonBenhNhan : Form
     {
         BUS_LichKham busLK;
 
-        public FChonBenhNhan()
+        public FBS_ChonBenhNhan()
         {
             InitializeComponent();
             busLK = new BUS_LichKham();

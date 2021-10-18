@@ -1,7 +1,7 @@
 ﻿
 namespace QLPM
 {
-    partial class FChiTietPK
+    partial class FBS_XetNghiem
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@ namespace QLPM
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FChiTietPK));
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.gVCTPK = new System.Windows.Forms.DataGridView();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -54,7 +53,7 @@ namespace QLPM
             this.btSua = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
-            this.btThoat = new System.Windows.Forms.Button();
+            this.btThemChiTiet = new System.Windows.Forms.Button();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gVCTPK)).BeginInit();
             this.groupBox8.SuspendLayout();
@@ -282,7 +281,7 @@ namespace QLPM
             this.btSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSua.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btSua.Image = global::QLPM.Properties.Resources.fix_it_icon;
-            this.btSua.Location = new System.Drawing.Point(615, 294);
+            this.btSua.Location = new System.Drawing.Point(725, 294);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(75, 58);
             this.btSua.TabIndex = 8;
@@ -297,7 +296,7 @@ namespace QLPM
             this.btXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btXoa.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btXoa.Image = global::QLPM.Properties.Resources.delete_file_icon;
-            this.btXoa.Location = new System.Drawing.Point(722, 294);
+            this.btXoa.Location = new System.Drawing.Point(832, 294);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(75, 58);
             this.btXoa.TabIndex = 9;
@@ -312,7 +311,7 @@ namespace QLPM
             this.btThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btThem.Image = global::QLPM.Properties.Resources.Button_Add_icon;
-            this.btThem.Location = new System.Drawing.Point(491, 294);
+            this.btThem.Location = new System.Drawing.Point(601, 294);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(84, 58);
             this.btThem.TabIndex = 7;
@@ -321,27 +320,27 @@ namespace QLPM
             this.btThem.UseVisualStyleBackColor = false;
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
-            // btThoat
+            // btThemChiTiet
             // 
-            this.btThoat.BackColor = System.Drawing.SystemColors.Control;
-            this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btThoat.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btThoat.Image = global::QLPM.Properties.Resources.Accept_icon;
-            this.btThoat.Location = new System.Drawing.Point(819, 294);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(88, 58);
-            this.btThoat.TabIndex = 26;
-            this.btThoat.Text = "Hoàn thành";
-            this.btThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btThoat.UseVisualStyleBackColor = false;
-            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
+            this.btThemChiTiet.BackColor = System.Drawing.SystemColors.Control;
+            this.btThemChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThemChiTiet.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btThemChiTiet.Image = global::QLPM.Properties.Resources.Accept_icon;
+            this.btThemChiTiet.Location = new System.Drawing.Point(796, 706);
+            this.btThemChiTiet.Name = "btThemChiTiet";
+            this.btThemChiTiet.Size = new System.Drawing.Size(111, 58);
+            this.btThemChiTiet.TabIndex = 26;
+            this.btThemChiTiet.Text = "Thêm chi tiết xét nghiệm";
+            this.btThemChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btThemChiTiet.UseVisualStyleBackColor = false;
+            this.btThemChiTiet.Click += new System.EventHandler(this.btThemChiTiet_Click);
             // 
-            // FChiTietPK
+            // FBS_XetNghiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Controls.Add(this.btThoat);
+            this.ClientSize = new System.Drawing.Size(984, 811);
+            this.Controls.Add(this.btThemChiTiet);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btThem);
@@ -349,12 +348,11 @@ namespace QLPM
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.label17);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "FChiTietPK";
+            this.Name = "FBS_XetNghiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Chi tiết phiếu khám";
-            this.Load += new System.EventHandler(this.FChiTietPK_Load);
+            this.Text = "Xét nghiệm";
+            this.Load += new System.EventHandler(this.FBS_XetNghiem_Load);
             this.groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gVCTPK)).EndInit();
             this.groupBox8.ResumeLayout(false);
@@ -372,7 +370,6 @@ namespace QLPM
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtMaPK;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label1;
@@ -386,10 +383,11 @@ namespace QLPM
         private System.Windows.Forms.Button btSua;
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.Button btThem;
-        private System.Windows.Forms.Button btThoat;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtMoTa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMaXN;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btThemChiTiet;
     }
 }

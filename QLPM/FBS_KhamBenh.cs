@@ -1,5 +1,4 @@
 ﻿using QLPM.BUS;
-using QLPM.FORMS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -261,7 +260,7 @@ namespace QLPM
             //goi Form
             FChiTietToa f = new FChiTietToa();
             //truyen bien
-            f.MaToa = maToa;
+            f.maToa = maToa;
             f.ShowDialog();
         }
 

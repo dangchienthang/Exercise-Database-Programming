@@ -9,13 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLPM.FORMS
+namespace QLPM
 {
-    public partial class FToaThuoc : Form
+    public partial class FDSToaThuoc : Form
     {
         BUS_ToaThuoc bToa;
 
-        public FToaThuoc()
+        public FDSToaThuoc()
         {
             InitializeComponent();
             bToa = new BUS_ToaThuoc();

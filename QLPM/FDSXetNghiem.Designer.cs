@@ -1,7 +1,7 @@
 ﻿
-namespace QLPM.FORMS
+namespace QLPM
 {
-    partial class FXetNghiem
+    partial class FDSXetNghiem
     {
         /// <summary>
         /// Required designer variable.

@@ -9,13 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLPM.FORMS
+namespace QLPM
 {
-    public partial class FXetNghiem : Form
+    public partial class FDSXetNghiem : Form
     {
         BUS_XetNghiem busXN;
 
-        public FXetNghiem()
+        public FDSXetNghiem()
         {
             InitializeComponent();
             busXN = new BUS_XetNghiem();

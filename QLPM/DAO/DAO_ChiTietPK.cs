@@ -31,51 +31,20 @@ namespace QLPM.DAO
             return ds;
         }
 
-        public void ThemCT(XetNghiem_PhieuKham x)
+        public bool SuaCTPK(XetNghiem_PhieuKham x)
         {
-            db.XetNghiem_PhieuKham.Add(x);
-            db.SaveChanges();
-        }
-
-        public bool KT(XetNghiem_PhieuKham x)
-        {
-            XetNghiem_PhieuKham xn = db.XetNghiem_PhieuKham.Find(x.MaPK);
-            if (xn != null)
-            {
-                return true;
-            }
-            else
-                return false;
-        }
-
-        public void SuaCT(XetNghiem_PhieuKham xetNghiem)
-        {
-            XetNghiem_PhieuKham x = db.XetNghiem_PhieuKham.Find(xetNghiem.MaPK);
-
-            x.MaXN = xetNghiem.MaXN;
-            x.NgayXN = xetNghiem.NgayXN;
-            x.NgayHenLayKQ = xetNghiem.NgayHenLayKQ;
-            x.YeuCauXN = xetNghiem.YeuCauXN;
-            x.KetQuaXN = xetNghiem.KetQuaXN;
-
-            db.SaveChanges();
-        }
-
-        public bool XoaCT(int maPK)
-        {
-            bool tinhTrang = true;
+            bool tinhTrang = false;
             try
             {
-                XetNghiem_PhieuKham x = db.XetNghiem_PhieuKham.Find(maPK);
-                if (x != null)
-                {
-                    db.XetNghiem_PhieuKham.Remove(x);
-                    db.SaveChanges();
+                XetNghiem_PhieuKham xn = db.XetNghiem_PhieuKham.First(s => s.MaPK == x.MaPK && s.MaXN == x.MaXN);
 
-                    tinhTrang = true;
-                }
-                else
-                    tinhTrang = false;
+                xn.NgayXN = x.NgayXN;
+                xn.NgayHenLayKQ = x.NgayHenLayKQ;
+                xn.YeuCauXN = x.YeuCauXN;
+                xn.KetQuaXN = x.KetQuaXN;
+
+                db.SaveChanges();
+                tinhTrang = true;
             }
             catch (Exception)
             {
@@ -84,22 +53,72 @@ namespace QLPM.DAO
             return tinhTrang;
         }
 
+        public bool XoaCTPK(int maPK, int maXN)
+        {
+            bool tinhTrang = true;
+            try
+            {
+                // Xoa chi tiet phieu kham co MaPK = maPK va MaXN = maXN
+                XetNghiem_PhieuKham x = db.XetNghiem_PhieuKham.Single(s => s.MaPK == maPK && s.MaXN == maXN);
+                db.XetNghiem_PhieuKham.Remove(x);
+                db.SaveChanges();
+
+                tinhTrang = true;
+            }
+            catch (Exception)
+            {
+                tinhTrang = false;
+            }
+            return tinhTrang;
+        }
+
+        public bool ThemDanhSachCTPK(List<XetNghiem_PhieuKham> ds)
+        {
+            bool tinhTrang = true;
+            try
+            {
+                db.XetNghiem_PhieuKham.AddRange(ds);
+                db.SaveChanges();
+
+                tinhTrang = true;
+            }
+            catch (Exception)
+            {
+                tinhTrang = false;
+                throw;
+            }
+
+            return tinhTrang;
+        }
+
         public dynamic LayDSXN()
         {
-            var ds = db.XetNghiems.Select(s => new
-            {
-                s.MaXN,
-                s.TenXN,
-                s.MoTa
-            }).ToList();
+            var ds = db.XetNghiems.Select(s => s
+            ).ToList();
             return ds;
         }
 
-        public XetNghiem LayThongTinXN(int maXN)
+        public XetNghiem LayThongTinXetNghiem(int maXN)
         {
             XetNghiem xetNghiem = db.XetNghiems.FirstOrDefault(s => s.MaXN == maXN);
 
             return xetNghiem;
+        }
+
+        public bool KiemTraXetNghiem(XetNghiem_PhieuKham xn)
+        {
+            int? sl;
+            sl = db.sp_KiemTraXetNghiem(xn.MaPK, xn.MaXN).FirstOrDefault();
+            if (sl != 0)
+                return false;
+            else
+                return true;
+        }
+
+        public void ThemChiTietPhieuKham(XetNghiem_PhieuKham x)
+        {
+            db.XetNghiem_PhieuKham.Add(x);
+            db.SaveChanges();
         }
     }
 }

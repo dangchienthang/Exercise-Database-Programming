@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLPM.FORMS
+namespace QLPM
 {
     public partial class FQLYTa : Form
     {

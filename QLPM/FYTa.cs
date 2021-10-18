@@ -1,5 +1,4 @@
-﻿using QLPM.FORMS;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,18 +10,20 @@ using System.Windows.Forms;
 
 namespace QLPM
 {
-    public partial class FQuanTri : Form
+    public partial class FYTa : Form
     {
+        int MaTK;
+        public FYTa(int ma)
+        {
+            InitializeComponent();
+            random = new Random();
+            MaTK = ma;
+        }
+
         private Button nutHienTai;
         private Random random;
         private int s;
         private Form kichHoatForm;
-
-        public FQuanTri()
-        {
-            InitializeComponent();
-            random = new Random();
-        }
 
         private Color ChonMau()
         {
@@ -87,29 +88,14 @@ namespace QLPM
             labelTieuDe.Text = formCon.Text;
         }
 
-        private void btBS_Click(object sender, EventArgs e)
-        {
-            MoFormCon(new FQLBacSi(), sender);
-        }
-
-        private void btYT_Click(object sender, EventArgs e)
-        {
-            MoFormCon(new FQLYTa(), sender);
-        }
-
         private void bTBN_Click(object sender, EventArgs e)
         {
             MoFormCon(new FQLBenhNhan(), sender);
         }
 
-        private void btT_Click(object sender, EventArgs e)
+        private void btLK_Click(object sender, EventArgs e)
         {
-            MoFormCon(new FQLThuoc(), sender);
-        }
-
-        private void btTK_Click(object sender, EventArgs e)
-        {
-            MoFormCon(new FQLBenhNhan(), sender);
+            MoFormCon(new FQLLichKham(), sender);
         }
 
         private void btThoat_Click(object sender, EventArgs e)

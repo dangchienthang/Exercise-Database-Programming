@@ -1,7 +1,7 @@
 ﻿
-namespace QLPM.FORMS
+namespace QLPM
 {
-    partial class FChonBenhNhan
+    partial class FBS_ChonBenhNhan
     {
         /// <summary>
         /// Required designer variable.
@@ -83,7 +83,7 @@ namespace QLPM.FORMS
             // 
             // gVLK
             // 
-            this.gVLK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gVLK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.gVLK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gVLK.Location = new System.Drawing.Point(32, 267);

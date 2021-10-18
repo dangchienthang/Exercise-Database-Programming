@@ -1,5 +1,5 @@
 ﻿
-namespace QLPM.FORMS
+namespace QLPM
 {
     partial class FBacSi
     {
@@ -33,7 +33,6 @@ namespace QLPM.FORMS
             this.panelDanhMuc = new System.Windows.Forms.Panel();
             this.btPK = new System.Windows.Forms.Button();
             this.btTT = new System.Windows.Forms.Button();
-            this.btT = new System.Windows.Forms.Button();
             this.btXN = new System.Windows.Forms.Button();
             this.btLXN = new System.Windows.Forms.Button();
             this.btQuayLai = new System.Windows.Forms.Button();
@@ -52,7 +51,6 @@ namespace QLPM.FORMS
             this.panelDanhMuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.panelDanhMuc.Controls.Add(this.btPK);
             this.panelDanhMuc.Controls.Add(this.btTT);
-            this.panelDanhMuc.Controls.Add(this.btT);
             this.panelDanhMuc.Controls.Add(this.btXN);
             this.panelDanhMuc.Controls.Add(this.btLXN);
             this.panelDanhMuc.Controls.Add(this.btQuayLai);
@@ -76,7 +74,7 @@ namespace QLPM.FORMS
             this.btPK.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btPK.Image = global::QLPM.Properties.Resources.Apps_preferences_contact_list_icon;
             this.btPK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btPK.Location = new System.Drawing.Point(0, 358);
+            this.btPK.Location = new System.Drawing.Point(0, 305);
             this.btPK.Name = "btPK";
             this.btPK.Size = new System.Drawing.Size(170, 53);
             this.btPK.TabIndex = 17;
@@ -96,7 +94,7 @@ namespace QLPM.FORMS
             this.btTT.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btTT.Image = global::QLPM.Properties.Resources.App_lists_icon;
             this.btTT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTT.Location = new System.Drawing.Point(0, 305);
+            this.btTT.Location = new System.Drawing.Point(0, 252);
             this.btTT.Name = "btTT";
             this.btTT.Size = new System.Drawing.Size(170, 53);
             this.btTT.TabIndex = 16;
@@ -105,26 +103,6 @@ namespace QLPM.FORMS
             this.btTT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btTT.UseVisualStyleBackColor = false;
             this.btTT.Click += new System.EventHandler(this.btTT_Click);
-            // 
-            // btT
-            // 
-            this.btT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.btT.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btT.FlatAppearance.BorderSize = 0;
-            this.btT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btT.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btT.Image = global::QLPM.Properties.Resources.App_lists_icon;
-            this.btT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btT.Location = new System.Drawing.Point(0, 252);
-            this.btT.Name = "btT";
-            this.btT.Size = new System.Drawing.Size(170, 53);
-            this.btT.TabIndex = 15;
-            this.btT.Text = "  Thuốc";
-            this.btT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btT.UseVisualStyleBackColor = false;
-            this.btT.Click += new System.EventHandler(this.btT_Click);
             // 
             // btXN
             // 
@@ -237,8 +215,8 @@ namespace QLPM.FORMS
             // 
             // panelFormCon
             // 
-            this.panelFormCon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelFormCon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelFormCon.Location = new System.Drawing.Point(170, 93);
             this.panelFormCon.Name = "panelFormCon";
@@ -300,7 +278,6 @@ namespace QLPM.FORMS
         private System.Windows.Forms.Button btThoat;
         private System.Windows.Forms.Button btQuayLai;
         private System.Windows.Forms.Button btTT;
-        private System.Windows.Forms.Button btT;
         private System.Windows.Forms.Button btXN;
         private System.Windows.Forms.Button btLXN;
         private System.Windows.Forms.Button btPK;

@@ -1,7 +1,7 @@
 ﻿
-namespace QLPM.FORMS
+namespace QLPM
 {
-    partial class FToaThuoc
+    partial class FDSToaThuoc
     {
         /// <summary>
         /// Required designer variable.

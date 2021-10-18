@@ -144,7 +144,7 @@ create table XetNghiem_PhieuKham
 	NgayHenLayKQ date not null,
 	YeuCauXN nvarchar(100) not null,
 	KetQuaXN nvarchar(100) not null,
-	primary key (MaXN, MaPK, NgayXN),
+	primary key (MaXN, MaPK),
 
 	foreign key (MaXN) references dbo.XetNghiem(MaXN),
 	foreign key (MaPK) references dbo.PhieuKham(MaPK)
@@ -157,6 +157,17 @@ begin
 	declare @sl int
 	select @sl = COUNT(*) from [ChiTietToaThuoc]
 	where MaToa=@MaToa and MaThuoc=@MaThuoc
+	select @sl as alias
+end
+GO
+
+CREATE proc [dbo].[sp_KiemTraXetNghiem] @MaPK int, @MaXN int
+as
+begin
+	SET NOCOUNT ON
+	declare @sl int
+	select @sl = COUNT(*) from [XetNghiem_PhieuKham]
+	where MaPK=@MaPK and MaXN=@MaXN
 	select @sl as alias
 end
 GO

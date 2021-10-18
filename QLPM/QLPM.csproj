@@ -102,102 +102,114 @@
     <Compile Include="BUS\BUS_QLYTa.cs" />
     <Compile Include="BUS\BUS_QLThuoc.cs" />
     <Compile Include="DAO\DAO_QLBenhNhan.cs" />
-    <Compile Include="FORMS\FBacSi.cs">
+    <Compile Include="FBacSi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FBacSi.Designer.cs">
+    <Compile Include="FBacSi.Designer.cs">
       <DependentUpon>FBacSi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FChonBenhNhan.cs">
+    <Compile Include="FBS_ChonBenhNhan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FChonBenhNhan.Designer.cs">
-      <DependentUpon>FChonBenhNhan.cs</DependentUpon>
+    <Compile Include="FBS_ChonBenhNhan.Designer.cs">
+      <DependentUpon>FBS_ChonBenhNhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FLoaiXetNghiem.cs">
+    <Compile Include="FBS_XetNghiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FLoaiXetNghiem.Designer.cs">
-      <DependentUpon>FLoaiXetNghiem.cs</DependentUpon>
+    <Compile Include="FBS_XetNghiem.Designer.cs">
+      <DependentUpon>FBS_XetNghiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FQLLichKham.cs">
+    <Compile Include="FDSPhieuKham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FQLLichKham.Designer.cs">
+    <Compile Include="FDSPhieuKham.Designer.cs">
+      <DependentUpon>FDSPhieuKham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDSLoaiXetNghiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDSLoaiXetNghiem.Designer.cs">
+      <DependentUpon>FDSLoaiXetNghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FQLLichKham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQLLichKham.Designer.cs">
       <DependentUpon>FQLLichKham.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FQLThuoc.cs">
+    <Compile Include="FQLThuoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FQLThuoc.Designer.cs">
+    <Compile Include="FQLThuoc.Designer.cs">
       <DependentUpon>FQLThuoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FQLYTa.cs">
+    <Compile Include="FQLYTa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FQLYTa.Designer.cs">
+    <Compile Include="FQLYTa.Designer.cs">
       <DependentUpon>FQLYTa.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FToaThuoc.cs">
+    <Compile Include="FDSToaThuoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FToaThuoc.Designer.cs">
-      <DependentUpon>FToaThuoc.cs</DependentUpon>
+    <Compile Include="FDSToaThuoc.Designer.cs">
+      <DependentUpon>FDSToaThuoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FXetNghiem.cs">
+    <Compile Include="FDSXetNghiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FXetNghiem.Designer.cs">
-      <DependentUpon>FXetNghiem.cs</DependentUpon>
+    <Compile Include="FDSXetNghiem.Designer.cs">
+      <DependentUpon>FDSXetNghiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FYTa.cs">
+    <Compile Include="FYTa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FYTa.Designer.cs">
+    <Compile Include="FYTa.Designer.cs">
       <DependentUpon>FYTa.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FAdmin.cs">
+    <Compile Include="FAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FAdmin.Designer.cs">
+    <Compile Include="FAdmin.Designer.cs">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FChiTietPK.cs">
+    <Compile Include="FBS_ChiTietPK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FChiTietPK.Designer.cs">
-      <DependentUpon>FChiTietPK.cs</DependentUpon>
+    <Compile Include="FBS_ChiTietPK.Designer.cs">
+      <DependentUpon>FBS_ChiTietPK.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FChiTietToa.cs">
+    <Compile Include="FBS_ChiTietToa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FChiTietToa.Designer.cs">
-      <DependentUpon>FChiTietToa.cs</DependentUpon>
+    <Compile Include="FBS_ChiTietToa.Designer.cs">
+      <DependentUpon>FBS_ChiTietToa.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FDangNhap.cs">
+    <Compile Include="FDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FDangNhap.Designer.cs">
+    <Compile Include="FDangNhap.Designer.cs">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\DAO_QLBacSi.cs" />
     <Compile Include="DAO\DAO_QLThuoc.cs" />
-    <Compile Include="FORMS\FKeToa.cs">
+    <Compile Include="FBS_KeToa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FKeToa.Designer.cs">
-      <DependentUpon>FKeToa.cs</DependentUpon>
+    <Compile Include="FBS_KeToa.Designer.cs">
+      <DependentUpon>FBS_KeToa.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FKhamBenh.cs">
+    <Compile Include="FBS_KhamBenh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FKhamBenh.Designer.cs">
-      <DependentUpon>FKhamBenh.cs</DependentUpon>
+    <Compile Include="FBS_KhamBenh.Designer.cs">
+      <DependentUpon>FBS_KhamBenh.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\FQLBacSi.cs">
+    <Compile Include="FQLBacSi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FQLBacSi.Designer.cs">
+    <Compile Include="FQLBacSi.Designer.cs">
       <DependentUpon>FQLBacSi.cs</DependentUpon>
     </Compile>
     <Compile Include="LichKham.cs">
@@ -221,10 +233,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FORMS\FQLBenhNhan.cs">
+    <Compile Include="FQLBenhNhan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMS\FQLBenhNhan.Designer.cs">
+    <Compile Include="FQLBenhNhan.Designer.cs">
       <DependentUpon>FQLBenhNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyPhongMach.Context.cs">
@@ -260,55 +272,58 @@
     <Compile Include="YTa.cs">
       <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FORMS\FBacSi.resx">
+    <EmbeddedResource Include="FBacSi.resx">
       <DependentUpon>FBacSi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FChonBenhNhan.resx">
-      <DependentUpon>FChonBenhNhan.cs</DependentUpon>
+    <EmbeddedResource Include="FBS_ChonBenhNhan.resx">
+      <DependentUpon>FBS_ChonBenhNhan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FLoaiXetNghiem.resx">
-      <DependentUpon>FLoaiXetNghiem.cs</DependentUpon>
+    <EmbeddedResource Include="FBS_XetNghiem.resx">
+      <DependentUpon>FBS_XetNghiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FQLLichKham.resx">
+    <EmbeddedResource Include="FDSLoaiXetNghiem.resx">
+      <DependentUpon>FDSLoaiXetNghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FQLLichKham.resx">
       <DependentUpon>FQLLichKham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FQLThuoc.resx">
+    <EmbeddedResource Include="FQLThuoc.resx">
       <DependentUpon>FQLThuoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FQLYTa.resx">
+    <EmbeddedResource Include="FQLYTa.resx">
       <DependentUpon>FQLYTa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FToaThuoc.resx">
-      <DependentUpon>FToaThuoc.cs</DependentUpon>
+    <EmbeddedResource Include="FDSToaThuoc.resx">
+      <DependentUpon>FDSToaThuoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FXetNghiem.resx">
-      <DependentUpon>FXetNghiem.cs</DependentUpon>
+    <EmbeddedResource Include="FDSXetNghiem.resx">
+      <DependentUpon>FDSXetNghiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FYTa.resx">
+    <EmbeddedResource Include="FYTa.resx">
       <DependentUpon>FYTa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FAdmin.resx">
+    <EmbeddedResource Include="FAdmin.resx">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FChiTietPK.resx">
-      <DependentUpon>FChiTietPK.cs</DependentUpon>
+    <EmbeddedResource Include="FBS_ChiTietPK.resx">
+      <DependentUpon>FBS_ChiTietPK.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FChiTietToa.resx">
-      <DependentUpon>FChiTietToa.cs</DependentUpon>
+    <EmbeddedResource Include="FBS_ChiTietToa.resx">
+      <DependentUpon>FBS_ChiTietToa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FDangNhap.resx">
+    <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FKeToa.resx">
-      <DependentUpon>FKeToa.cs</DependentUpon>
+    <EmbeddedResource Include="FBS_KeToa.resx">
+      <DependentUpon>FBS_KeToa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FKhamBenh.resx">
-      <DependentUpon>FKhamBenh.cs</DependentUpon>
+    <EmbeddedResource Include="FBS_KhamBenh.resx">
+      <DependentUpon>FBS_KhamBenh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FQLBacSi.resx">
+    <EmbeddedResource Include="FQLBacSi.resx">
       <DependentUpon>FQLBacSi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\FQLBenhNhan.resx">
+    <EmbeddedResource Include="FQLBenhNhan.resx">
       <DependentUpon>FQLBenhNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

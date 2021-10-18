@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLPM.FORMS
+namespace QLPM
 {
     public partial class FBacSi : Form
     {
@@ -96,32 +96,27 @@ namespace QLPM.FORMS
 
         private void btLK_Click(object sender, EventArgs e)
         {
-            MoFormCon(new FChonBenhNhan(), sender);
+            MoFormCon(new FBS_ChonBenhNhan(), sender);
         }
 
         private void btPK_Click(object sender, EventArgs e)
         {
-            MoFormCon(new FChonBenhNhan(), sender);
+            MoFormCon(new FDSPhieuKham(), sender);
         }
 
         private void btTT_Click(object sender, EventArgs e)
         {
-            MoFormCon(new FToaThuoc(), sender);
+            MoFormCon(new FDSToaThuoc(), sender);
         }
 
         private void btLXN_Click(object sender, EventArgs e)
         {
-            MoFormCon(new FLoaiXetNghiem(), sender);
+            MoFormCon(new FDSLoaiXetNghiem(), sender);
         }
 
         private void btXN_Click(object sender, EventArgs e)
         {
-            MoFormCon(new FXetNghiem(), sender);
-        }
-
-        private void btT_Click(object sender, EventArgs e)
-        {
-            MoFormCon(new FQLThuoc(), sender);
+            MoFormCon(new FDSXetNghiem(), sender);
         }
     }
 }

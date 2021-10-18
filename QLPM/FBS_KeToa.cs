@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace QLPM
 {
-    public partial class FKeToa : Form
+    public partial class FBS_KeToa : Form
     {
-        public int MaToa;
+        public int maToa;
 
         BUS_ChiTietToa busToa;
 
         bool co = false;
         DataTable dtToaThuoc;
 
-        public FKeToa()
+        public FBS_KeToa()
         {
             InitializeComponent();
             busToa = new BUS_ChiTietToa();
@@ -28,7 +28,7 @@ namespace QLPM
 
         private void FKeToa_Load(object sender, EventArgs e)
         {
-            txtMaToa.Text = MaToa.ToString();
+            txtMaToa.Text = maToa.ToString();
 
             busToa.LayDSThuoc(cbThuoc);
             co = true;
@@ -45,18 +45,22 @@ namespace QLPM
             dGToa.Columns[2].Width = (int)(0.5 * dGToa.Width);
         }
 
-        void HienThiThongTinThuoc(string maThuoc)
-        {
-            int ma = int.Parse(maThuoc);
-            Thuoc t = busToa.HienThiDSThuoc(ma);
-            txtMaThuoc.Text = t.MaThuoc.ToString();
-        }
+        //void HienThiThongTinThuoc(string maThuoc)
+        //{
+        //    int ma = int.Parse(maThuoc);
+        //    Thuoc t = busToa.HienThiDSThuoc(ma);
+        //    txtMaThuoc.Text = t.MaThuoc.ToString();
+        //}
 
         private void cbThuoc_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int ma;
+            Thuoc t;
             if (co)
             {
-                HienThiThongTinThuoc(cbThuoc.SelectedValue.ToString());
+                ma = int.Parse(cbThuoc.SelectedValue.ToString());
+                t = busToa.HienThiDSThuoc(ma);
+                txtMaThuoc.Text = t.MoTa.ToString();
             }
         }
 
@@ -133,7 +137,7 @@ namespace QLPM
 
         private void btTaoToa_Click(object sender, EventArgs e)
         {
-            if (busToa.ThemToa(MaToa, dtToaThuoc))
+            if (busToa.ThemToa(maToa, dtToaThuoc))
             {
                 MessageBox.Show("Đặt hàng thành công");
                 Close();

@@ -55,5 +55,18 @@ namespace QLPM
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_KiemTraThuoc", maToaParameter, maThuocParameter);
         }
+    
+        public virtual ObjectResult<Nullable<int>> sp_KiemTraXetNghiem(Nullable<int> maPK, Nullable<int> maXN)
+        {
+            var maPKParameter = maPK.HasValue ?
+                new ObjectParameter("MaPK", maPK) :
+                new ObjectParameter("MaPK", typeof(int));
+    
+            var maXNParameter = maXN.HasValue ?
+                new ObjectParameter("MaXN", maXN) :
+                new ObjectParameter("MaXN", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_KiemTraXetNghiem", maPKParameter, maXNParameter);
+        }
     }
 }

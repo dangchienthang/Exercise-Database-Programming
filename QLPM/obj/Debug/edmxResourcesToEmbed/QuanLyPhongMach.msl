@@ -2,6 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="QuanLyPhongMachModelStoreContainer" CdmEntityContainer="QuanLyPhongMachEntities">
     <FunctionImportMapping FunctionImportName="sp_KiemTraThuoc" FunctionName="QuanLyPhongMachModel.Store.sp_KiemTraThuoc" />
+    <FunctionImportMapping FunctionImportName="sp_KiemTraXetNghiem" FunctionName="QuanLyPhongMachModel.Store.sp_KiemTraXetNghiem" />
     <EntitySetMapping Name="BacSis">
       <EntityTypeMapping TypeName="QuanLyPhongMachModel.BacSi">
         <MappingFragment StoreEntitySet="BacSi">

@@ -25,7 +25,7 @@ namespace QLPM.BUS
 
             dtCTT.Columns.Add("MaToa");
             dtCTT.Columns.Add("MaThuoc");
-            dtCTT.Columns.Add("So luong");
+            dtCTT.Columns.Add("SoLuong");
             dtCTT.Columns.Add("LieuDung");
 
             return dtCTT;
@@ -126,7 +126,6 @@ namespace QLPM.BUS
                     ketQua = false;
                 }
             }
-
             return ketQua;
         }
     }
