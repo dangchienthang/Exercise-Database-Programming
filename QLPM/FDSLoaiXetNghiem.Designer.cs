@@ -82,7 +82,7 @@ namespace QLPM
             this.btThem.Location = new System.Drawing.Point(563, 174);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(93, 58);
-            this.btThem.TabIndex = 4;
+            this.btThem.TabIndex = 3;
             this.btThem.Text = "  Thêm";
             this.btThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btThem.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@ namespace QLPM
             this.btSua.Location = new System.Drawing.Point(792, 174);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(75, 58);
-            this.btSua.TabIndex = 6;
+            this.btSua.TabIndex = 5;
             this.btSua.Text = "Sửa";
             this.btSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btSua.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@ namespace QLPM
             this.btXoa.Location = new System.Drawing.Point(688, 174);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(75, 58);
-            this.btXoa.TabIndex = 5;
+            this.btXoa.TabIndex = 4;
             this.btXoa.Text = "Xóa";
             this.btXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btXoa.UseVisualStyleBackColor = true;
@@ -125,10 +125,10 @@ namespace QLPM
             this.gVLXN.RowHeadersWidth = 62;
             this.gVLXN.RowTemplate.Height = 28;
             this.gVLXN.Size = new System.Drawing.Size(835, 270);
-            this.gVLXN.TabIndex = 7;
+            this.gVLXN.TabIndex = 6;
             this.gVLXN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVLXN_CellClick);
             // 
-            // FLoaiXetNghiem
+            // FDSLoaiXetNghiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,7 +141,7 @@ namespace QLPM
             this.Controls.Add(this.txtMaLXN);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTenLXN);
-            this.Name = "FLoaiXetNghiem";
+            this.Name = "FDSLoaiXetNghiem";
             this.Text = "DANH SÁCH LOẠI XÉT NGHIỆM";
             this.Load += new System.EventHandler(this.FLoaiXetNghiem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gVLXN)).EndInit();

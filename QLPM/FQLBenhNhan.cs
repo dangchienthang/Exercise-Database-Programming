@@ -47,7 +47,7 @@ namespace QLPM
         {
             if (e.RowIndex >= 0 && e.RowIndex < gVBN.Rows.Count)
             {
-                txtMaBN.Text = gVBN.Rows[e.RowIndex].Cells["MaBS"].Value.ToString();
+                txtMaBN.Text = gVBN.Rows[e.RowIndex].Cells["MaBN"].Value.ToString();
                 txtTenBN.Text = gVBN.Rows[e.RowIndex].Cells[1].Value.ToString();
                 dtpNgaySinh.Text = gVBN.Rows[e.RowIndex].Cells[2].Value.ToString();
                 cbGioiTinh.Text = gVBN.Rows[e.RowIndex].Cells[3].Value.ToString();

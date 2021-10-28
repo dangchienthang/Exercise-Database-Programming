@@ -77,26 +77,32 @@ namespace QLPM
 
         private void btThemYT_Click(object sender, EventArgs e)
         {
-            if (txtTenYT.Text == "")
+            if (txtTenYT.Text == "" || txtDienThoai.Text == "")
                 MessageBox.Show("Điền đủ thông tin trước khi thêm");
             else
             {
-                YTa yt = new YTa();
-
-                yt.HoTenYT = txtTenYT.Text;
-                yt.NgaySinh = dtpNgaySinh.Value;
-                yt.MaLGT = Int32.Parse(cbGioiTinh.SelectedValue.ToString());
-                yt.DienThoai = txtDienThoai.Text;
-                yt.MaLNV = int.Parse(txtMaLNV.Text);
-
-                if (busYTa.TaoYTa(yt))
-                {
-                    MessageBox.Show("Tạo y tá thành công");
-                    busYTa.LayDSYTa(gVYT);
-                    CapNhatDG();
-                }
+                DateTime d = DateTime.Now;
+                if (d.Year - dtpNgaySinh.Value.Year < 18 || d.Year - dtpNgaySinh.Value.Year > 60)
+                    MessageBox.Show("Độ tuổi hợp lệ từ 18 đến 60!\n(Tuổi đã nhập " + (d.Year - dtpNgaySinh.Value.Year) + ")");
                 else
-                    MessageBox.Show("Tạo y tá thất bại");
+                {
+                    YTa yt = new YTa();
+
+                    yt.HoTenYT = txtTenYT.Text;
+                    yt.NgaySinh = dtpNgaySinh.Value;
+                    yt.MaLGT = Int32.Parse(cbGioiTinh.SelectedValue.ToString());
+                    yt.DienThoai = txtDienThoai.Text;
+                    yt.MaLNV = int.Parse(txtMaLNV.Text);
+
+                    if (busYTa.TaoYTa(yt))
+                    {
+                        MessageBox.Show("Tạo y tá thành công");
+                        busYTa.LayDSYTa(gVYT);
+                        CapNhatDG();
+                    }
+                    else
+                        MessageBox.Show("Tạo y tá thất bại");
+                }
             }
         }
 
@@ -118,24 +124,30 @@ namespace QLPM
                 MessageBox.Show("Vui lòng chọn hàng dữ liệu cần sửa!");
             else
             {
-                YTa yt = new YTa();
-
-                yt.MaYT = int.Parse(txtMaYT.Text);
-                yt.HoTenYT = txtTenYT.Text;
-                yt.NgaySinh = dtpNgaySinh.Value;
-                yt.MaLGT = int.Parse(cbGioiTinh.SelectedValue.ToString());
-                yt.DienThoai = txtDienThoai.Text;
-                yt.MaLNV = int.Parse(txtMaLNV.Text);
-
-                if (busYTa.SuaYTa(yt))
-                {
-                    MessageBox.Show("Sửa thành công");
-                    busYTa.SuaYTa(yt);
-                    busYTa.LayDSYTa(gVYT);
-                    CapNhatDG();
-                }
+                DateTime d = DateTime.Now;
+                if (d.Year - dtpNgaySinh.Value.Year < 18 || d.Year - dtpNgaySinh.Value.Year > 60)
+                    MessageBox.Show("Độ tuổi hợp lệ từ 18 đến 60!\n(Tuổi đã nhập " + (d.Year - dtpNgaySinh.Value.Year) + ")");
                 else
-                    MessageBox.Show("Sửa thất bại");
+                {
+                    YTa yt = new YTa();
+
+                    yt.MaYT = int.Parse(txtMaYT.Text);
+                    yt.HoTenYT = txtTenYT.Text;
+                    yt.NgaySinh = dtpNgaySinh.Value;
+                    yt.MaLGT = int.Parse(cbGioiTinh.SelectedValue.ToString());
+                    yt.DienThoai = txtDienThoai.Text;
+                    yt.MaLNV = int.Parse(txtMaLNV.Text);
+
+                    if (busYTa.SuaYTa(yt))
+                    {
+                        MessageBox.Show("Sửa thành công");
+                        busYTa.SuaYTa(yt);
+                        busYTa.LayDSYTa(gVYT);
+                        CapNhatDG();
+                    }
+                    else
+                        MessageBox.Show("Sửa thất bại");
+                }
             }
         }
     }

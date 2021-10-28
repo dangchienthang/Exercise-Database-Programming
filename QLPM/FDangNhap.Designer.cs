@@ -62,7 +62,7 @@ namespace QLPM
             this.txtMK.Name = "txtMK";
             this.txtMK.PasswordChar = '*';
             this.txtMK.Size = new System.Drawing.Size(141, 20);
-            this.txtMK.TabIndex = 3;
+            this.txtMK.TabIndex = 2;
             // 
             // label2
             // 
@@ -80,7 +80,7 @@ namespace QLPM
             this.btDangNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btDangNhap.Name = "btDangNhap";
             this.btDangNhap.Size = new System.Drawing.Size(56, 41);
-            this.btDangNhap.TabIndex = 4;
+            this.btDangNhap.TabIndex = 3;
             this.btDangNhap.Text = "Login";
             this.btDangNhap.UseVisualStyleBackColor = true;
             this.btDangNhap.Click += new System.EventHandler(this.btDangNhap_Click);

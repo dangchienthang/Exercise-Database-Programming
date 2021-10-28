@@ -221,6 +221,7 @@ namespace QLPM
             // dtpNgayTaiKham
             // 
             this.dtpNgayTaiKham.CustomFormat = "";
+            this.dtpNgayTaiKham.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayTaiKham.Location = new System.Drawing.Point(614, 112);
             this.dtpNgayTaiKham.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNgayTaiKham.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
@@ -294,6 +295,7 @@ namespace QLPM
             // dtpNgayKham
             // 
             this.dtpNgayKham.CustomFormat = "";
+            this.dtpNgayKham.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayKham.Location = new System.Drawing.Point(614, 24);
             this.dtpNgayKham.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNgayKham.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);

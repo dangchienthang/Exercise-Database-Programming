@@ -78,7 +78,7 @@ namespace QLPM
             this.gVCTPK.RowHeadersWidth = 62;
             this.gVCTPK.RowTemplate.Height = 28;
             this.gVCTPK.Size = new System.Drawing.Size(823, 292);
-            this.gVCTPK.TabIndex = 11;
+            this.gVCTPK.TabIndex = 10;
             this.gVCTPK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVCTPK_CellClick);
             // 
             // groupBox8
@@ -329,7 +329,7 @@ namespace QLPM
             this.btThemChiTiet.Location = new System.Drawing.Point(796, 706);
             this.btThemChiTiet.Name = "btThemChiTiet";
             this.btThemChiTiet.Size = new System.Drawing.Size(111, 58);
-            this.btThemChiTiet.TabIndex = 26;
+            this.btThemChiTiet.TabIndex = 11;
             this.btThemChiTiet.Text = "Thêm chi tiết xét nghiệm";
             this.btThemChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btThemChiTiet.UseVisualStyleBackColor = false;

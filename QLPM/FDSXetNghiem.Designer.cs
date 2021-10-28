@@ -146,7 +146,7 @@ namespace QLPM
             this.gVXN.RowHeadersWidth = 62;
             this.gVXN.RowTemplate.Height = 28;
             this.gVXN.Size = new System.Drawing.Size(835, 270);
-            this.gVXN.TabIndex = 7;
+            this.gVXN.TabIndex = 8;
             this.gVXN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVXN_CellClick);
             // 
             // cbLXN
@@ -167,7 +167,7 @@ namespace QLPM
             this.label3.TabIndex = 14;
             this.label3.Text = "Loại xét nghiệm:";
             // 
-            // FXetNghiem
+            // FDSXetNghiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -184,7 +184,7 @@ namespace QLPM
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMoTa);
             this.Controls.Add(this.txtTenXN);
-            this.Name = "FXetNghiem";
+            this.Name = "FDSXetNghiem";
             this.Text = "DANH SÁCH XÉT NGHIỆM";
             this.Load += new System.EventHandler(this.FXetNghiem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gVXN)).EndInit();

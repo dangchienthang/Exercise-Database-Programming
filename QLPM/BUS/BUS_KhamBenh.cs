@@ -164,5 +164,24 @@ namespace QLPM.BUS
                 MessageBox.Show("Không thấy toa thuốc để xóa");
             }
         }
+
+        public void LayDSPK(DataGridView dg)
+        {
+            dg.DataSource = dPK.LayDSPK();
+        }
+
+        public void LayDSBS(ComboBox cb)
+        {
+            cb.DataSource = dPK.LayDSBS();
+            cb.DisplayMember = "HoTenBS";
+            cb.ValueMember = "MaBS";
+        }
+
+        public void LayDSBN(ComboBox cb)
+        {
+            cb.DataSource = dPK.LayDSBN();
+            cb.DisplayMember = "HoTenBN";
+            cb.ValueMember = "MaBN";
+        }
     }
 }

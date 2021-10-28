@@ -68,10 +68,10 @@ namespace QLPM
             // 
             this.btThemLich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThemLich.Image = global::QLPM.Properties.Resources.Button_Add_icon;
-            this.btThemLich.Location = new System.Drawing.Point(566, 152);
+            this.btThemLich.Location = new System.Drawing.Point(557, 152);
             this.btThemLich.Name = "btThemLich";
-            this.btThemLich.Size = new System.Drawing.Size(89, 58);
-            this.btThemLich.TabIndex = 7;
+            this.btThemLich.Size = new System.Drawing.Size(98, 58);
+            this.btThemLich.TabIndex = 6;
             this.btThemLich.Text = "Thêm lịch";
             this.btThemLich.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btThemLich.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@ namespace QLPM
             this.btSuaLich.Location = new System.Drawing.Point(792, 152);
             this.btSuaLich.Name = "btSuaLich";
             this.btSuaLich.Size = new System.Drawing.Size(75, 58);
-            this.btSuaLich.TabIndex = 9;
+            this.btSuaLich.TabIndex = 8;
             this.btSuaLich.Text = "Sửa";
             this.btSuaLich.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btSuaLich.UseVisualStyleBackColor = true;
@@ -97,7 +97,7 @@ namespace QLPM
             this.btXoaLich.Location = new System.Drawing.Point(688, 152);
             this.btXoaLich.Name = "btXoaLich";
             this.btXoaLich.Size = new System.Drawing.Size(75, 58);
-            this.btXoaLich.TabIndex = 8;
+            this.btXoaLich.TabIndex = 7;
             this.btXoaLich.Text = "Xóa";
             this.btXoaLich.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btXoaLich.UseVisualStyleBackColor = true;
@@ -114,7 +114,7 @@ namespace QLPM
             this.gVLK.RowHeadersWidth = 62;
             this.gVLK.RowTemplate.Height = 28;
             this.gVLK.Size = new System.Drawing.Size(835, 270);
-            this.gVLK.TabIndex = 10;
+            this.gVLK.TabIndex = 9;
             // 
             // cbBN
             // 
@@ -123,7 +123,7 @@ namespace QLPM
             this.cbBN.Margin = new System.Windows.Forms.Padding(2);
             this.cbBN.Name = "cbBN";
             this.cbBN.Size = new System.Drawing.Size(237, 21);
-            this.cbBN.TabIndex = 16;
+            this.cbBN.TabIndex = 2;
             // 
             // label5
             // 
@@ -141,7 +141,7 @@ namespace QLPM
             this.cbYT.Margin = new System.Windows.Forms.Padding(2);
             this.cbYT.Name = "cbYT";
             this.cbYT.Size = new System.Drawing.Size(237, 21);
-            this.cbYT.TabIndex = 18;
+            this.cbYT.TabIndex = 3;
             // 
             // label1
             // 
@@ -159,7 +159,7 @@ namespace QLPM
             this.cbBS.Margin = new System.Windows.Forms.Padding(2);
             this.cbBS.Name = "cbBS";
             this.cbBS.Size = new System.Drawing.Size(237, 21);
-            this.cbBS.TabIndex = 19;
+            this.cbBS.TabIndex = 4;
             // 
             // label4
             // 
@@ -180,7 +180,7 @@ namespace QLPM
             this.dtpNgayHen.MinDate = new System.DateTime(2003, 1, 1, 0, 0, 0, 0);
             this.dtpNgayHen.Name = "dtpNgayHen";
             this.dtpNgayHen.Size = new System.Drawing.Size(237, 20);
-            this.dtpNgayHen.TabIndex = 21;
+            this.dtpNgayHen.TabIndex = 5;
             this.dtpNgayHen.Value = new System.DateTime(2021, 9, 14, 0, 0, 0, 0);
             // 
             // label7

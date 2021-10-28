@@ -74,7 +74,7 @@ namespace QLPM
             this.gVCTPK.RowHeadersWidth = 62;
             this.gVCTPK.RowTemplate.Height = 28;
             this.gVCTPK.Size = new System.Drawing.Size(823, 292);
-            this.gVCTPK.TabIndex = 11;
+            this.gVCTPK.TabIndex = 10;
             this.gVCTPK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVCTPK_CellClick);
             // 
             // groupBox8
@@ -114,7 +114,7 @@ namespace QLPM
             this.txtMaXN.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaXN.Name = "txtMaXN";
             this.txtMaXN.Size = new System.Drawing.Size(230, 20);
-            this.txtMaXN.TabIndex = 24;
+            this.txtMaXN.TabIndex = 2;
             // 
             // dtpNgayHen
             // 

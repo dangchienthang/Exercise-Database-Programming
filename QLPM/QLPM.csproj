@@ -284,6 +284,9 @@
     <EmbeddedResource Include="FDSLoaiXetNghiem.resx">
       <DependentUpon>FDSLoaiXetNghiem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FDSPhieuKham.resx">
+      <DependentUpon>FDSPhieuKham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FQLLichKham.resx">
       <DependentUpon>FQLLichKham.cs</DependentUpon>
     </EmbeddedResource>

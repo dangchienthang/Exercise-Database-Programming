@@ -77,7 +77,7 @@ namespace QLPM
             this.btPK.Location = new System.Drawing.Point(0, 305);
             this.btPK.Name = "btPK";
             this.btPK.Size = new System.Drawing.Size(170, 53);
-            this.btPK.TabIndex = 17;
+            this.btPK.TabIndex = 5;
             this.btPK.Text = "  Phiếu khám bệnh";
             this.btPK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btPK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -97,7 +97,7 @@ namespace QLPM
             this.btTT.Location = new System.Drawing.Point(0, 252);
             this.btTT.Name = "btTT";
             this.btTT.Size = new System.Drawing.Size(170, 53);
-            this.btTT.TabIndex = 16;
+            this.btTT.TabIndex = 4;
             this.btTT.Text = "  Toa thuốc";
             this.btTT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btTT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -117,7 +117,7 @@ namespace QLPM
             this.btXN.Location = new System.Drawing.Point(0, 199);
             this.btXN.Name = "btXN";
             this.btXN.Size = new System.Drawing.Size(170, 53);
-            this.btXN.TabIndex = 13;
+            this.btXN.TabIndex = 3;
             this.btXN.Text = "  Xét nghiệm";
             this.btXN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btXN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -137,7 +137,7 @@ namespace QLPM
             this.btLXN.Location = new System.Drawing.Point(0, 146);
             this.btLXN.Name = "btLXN";
             this.btLXN.Size = new System.Drawing.Size(170, 53);
-            this.btLXN.TabIndex = 12;
+            this.btLXN.TabIndex = 2;
             this.btLXN.Text = "  Loại xét nghiệm";
             this.btLXN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLXN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -196,7 +196,7 @@ namespace QLPM
             this.btLK.Location = new System.Drawing.Point(0, 93);
             this.btLK.Name = "btLK";
             this.btLK.Size = new System.Drawing.Size(170, 53);
-            this.btLK.TabIndex = 3;
+            this.btLK.TabIndex = 1;
             this.btLK.Text = "  Lịch khám";
             this.btLK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -215,8 +215,8 @@ namespace QLPM
             // 
             // panelFormCon
             // 
-            this.panelFormCon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panelFormCon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelFormCon.Location = new System.Drawing.Point(170, 93);
             this.panelFormCon.Name = "panelFormCon";

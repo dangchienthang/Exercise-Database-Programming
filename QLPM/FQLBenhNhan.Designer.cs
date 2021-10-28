@@ -145,9 +145,9 @@ namespace QLPM
             // 
             this.btThemBN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThemBN.Image = global::QLPM.Properties.Resources.Button_Add_icon;
-            this.btThemBN.Location = new System.Drawing.Point(556, 174);
+            this.btThemBN.Location = new System.Drawing.Point(543, 174);
             this.btThemBN.Name = "btThemBN";
-            this.btThemBN.Size = new System.Drawing.Size(100, 58);
+            this.btThemBN.Size = new System.Drawing.Size(113, 58);
             this.btThemBN.TabIndex = 7;
             this.btThemBN.Text = "Thêm bệnh nhân";
             this.btThemBN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

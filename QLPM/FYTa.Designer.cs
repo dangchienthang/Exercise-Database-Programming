@@ -70,7 +70,7 @@ namespace QLPM
             this.btLK.Location = new System.Drawing.Point(0, 146);
             this.btLK.Name = "btLK";
             this.btLK.Size = new System.Drawing.Size(170, 53);
-            this.btLK.TabIndex = 8;
+            this.btLK.TabIndex = 2;
             this.btLK.Text = "Quản lý lịch khám";
             this.btLK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btLK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -129,7 +129,7 @@ namespace QLPM
             this.bTBN.Location = new System.Drawing.Point(0, 93);
             this.bTBN.Name = "bTBN";
             this.bTBN.Size = new System.Drawing.Size(170, 53);
-            this.bTBN.TabIndex = 3;
+            this.bTBN.TabIndex = 1;
             this.bTBN.Text = "Quản lý bệnh nhân";
             this.bTBN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bTBN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

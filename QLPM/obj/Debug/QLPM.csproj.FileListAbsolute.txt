@@ -51,3 +51,4 @@ D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FQLLichKham.resources
 D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FQLThuoc.resources
 D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FQLYTa.resources
 D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FYTa.resources
+D:\Study\DA\BT\QLPM\obj\Debug\QLPM.FDSPhieuKham.resources

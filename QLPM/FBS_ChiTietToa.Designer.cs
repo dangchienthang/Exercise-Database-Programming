@@ -59,7 +59,7 @@ namespace QLPM
             this.btSuaTT.Location = new System.Drawing.Point(718, 164);
             this.btSuaTT.Name = "btSuaTT";
             this.btSuaTT.Size = new System.Drawing.Size(75, 58);
-            this.btSuaTT.TabIndex = 31;
+            this.btSuaTT.TabIndex = 6;
             this.btSuaTT.Text = "Sửa";
             this.btSuaTT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btSuaTT.UseVisualStyleBackColor = false;
@@ -97,7 +97,7 @@ namespace QLPM
             this.btXoaTT.Location = new System.Drawing.Point(837, 164);
             this.btXoaTT.Name = "btXoaTT";
             this.btXoaTT.Size = new System.Drawing.Size(75, 58);
-            this.btXoaTT.TabIndex = 32;
+            this.btXoaTT.TabIndex = 7;
             this.btXoaTT.Text = "Xóa";
             this.btXoaTT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btXoaTT.UseVisualStyleBackColor = false;
@@ -112,7 +112,7 @@ namespace QLPM
             this.btThemTT.Location = new System.Drawing.Point(512, 164);
             this.btThemTT.Name = "btThemTT";
             this.btThemTT.Size = new System.Drawing.Size(166, 58);
-            this.btThemTT.TabIndex = 30;
+            this.btThemTT.TabIndex = 5;
             this.btThemTT.Text = "Thêm chi tiết toa thuốc";
             this.btThemTT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btThemTT.UseVisualStyleBackColor = false;
@@ -217,7 +217,7 @@ namespace QLPM
             this.label18.TabIndex = 33;
             this.label18.Text = "CHI TIẾT TOA THUỐC";
             // 
-            // FCTToaThuoc
+            // FChiTietToa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -231,7 +231,7 @@ namespace QLPM
             this.Controls.Add(this.label18);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "FCTToaThuoc";
+            this.Name = "FChiTietToa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết toa thuốc";
             this.Activated += new System.EventHandler(this.FCTToaThuoc_Activated);

@@ -36,6 +36,7 @@ namespace QLPM
         {
             //Cập nhật lại textbox sau khi thực hiện hành động thêm, sửa hoặc xóa
             txtMaBS.Text = "";
+            txtDienThoai.Text = "";
 
             //Cập nhật DataGridView
             gVBS.Columns.Clear();
@@ -56,58 +57,70 @@ namespace QLPM
 
         private void btThemBS_Click(object sender, EventArgs e)
         {
-            if (txtTenBS.Text == "")
+            if (txtTenBS.Text == "" || txtDienThoai.Text == "")
             {
                 MessageBox.Show("Điền đầy đủ thông tin trước khi thêm");
             }
             else
             {
-                BacSi bs = new BacSi();
-
-                bs.HoTenBS = txtTenBS.Text;
-                bs.NgaySinh = dtpNgaySinh.Value;
-                bs.MaLGT = Int32.Parse(cbGioiTinh.SelectedValue.ToString());
-                bs.DienThoai = txtDienThoai.Text;
-                bs.MaLNV = int.Parse(txtMaLNV.Text);
-
-                if (busBacSi.TaoBacSi(bs))
-                {
-                    MessageBox.Show("Tạo bác sĩ thành công");
-                    busBacSi.LayDSBacSi(gVBS);
-                    CapNhatDGBS();
-                }
+                DateTime d = DateTime.Now;
+                if (d.Year - dtpNgaySinh.Value.Year < 18 || d.Year - dtpNgaySinh.Value.Year > 60)
+                    MessageBox.Show("Độ tuổi hợp lệ từ 18 đến 60!\n(Tuổi đã nhập " + (d.Year - dtpNgaySinh.Value.Year) + ")");
                 else
                 {
-                    MessageBox.Show("Tạo bác sĩ thất bại");
+                    BacSi bs = new BacSi();
+
+                    bs.HoTenBS = txtTenBS.Text;
+                    bs.NgaySinh = dtpNgaySinh.Value;
+                    bs.MaLGT = Int32.Parse(cbGioiTinh.SelectedValue.ToString());
+                    bs.DienThoai = txtDienThoai.Text;
+                    bs.MaLNV = int.Parse(txtMaLNV.Text);
+
+                    if (busBacSi.TaoBacSi(bs))
+                    {
+                        MessageBox.Show("Tạo bác sĩ thành công");
+                        busBacSi.LayDSBacSi(gVBS);
+                        CapNhatDGBS();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tạo bác sĩ thất bại");
+                    }
                 }
             }
         }
 
         private void btSuaBS_Click(object sender, EventArgs e)
         {
-            if (txtMaBS.Text == "")
+            if (txtMaBS.Text == "" || txtDienThoai.Text == "")
                 MessageBox.Show("Vui lòng chọn hàng dữ liệu cần sửa!");
             else
             {
-                BacSi bs = new BacSi();
-
-                bs.MaBS = int.Parse(txtMaBS.Text);
-                bs.HoTenBS = txtTenBS.Text;
-                bs.NgaySinh = dtpNgaySinh.Value;
-                bs.MaLGT = int.Parse(cbGioiTinh.SelectedValue.ToString());
-                bs.DienThoai = txtDienThoai.Text;
-                bs.MaLNV = int.Parse(txtMaLNV.Text);
-
-                if (busBacSi.SuaBacSi(bs))
-                {
-                    MessageBox.Show("Sửa thành công");
-                    busBacSi.SuaBacSi(bs);
-                    busBacSi.LayDSBacSi(gVBS);
-                    CapNhatDGBS();
-                }
+                DateTime d = DateTime.Now;
+                if (d.Year - dtpNgaySinh.Value.Year < 18 || d.Year - dtpNgaySinh.Value.Year > 60)
+                    MessageBox.Show("Độ tuổi hợp lệ từ 18 đến 60!\n(Tuổi đã nhập " + (d.Year - dtpNgaySinh.Value.Year) + ")");
                 else
                 {
-                    MessageBox.Show("Sửa thất bại");
+                    BacSi bs = new BacSi();
+
+                    bs.MaBS = int.Parse(txtMaBS.Text);
+                    bs.HoTenBS = txtTenBS.Text;
+                    bs.NgaySinh = dtpNgaySinh.Value;
+                    bs.MaLGT = int.Parse(cbGioiTinh.SelectedValue.ToString());
+                    bs.DienThoai = txtDienThoai.Text;
+                    bs.MaLNV = int.Parse(txtMaLNV.Text);
+
+                    if (busBacSi.SuaBacSi(bs))
+                    {
+                        MessageBox.Show("Sửa thành công");
+                        busBacSi.SuaBacSi(bs);
+                        busBacSi.LayDSBacSi(gVBS);
+                        CapNhatDGBS();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa thất bại");
+                    }
                 }
             }
         }

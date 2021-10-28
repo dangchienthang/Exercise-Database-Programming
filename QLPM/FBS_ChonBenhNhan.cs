@@ -57,10 +57,10 @@ namespace QLPM
             if (e.RowIndex >= 0 && e.RowIndex < gVLK.Rows.Count)
             {
                 txtMaLK.Text = gVLK.Rows[e.RowIndex].Cells["MaLK"].Value.ToString();
-                cbBN.Text = gVLK.Rows[e.RowIndex].Cells["MaBN"].Value.ToString();
-                cbBS.Text = gVLK.Rows[e.RowIndex].Cells["MaBS"].Value.ToString();
-                cbYT.Text = gVLK.Rows[e.RowIndex].Cells["MaYT"].Value.ToString();
-                dtpNgayHen.Text = gVLK.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtMaBN.Text = gVLK.Rows[e.RowIndex].Cells["MaBN"].Value.ToString();
+                txtMaYT.Text = gVLK.Rows[e.RowIndex].Cells["MaYT"].Value.ToString();
+                txtMaBS.Text = gVLK.Rows[e.RowIndex].Cells["MaBS"].Value.ToString();
+                dtpNgayHen.Text = gVLK.Rows[e.RowIndex].Cells["NgayHen"].Value.ToString();
             }
         }
 

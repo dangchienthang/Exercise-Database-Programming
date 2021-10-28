@@ -163,9 +163,9 @@ namespace QLPM
             // 
             this.btThemYT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThemYT.Image = global::QLPM.Properties.Resources.Button_Add_icon;
-            this.btThemYT.Location = new System.Drawing.Point(561, 174);
+            this.btThemYT.Location = new System.Drawing.Point(555, 174);
             this.btThemYT.Name = "btThemYT";
-            this.btThemYT.Size = new System.Drawing.Size(95, 58);
+            this.btThemYT.Size = new System.Drawing.Size(101, 58);
             this.btThemYT.TabIndex = 7;
             this.btThemYT.Text = "Thêm y tá";
             this.btThemYT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

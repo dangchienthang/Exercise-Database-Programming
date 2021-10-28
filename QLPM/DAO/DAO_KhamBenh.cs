@@ -148,5 +148,33 @@ namespace QLPM.DAO
             }
             return tinhTrang;
         }
+
+        public dynamic LayDSPK()
+        {
+            var ds = db.PhieuKhams.Select(s => s).ToList();
+            return ds;
+        }
+
+        public dynamic LayDSBS()
+        {
+            var ds = db.BacSis.Select(s => new
+            {
+                s.MaBS,
+                s.HoTenBS
+            }).ToList();
+
+            return ds;
+        }
+
+        public dynamic LayDSBN()
+        {
+            var ds = db.BenhNhans.Select(s => new
+            {
+                s.MaBN,
+                s.HoTenBN
+            }).ToList();
+
+            return ds;
+        }
     }
 }

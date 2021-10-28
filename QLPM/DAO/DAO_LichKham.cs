@@ -46,8 +46,8 @@ namespace QLPM.DAO
             {
                 s.MaLK,
                 s.MaBN,
-                s.MaBS,
                 s.MaYT,
+                s.MaBS,
                 s.NgayHen,
             }).ToList();
             return ds;
