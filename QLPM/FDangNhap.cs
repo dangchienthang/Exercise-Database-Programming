@@ -73,5 +73,19 @@ namespace QLPM
             else
                 MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
         }
+
+        private void FDangNhap_Activated(object sender, EventArgs e)
+        {
+            txtMK.Text = "";
+            checkBox.Checked = false;
+        }
+
+        private void checkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox.Checked)
+                txtMK.PasswordChar = default(char);
+            else
+                txtMK.PasswordChar = '*';
+        }
     }
 }

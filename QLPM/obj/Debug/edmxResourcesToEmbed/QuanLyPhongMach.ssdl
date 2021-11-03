@@ -378,6 +378,18 @@
     <Parameter Name="MaPK" Type="int" Mode="In" />
     <Parameter Name="MaXN" Type="int" Mode="In" />
   </Function>
+  <Function Name="timKiemBacSi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chuoi" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="timKiemBenhNhan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chuoi" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="timKiemThuoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chuoi" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="timKiemYTa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chuoi" Type="nvarchar" Mode="In" />
+  </Function>
   <EntityContainer Name="QuanLyPhongMachModelStoreContainer">
     <EntitySet Name="BacSi" EntityType="Self.BacSi" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BenhNhan" EntityType="Self.BenhNhan" Schema="dbo" store:Type="Tables" />

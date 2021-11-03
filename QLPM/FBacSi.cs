@@ -118,5 +118,35 @@ namespace QLPM
         {
             MoFormCon(new FDSXetNghiem(), sender);
         }
+
+        private void Reset()
+        {
+            VoHieuButton();
+            labelTieuDe.Text = "BÁC SĨ";
+            panelTieuDe.BackColor = Color.FromArgb(69, 69, 69);
+            panelLogo.BackColor = Color.FromArgb(39, 39, 39);
+            labelTieuDe.BackColor = Color.FromArgb(69, 69, 69);
+            nutHienTai = null;
+            btQuayLai.Visible = false;
+        }
+
+        private void btQuayLai_Click(object sender, EventArgs e)
+        {
+            if (kichHoatForm != null)
+                kichHoatForm.Close();
+            Reset();
+        }
+
+        private void FBacSi_Load(object sender, EventArgs e)
+        {
+            panelLogo.BackColor = Color.FromArgb(39, 39, 39);
+        }
+
+        private void FBacSi_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+                e.Cancel = MessageBox.Show("Bạn muốn đăng xuất?", "Xác nhận",
+                                           MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No;
+        }
     }
 }

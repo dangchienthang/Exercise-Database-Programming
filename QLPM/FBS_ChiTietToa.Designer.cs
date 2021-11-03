@@ -160,6 +160,7 @@ namespace QLPM
             this.txtSL.Name = "txtSL";
             this.txtSL.Size = new System.Drawing.Size(230, 20);
             this.txtSL.TabIndex = 3;
+            this.txtSL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSL_KeyPress);
             // 
             // label2
             // 

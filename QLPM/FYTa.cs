@@ -102,5 +102,35 @@ namespace QLPM
         {
             Close();
         }
+
+        private void Reset()
+        {
+            VoHieuButton();
+            labelTieuDe.Text = "Y TÁ";
+            panelTieuDe.BackColor = Color.FromArgb(69, 69, 69);
+            panelLogo.BackColor = Color.FromArgb(39, 39, 39);
+            labelTieuDe.BackColor = Color.FromArgb(69, 69, 69);
+            nutHienTai = null;
+            btQuayLai.Visible = false;
+        }
+
+        private void btQuayLai_Click(object sender, EventArgs e)
+        {
+            if (kichHoatForm != null)
+                kichHoatForm.Close();
+            Reset();
+        }
+
+        private void FYTa_Load(object sender, EventArgs e)
+        {
+            panelLogo.BackColor = Color.FromArgb(39, 39, 39);
+        }
+
+        private void FYTa_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+                e.Cancel = MessageBox.Show("Bạn muốn đăng xuất?", "Xác nhận",
+                                           MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No;
+        }
     }
 }

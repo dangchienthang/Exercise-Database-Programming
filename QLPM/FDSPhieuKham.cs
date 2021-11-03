@@ -92,8 +92,8 @@ namespace QLPM
                 PhieuKham pk = new PhieuKham();
 
                 pk.MaPK = int.Parse(txtMaPK.Text);
-                pk.MaBS = int.Parse(cbBS.Text);
-                pk.MaBN = int.Parse(cbBN.Text);
+                pk.MaBS = int.Parse(cbBS.SelectedValue.ToString());
+                pk.MaBN = int.Parse(cbBN.SelectedValue.ToString());
                 pk.NgayKham = dtpNgayKham.Value;
                 pk.TrieuChung = txtTrieuChung.Text;
                 pk.ChuanDoan = txtChuanDoan.Text;

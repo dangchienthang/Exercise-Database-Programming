@@ -43,6 +43,7 @@ namespace QLPM
             this.label4 = new System.Windows.Forms.Label();
             this.dtpNgayHen = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
+            this.btThongKe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gVLK)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +69,7 @@ namespace QLPM
             // 
             this.btThemLich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThemLich.Image = global::QLPM.Properties.Resources.Button_Add_icon;
-            this.btThemLich.Location = new System.Drawing.Point(557, 152);
+            this.btThemLich.Location = new System.Drawing.Point(515, 154);
             this.btThemLich.Name = "btThemLich";
             this.btThemLich.Size = new System.Drawing.Size(98, 58);
             this.btThemLich.TabIndex = 6;
@@ -81,7 +82,7 @@ namespace QLPM
             // 
             this.btSuaLich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSuaLich.Image = global::QLPM.Properties.Resources.fix_it_icon;
-            this.btSuaLich.Location = new System.Drawing.Point(792, 152);
+            this.btSuaLich.Location = new System.Drawing.Point(700, 154);
             this.btSuaLich.Name = "btSuaLich";
             this.btSuaLich.Size = new System.Drawing.Size(75, 58);
             this.btSuaLich.TabIndex = 8;
@@ -94,7 +95,7 @@ namespace QLPM
             // 
             this.btXoaLich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btXoaLich.Image = global::QLPM.Properties.Resources.delete_file_icon;
-            this.btXoaLich.Location = new System.Drawing.Point(688, 152);
+            this.btXoaLich.Location = new System.Drawing.Point(619, 154);
             this.btXoaLich.Name = "btXoaLich";
             this.btXoaLich.Size = new System.Drawing.Size(75, 58);
             this.btXoaLich.TabIndex = 7;
@@ -114,7 +115,7 @@ namespace QLPM
             this.gVLK.RowHeadersWidth = 62;
             this.gVLK.RowTemplate.Height = 28;
             this.gVLK.Size = new System.Drawing.Size(835, 270);
-            this.gVLK.TabIndex = 9;
+            this.gVLK.TabIndex = 10;
             // 
             // cbBN
             // 
@@ -192,11 +193,25 @@ namespace QLPM
             this.label7.TabIndex = 20;
             this.label7.Text = "Ngày hẹn:";
             // 
+            // btThongKe
+            // 
+            this.btThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThongKe.Image = global::QLPM.Properties.Resources.list_icon;
+            this.btThongKe.Location = new System.Drawing.Point(781, 154);
+            this.btThongKe.Name = "btThongKe";
+            this.btThongKe.Size = new System.Drawing.Size(86, 58);
+            this.btThongKe.TabIndex = 9;
+            this.btThongKe.Text = "Thống kê";
+            this.btThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btThongKe.UseVisualStyleBackColor = true;
+            this.btThongKe.Click += new System.EventHandler(this.btThongKe_Click);
+            // 
             // FQLLichKham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 570);
+            this.Controls.Add(this.btThongKe);
             this.Controls.Add(this.cbYT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbBS);
@@ -235,5 +250,6 @@ namespace QLPM
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtpNgayHen;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btThongKe;
     }
 }

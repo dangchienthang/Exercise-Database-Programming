@@ -1,4 +1,5 @@
 ﻿using QLPM.BUS;
+using QLPM.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -84,6 +85,8 @@ namespace QLPM
                 DateTime d = DateTime.Now;
                 if (d.Year - dtpNgaySinh.Value.Year < 18 || d.Year - dtpNgaySinh.Value.Year > 60)
                     MessageBox.Show("Độ tuổi hợp lệ từ 18 đến 60!\n(Tuổi đã nhập " + (d.Year - dtpNgaySinh.Value.Year) + ")");
+                else if (txtDienThoai.Text.Trim().Length != 10)
+                    MessageBox.Show("Số điện thoại Không hợp lệ");
                 else
                 {
                     YTa yt = new YTa();
@@ -127,6 +130,8 @@ namespace QLPM
                 DateTime d = DateTime.Now;
                 if (d.Year - dtpNgaySinh.Value.Year < 18 || d.Year - dtpNgaySinh.Value.Year > 60)
                     MessageBox.Show("Độ tuổi hợp lệ từ 18 đến 60!\n(Tuổi đã nhập " + (d.Year - dtpNgaySinh.Value.Year) + ")");
+                else if (txtDienThoai.Text.Trim().Length != 10)
+                    MessageBox.Show("Số điện thoại Không hợp lệ");
                 else
                 {
                     YTa yt = new YTa();
@@ -149,6 +154,26 @@ namespace QLPM
                         MessageBox.Show("Sửa thất bại");
                 }
             }
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            busYTa.TimKiemYTa(gVYT, txtTimKiem.Text.ToString());
+        }
+
+        private void btThongKe_Click(object sender, EventArgs e)
+        {
+            ThongKeYTa t = new ThongKeYTa();
+            FReport f = new FReport();
+            t.SetDataSource(busYTa.LayDSYT().ToList());
+            f.Report.ReportSource = t;
+            f.Show();
+        }
+
+        private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

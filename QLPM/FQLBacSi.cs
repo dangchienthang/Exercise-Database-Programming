@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLPM.Report;
 
 namespace QLPM
 {
@@ -30,6 +31,12 @@ namespace QLPM
             gVBS.Columns[2].Width = (int)(gVBS.Width * 0.2);
             gVBS.Columns[3].Width = (int)(gVBS.Width * 0.2);
             gVBS.Columns[4].Width = (int)(gVBS.Width * 0.3);
+
+            gVBS.Columns[0].HeaderText = "Mã bác sĩ";
+            gVBS.Columns[1].HeaderText = "Tên bác sĩ";
+            gVBS.Columns[2].HeaderText = "Ngày sinh";
+            gVBS.Columns[3].HeaderText = "Giới tính";
+            gVBS.Columns[4].HeaderText = "Điện thoại";
         }
 
         public void CapNhatDGBS()
@@ -66,11 +73,13 @@ namespace QLPM
                 DateTime d = DateTime.Now;
                 if (d.Year - dtpNgaySinh.Value.Year < 18 || d.Year - dtpNgaySinh.Value.Year > 60)
                     MessageBox.Show("Độ tuổi hợp lệ từ 18 đến 60!\n(Tuổi đã nhập " + (d.Year - dtpNgaySinh.Value.Year) + ")");
+                else if (txtDienThoai.Text.Trim().Length != 10)
+                    MessageBox.Show("Số điện thoại Không hợp lệ");
                 else
                 {
                     BacSi bs = new BacSi();
 
-                    bs.HoTenBS = txtTenBS.Text;
+                    bs.HoTenBS = txtTenBS.Text.Trim();
                     bs.NgaySinh = dtpNgaySinh.Value;
                     bs.MaLGT = Int32.Parse(cbGioiTinh.SelectedValue.ToString());
                     bs.DienThoai = txtDienThoai.Text;
@@ -99,6 +108,8 @@ namespace QLPM
                 DateTime d = DateTime.Now;
                 if (d.Year - dtpNgaySinh.Value.Year < 18 || d.Year - dtpNgaySinh.Value.Year > 60)
                     MessageBox.Show("Độ tuổi hợp lệ từ 18 đến 60!\n(Tuổi đã nhập " + (d.Year - dtpNgaySinh.Value.Year) + ")");
+                else if (txtDienThoai.Text.Trim().Length != 10)
+                    MessageBox.Show("Số điện thoại Không hợp lệ");
                 else
                 {
                     BacSi bs = new BacSi();
@@ -158,6 +169,26 @@ namespace QLPM
             HienThiDSBacSi();
             busBacSi.LayDSLoaiGioiTinh(cbGioiTinh);
             DoiMauNut();
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            busBacSi.TimKiemBacSi(gVBS, txtTimKiem.Text.ToString());
+        }
+
+        private void btThongKe_Click(object sender, EventArgs e)
+        {
+            ThongKeBacSi t = new ThongKeBacSi();
+            FReport f = new FReport();
+            t.SetDataSource(busBacSi.LayDSBS().ToList());
+            f.Report.ReportSource = t;
+            f.Show();
+        }
+
+        private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

@@ -100,6 +100,18 @@
       <End Role="XetNghiem" EntitySet="XetNghiems" />
       <End Role="XetNghiem_PhieuKham" EntitySet="XetNghiem_PhieuKham" />
     </AssociationSet>
+    <FunctionImport Name="timKiemBacSi" ReturnType="Collection(QuanLyPhongMachModel.timKiemBacSi_Result)">
+      <Parameter Name="chuoi" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="timKiemBenhNhan" ReturnType="Collection(QuanLyPhongMachModel.timKiemBenhNhan_Result)">
+      <Parameter Name="chuoi" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="timKiemThuoc" ReturnType="Collection(QuanLyPhongMachModel.timKiemThuoc_Result)">
+      <Parameter Name="chuoi" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="timKiemYTa" ReturnType="Collection(QuanLyPhongMachModel.timKiemYTa_Result)">
+      <Parameter Name="chuoi" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="BacSi">
     <Key>
@@ -509,4 +521,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <ComplexType Name="timKiemBacSi_Result">
+    <Property Type="Int32" Name="MaBS" Nullable="false" />
+    <Property Type="String" Name="HoTenBS" Nullable="false" MaxLength="30" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="false" />
+    <Property Type="String" Name="TenLoaiGT" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="DienThoai" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="MaLNV" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="timKiemBenhNhan_Result">
+    <Property Type="Int32" Name="MaBN" Nullable="false" />
+    <Property Type="String" Name="HoTenBN" Nullable="false" MaxLength="30" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="false" />
+    <Property Type="String" Name="TenLoaiGT" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="DienThoai" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="DiaChi" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="timKiemThuoc_Result">
+    <Property Type="Int32" Name="MaThuoc" Nullable="false" />
+    <Property Type="String" Name="TenThuoc" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="MoTa" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="timKiemYTa_Result">
+    <Property Type="Int32" Name="MaYT" Nullable="false" />
+    <Property Type="String" Name="HoTenYT" Nullable="false" MaxLength="30" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="false" />
+    <Property Type="String" Name="TenLoaiGT" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="DienThoai" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="MaLNV" Nullable="false" />
+  </ComplexType>
 </Schema>

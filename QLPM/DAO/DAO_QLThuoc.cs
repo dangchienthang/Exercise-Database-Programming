@@ -76,5 +76,18 @@ namespace QLPM.DAO
             }
             return tinhTrang;
         }
+
+        public dynamic TimKiemThuoc(string chuoi)
+        {
+            var ds = db.timKiemThuoc(chuoi).Select(s => s).ToList();
+            return ds;
+        }
+
+        public dynamic LayDST()
+        {
+            var ds = db.Thuocs.Select(s => s).ToList();
+
+            return ds;
+        }
     }
 }

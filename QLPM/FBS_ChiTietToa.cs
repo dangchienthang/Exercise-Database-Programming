@@ -101,5 +101,11 @@ namespace QLPM
         {
             HienThiDSToa();
         }
+
+        private void txtSL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }   
 }

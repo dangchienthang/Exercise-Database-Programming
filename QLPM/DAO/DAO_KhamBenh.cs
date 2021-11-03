@@ -151,7 +151,15 @@ namespace QLPM.DAO
 
         public dynamic LayDSPK()
         {
-            var ds = db.PhieuKhams.Select(s => s).ToList();
+            var ds = db.PhieuKhams.Select(s => new {
+                s.MaPK,
+                s.BacSi.HoTenBS,
+                s.BenhNhan.HoTenBN,
+                s.NgayKham,
+                s.TrieuChung,
+                s.ChuanDoan,
+                s.NgayTaiKham
+            }).ToList();
             return ds;
         }
 
@@ -174,6 +182,21 @@ namespace QLPM.DAO
                 s.HoTenBN
             }).ToList();
 
+            return ds;
+        }
+
+        public dynamic ThongKePK(DateTime mocBD, DateTime mocKT)
+        {
+            var ds = db.PhieuKhams.Where(s => s.NgayKham >= mocBD && s.NgayKham <= mocKT).Select(s => new
+            {
+                s.MaPK,
+                s.BacSi.HoTenBS,
+                s.BenhNhan.HoTenBN,
+                s.NgayKham,
+                s.TrieuChung,
+                s.ChuanDoan,
+                s.NgayTaiKham
+            }).ToList();
             return ds;
         }
     }

@@ -75,5 +75,15 @@ namespace QLPM.BUS
                 MessageBox.Show("Không thấy y tá để xóa");
             }
         }
+
+        public void TimKiemYTa(DataGridView dg, string chuoi)
+        {
+            dg.DataSource = dYTa.TimKiemYTa(chuoi);
+        }
+
+        public List<YTa> LayDSYT()
+        {
+            return dYTa.LayDSYT();
+        }
     }
 }

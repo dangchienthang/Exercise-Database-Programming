@@ -383,6 +383,18 @@
           <Parameter Name="MaPK" Type="int" Mode="In" />
           <Parameter Name="MaXN" Type="int" Mode="In" />
         </Function>
+        <Function Name="timKiemBacSi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="chuoi" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="timKiemBenhNhan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="chuoi" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="timKiemThuoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="chuoi" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="timKiemYTa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="chuoi" Type="nvarchar" Mode="In" />
+        </Function>
         <EntityContainer Name="QuanLyPhongMachModelStoreContainer">
           <EntitySet Name="BacSi" EntityType="Self.BacSi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BenhNhan" EntityType="Self.BenhNhan" Schema="dbo" store:Type="Tables" />
@@ -580,6 +592,18 @@
             <End Role="XetNghiem" EntitySet="XetNghiems" />
             <End Role="XetNghiem_PhieuKham" EntitySet="XetNghiem_PhieuKham" />
           </AssociationSet>
+          <FunctionImport Name="timKiemBacSi" ReturnType="Collection(QuanLyPhongMachModel.timKiemBacSi_Result)">
+          <Parameter Name="chuoi" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="timKiemBenhNhan" ReturnType="Collection(QuanLyPhongMachModel.timKiemBenhNhan_Result)">
+            <Parameter Name="chuoi" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="timKiemThuoc" ReturnType="Collection(QuanLyPhongMachModel.timKiemThuoc_Result)">
+            <Parameter Name="chuoi" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="timKiemYTa" ReturnType="Collection(QuanLyPhongMachModel.timKiemYTa_Result)">
+            <Parameter Name="chuoi" Mode="In" Type="String" />
+          </FunctionImport>
           </EntityContainer>
         <EntityType Name="BacSi">
           <Key>
@@ -989,6 +1013,35 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="timKiemBacSi_Result">
+          <Property Type="Int32" Name="MaBS" Nullable="false" />
+          <Property Type="String" Name="HoTenBS" Nullable="false" MaxLength="30" />
+          <Property Type="DateTime" Name="NgaySinh" Nullable="false" />
+          <Property Type="String" Name="TenLoaiGT" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="DienThoai" Nullable="false" MaxLength="15" />
+          <Property Type="Int32" Name="MaLNV" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="timKiemBenhNhan_Result">
+          <Property Type="Int32" Name="MaBN" Nullable="false" />
+          <Property Type="String" Name="HoTenBN" Nullable="false" MaxLength="30" />
+          <Property Type="DateTime" Name="NgaySinh" Nullable="false" />
+          <Property Type="String" Name="TenLoaiGT" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="DienThoai" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="DiaChi" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="timKiemThuoc_Result">
+          <Property Type="Int32" Name="MaThuoc" Nullable="false" />
+          <Property Type="String" Name="TenThuoc" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="MoTa" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="timKiemYTa_Result">
+          <Property Type="Int32" Name="MaYT" Nullable="false" />
+          <Property Type="String" Name="HoTenYT" Nullable="false" MaxLength="30" />
+          <Property Type="DateTime" Name="NgaySinh" Nullable="false" />
+          <Property Type="String" Name="TenLoaiGT" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="DienThoai" Nullable="false" MaxLength="15" />
+          <Property Type="Int32" Name="MaLNV" Nullable="false" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1152,6 +1205,51 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="timKiemBacSi" FunctionName="QuanLyPhongMachModel.Store.timKiemBacSi">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyPhongMachModel.timKiemBacSi_Result">
+                <ScalarProperty Name="MaBS" ColumnName="MaBS" />
+                <ScalarProperty Name="HoTenBS" ColumnName="HoTenBS" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="TenLoaiGT" ColumnName="TenLoaiGT" />
+                <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+                <ScalarProperty Name="MaLNV" ColumnName="MaLNV" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="timKiemBenhNhan" FunctionName="QuanLyPhongMachModel.Store.timKiemBenhNhan">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyPhongMachModel.timKiemBenhNhan_Result">
+                <ScalarProperty Name="MaBN" ColumnName="MaBN" />
+                <ScalarProperty Name="HoTenBN" ColumnName="HoTenBN" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="TenLoaiGT" ColumnName="TenLoaiGT" />
+                <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="timKiemThuoc" FunctionName="QuanLyPhongMachModel.Store.timKiemThuoc">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyPhongMachModel.timKiemThuoc_Result">
+                <ScalarProperty Name="MaThuoc" ColumnName="MaThuoc" />
+                <ScalarProperty Name="TenThuoc" ColumnName="TenThuoc" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="timKiemYTa" FunctionName="QuanLyPhongMachModel.Store.timKiemYTa">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyPhongMachModel.timKiemYTa_Result">
+                <ScalarProperty Name="MaYT" ColumnName="MaYT" />
+                <ScalarProperty Name="HoTenYT" ColumnName="HoTenYT" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="TenLoaiGT" ColumnName="TenLoaiGT" />
+                <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+                <ScalarProperty Name="MaLNV" ColumnName="MaLNV" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

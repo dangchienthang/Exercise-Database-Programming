@@ -39,6 +39,9 @@ namespace QLPM
             this.btSuaThuoc = new System.Windows.Forms.Button();
             this.btXoaThuoc = new System.Windows.Forms.Button();
             this.gVThuoc = new System.Windows.Forms.DataGridView();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btTimKiem = new System.Windows.Forms.Button();
+            this.btThongKe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gVThuoc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,7 +101,7 @@ namespace QLPM
             // 
             this.btThemThuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThemThuoc.Image = global::QLPM.Properties.Resources.Button_Add_icon;
-            this.btThemThuoc.Location = new System.Drawing.Point(547, 174);
+            this.btThemThuoc.Location = new System.Drawing.Point(504, 174);
             this.btThemThuoc.Name = "btThemThuoc";
             this.btThemThuoc.Size = new System.Drawing.Size(109, 58);
             this.btThemThuoc.TabIndex = 4;
@@ -111,7 +114,7 @@ namespace QLPM
             // 
             this.btSuaThuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSuaThuoc.Image = global::QLPM.Properties.Resources.fix_it_icon;
-            this.btSuaThuoc.Location = new System.Drawing.Point(792, 174);
+            this.btSuaThuoc.Location = new System.Drawing.Point(700, 174);
             this.btSuaThuoc.Name = "btSuaThuoc";
             this.btSuaThuoc.Size = new System.Drawing.Size(75, 58);
             this.btSuaThuoc.TabIndex = 6;
@@ -124,7 +127,7 @@ namespace QLPM
             // 
             this.btXoaThuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btXoaThuoc.Image = global::QLPM.Properties.Resources.delete_file_icon;
-            this.btXoaThuoc.Location = new System.Drawing.Point(688, 174);
+            this.btXoaThuoc.Location = new System.Drawing.Point(619, 174);
             this.btXoaThuoc.Name = "btXoaThuoc";
             this.btXoaThuoc.Size = new System.Drawing.Size(75, 58);
             this.btXoaThuoc.TabIndex = 5;
@@ -144,14 +147,51 @@ namespace QLPM
             this.gVThuoc.RowHeadersWidth = 62;
             this.gVThuoc.RowTemplate.Height = 28;
             this.gVThuoc.Size = new System.Drawing.Size(835, 270);
-            this.gVThuoc.TabIndex = 7;
+            this.gVThuoc.TabIndex = 8;
             this.gVThuoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVThuoc_CellClick);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(32, 194);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(237, 20);
+            this.txtTimKiem.TabIndex = 53;
+            // 
+            // btTimKiem
+            // 
+            this.btTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTimKiem.Image = global::QLPM.Properties.Resources.Start_Menu_Search_icon;
+            this.btTimKiem.Location = new System.Drawing.Point(296, 174);
+            this.btTimKiem.Name = "btTimKiem";
+            this.btTimKiem.Size = new System.Drawing.Size(91, 58);
+            this.btTimKiem.TabIndex = 52;
+            this.btTimKiem.Text = "Tìm kiếm";
+            this.btTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btTimKiem.UseVisualStyleBackColor = true;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
+            // 
+            // btThongKe
+            // 
+            this.btThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThongKe.Image = global::QLPM.Properties.Resources.list_icon;
+            this.btThongKe.Location = new System.Drawing.Point(781, 174);
+            this.btThongKe.Name = "btThongKe";
+            this.btThongKe.Size = new System.Drawing.Size(86, 58);
+            this.btThongKe.TabIndex = 9;
+            this.btThongKe.Text = "Thống kê";
+            this.btThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btThongKe.UseVisualStyleBackColor = true;
+            this.btThongKe.Click += new System.EventHandler(this.btThongKe_Click);
             // 
             // FQLThuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 570);
+            this.Controls.Add(this.btThongKe);
+            this.Controls.Add(this.txtTimKiem);
+            this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.btSuaThuoc);
             this.Controls.Add(this.hoTenNhanVienLabel);
             this.Controls.Add(this.gVThuoc);
@@ -182,5 +222,8 @@ namespace QLPM
         private System.Windows.Forms.Button btSuaThuoc;
         private System.Windows.Forms.Button btXoaThuoc;
         private System.Windows.Forms.DataGridView gVThuoc;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Button btTimKiem;
+        private System.Windows.Forms.Button btThongKe;
     }
 }

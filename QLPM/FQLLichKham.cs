@@ -132,5 +132,10 @@ namespace QLPM
                 }
             }    
         }
+
+        private void btThongKe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -68,5 +68,15 @@ namespace QLPM.BUS
                 MessageBox.Show("Không thấy thuốc để xóa");
             }
         }
+
+        public void TimKiemThuoc(DataGridView dg, string chuoi)
+        {
+            dg.DataSource = dThuoc.TimKiemThuoc(chuoi);
+        }
+
+        public List<Thuoc> LayDST()
+        {
+            return dThuoc.LayDST();
+        }
     }
 }

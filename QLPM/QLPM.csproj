@@ -50,6 +50,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -64,6 +69,8 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -162,6 +169,18 @@
     <Compile Include="FDSXetNghiem.Designer.cs">
       <DependentUpon>FDSXetNghiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="FReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FReport.Designer.cs">
+      <DependentUpon>FReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongKe.Designer.cs">
+      <DependentUpon>FThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="FYTa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,10 +273,46 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyPhongMach.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Report\ThongKeBacSi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThongKeBacSi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ThongKeBenhNhan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThongKeBenhNhan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ThongKeThuoc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThongKeThuoc.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ThongKeYTa.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThongKeYTa.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="Thuoc.cs">
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="timKiemBacSi_Result.cs">
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="timKiemBenhNhan_Result.cs">
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="timKiemThuoc_Result.cs">
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="timKiemYTa_Result.cs">
       <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="ToaThuoc.cs">
@@ -302,6 +357,12 @@
     <EmbeddedResource Include="FDSXetNghiem.resx">
       <DependentUpon>FDSXetNghiem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FReport.resx">
+      <DependentUpon>FReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongKe.resx">
+      <DependentUpon>FThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FYTa.resx">
       <DependentUpon>FYTa.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +400,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\ThongKeBacSi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ThongKeBacSi.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ThongKeBenhNhan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ThongKeBenhNhan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ThongKeThuoc.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ThongKeThuoc.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ThongKeYTa.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ThongKeYTa.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -355,6 +432,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -404,6 +482,8 @@
       <DependentUpon>QuanLyPhongMach.edmx</DependentUpon>
       <LastGenOutput>QuanLyPhongMach.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Start-Menu-Search-icon.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

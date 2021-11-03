@@ -112,6 +112,7 @@ namespace QLPM
             0,
             0,
             0});
+            this.numSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numSoLuong_KeyPress);
             // 
             // cbThuoc
             // 
@@ -258,7 +259,7 @@ namespace QLPM
             this.btTaoToa.UseVisualStyleBackColor = true;
             this.btTaoToa.Click += new System.EventHandler(this.btTaoToa_Click);
             // 
-            // FKeToa
+            // FBS_KeToa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -272,7 +273,7 @@ namespace QLPM
             this.Controls.Add(this.groupBox3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "FKeToa";
+            this.Name = "FBS_KeToa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kê toa thuốc";
             this.Load += new System.EventHandler(this.FKeToa_Load);

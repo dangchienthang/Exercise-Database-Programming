@@ -45,6 +45,9 @@ namespace QLPM
             this.gVBN = new System.Windows.Forms.DataGridView();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btTimKiem = new System.Windows.Forms.Button();
+            this.btThongKe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gVBN)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +99,7 @@ namespace QLPM
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(237, 20);
             this.txtDienThoai.TabIndex = 5;
+            this.txtDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDienThoai_KeyPress);
             // 
             // label2
             // 
@@ -145,9 +149,9 @@ namespace QLPM
             // 
             this.btThemBN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThemBN.Image = global::QLPM.Properties.Resources.Button_Add_icon;
-            this.btThemBN.Location = new System.Drawing.Point(543, 174);
+            this.btThemBN.Location = new System.Drawing.Point(515, 174);
             this.btThemBN.Name = "btThemBN";
-            this.btThemBN.Size = new System.Drawing.Size(113, 58);
+            this.btThemBN.Size = new System.Drawing.Size(100, 58);
             this.btThemBN.TabIndex = 7;
             this.btThemBN.Text = "Thêm bệnh nhân";
             this.btThemBN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -158,7 +162,7 @@ namespace QLPM
             // 
             this.btSuaBN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSuaBN.Image = global::QLPM.Properties.Resources.fix_it_icon;
-            this.btSuaBN.Location = new System.Drawing.Point(792, 174);
+            this.btSuaBN.Location = new System.Drawing.Point(702, 174);
             this.btSuaBN.Name = "btSuaBN";
             this.btSuaBN.Size = new System.Drawing.Size(75, 58);
             this.btSuaBN.TabIndex = 9;
@@ -171,7 +175,7 @@ namespace QLPM
             // 
             this.btXoaBN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btXoaBN.Image = global::QLPM.Properties.Resources.delete_file_icon;
-            this.btXoaBN.Location = new System.Drawing.Point(688, 174);
+            this.btXoaBN.Location = new System.Drawing.Point(621, 174);
             this.btXoaBN.Name = "btXoaBN";
             this.btXoaBN.Size = new System.Drawing.Size(75, 58);
             this.btXoaBN.TabIndex = 8;
@@ -191,7 +195,7 @@ namespace QLPM
             this.gVBN.RowHeadersWidth = 62;
             this.gVBN.RowTemplate.Height = 28;
             this.gVBN.Size = new System.Drawing.Size(835, 270);
-            this.gVBN.TabIndex = 10;
+            this.gVBN.TabIndex = 11;
             this.gVBN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVBN_CellClick);
             // 
             // txtDiaChi
@@ -211,11 +215,48 @@ namespace QLPM
             this.label9.TabIndex = 17;
             this.label9.Text = "Địa chỉ:";
             // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(32, 194);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(237, 20);
+            this.txtTimKiem.TabIndex = 53;
+            // 
+            // btTimKiem
+            // 
+            this.btTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTimKiem.Image = global::QLPM.Properties.Resources.Start_Menu_Search_icon;
+            this.btTimKiem.Location = new System.Drawing.Point(296, 174);
+            this.btTimKiem.Name = "btTimKiem";
+            this.btTimKiem.Size = new System.Drawing.Size(91, 58);
+            this.btTimKiem.TabIndex = 52;
+            this.btTimKiem.Text = "Tìm kiếm";
+            this.btTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btTimKiem.UseVisualStyleBackColor = true;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
+            // 
+            // btThongKe
+            // 
+            this.btThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThongKe.Image = global::QLPM.Properties.Resources.list_icon;
+            this.btThongKe.Location = new System.Drawing.Point(781, 174);
+            this.btThongKe.Name = "btThongKe";
+            this.btThongKe.Size = new System.Drawing.Size(86, 58);
+            this.btThongKe.TabIndex = 10;
+            this.btThongKe.Text = "Thống kê";
+            this.btThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btThongKe.UseVisualStyleBackColor = true;
+            this.btThongKe.Click += new System.EventHandler(this.btThongKe_Click);
+            // 
             // FQLBenhNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 570);
+            this.Controls.Add(this.btThongKe);
+            this.Controls.Add(this.txtTimKiem);
+            this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btSuaBN);
@@ -258,5 +299,8 @@ namespace QLPM
         private System.Windows.Forms.DataGridView gVBN;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Button btTimKiem;
+        private System.Windows.Forms.Button btThongKe;
     }
 }

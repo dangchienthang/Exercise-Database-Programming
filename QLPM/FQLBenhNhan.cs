@@ -1,4 +1,5 @@
 ﻿using QLPM.BUS;
+using QLPM.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,23 +84,31 @@ namespace QLPM
                 MessageBox.Show("Điền đầy đủ thông tin trước khi thêm");
             else
             {
-                BenhNhan bn = new BenhNhan();
-
-                bn.HoTenBN = txtTenBN.Text;
-                bn.NgaySinh = dtpNgaySinh.Value;
-                bn.MaLGT = Int32.Parse(cbGioiTinh.SelectedValue.ToString());
-                bn.DienThoai = txtDienThoai.Text;
-                bn.DiaChi = txtDiaChi.Text;
-
-                if (busBN.TaoBenhNhan(bn))
-                {
-                    MessageBox.Show("Tạo bệnh nhân thành công");
-                    busBN.LayDSBenhNhan(gVBN);
-                    CapNhatDG();
-                }
+                DateTime d = DateTime.Now;
+                if (d.Year - dtpNgaySinh.Value.Year < 18 || d.Year - dtpNgaySinh.Value.Year > 60)
+                    MessageBox.Show("Độ tuổi hợp lệ từ 18 đến 60!\n(Tuổi đã nhập " + (d.Year - dtpNgaySinh.Value.Year) + ")");
+                else if (txtDienThoai.Text.Trim().Length != 10)
+                    MessageBox.Show("Số điện thoại Không hợp lệ");
                 else
                 {
-                    MessageBox.Show("Tạo bệnh nhân thất bại");
+                    BenhNhan bn = new BenhNhan();
+
+                    bn.HoTenBN = txtTenBN.Text;
+                    bn.NgaySinh = dtpNgaySinh.Value;
+                    bn.MaLGT = Int32.Parse(cbGioiTinh.SelectedValue.ToString());
+                    bn.DienThoai = txtDienThoai.Text;
+                    bn.DiaChi = txtDiaChi.Text;
+
+                    if (busBN.TaoBenhNhan(bn))
+                    {
+                        MessageBox.Show("Tạo bệnh nhân thành công");
+                        busBN.LayDSBenhNhan(gVBN);
+                        CapNhatDG();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tạo bệnh nhân thất bại");
+                    }
                 }
             }
         }
@@ -110,24 +119,32 @@ namespace QLPM
                 MessageBox.Show("Vui lòng chọn hàng dữ liệu cần sửa!");
             else
             {
-                BenhNhan bn = new BenhNhan();
-
-                bn.MaBN = int.Parse(txtMaBN.Text);
-                bn.HoTenBN = txtTenBN.Text;
-                bn.NgaySinh = dtpNgaySinh.Value;
-                bn.MaLGT = int.Parse(cbGioiTinh.SelectedValue.ToString());
-                bn.DienThoai = txtDienThoai.Text;
-                bn.DiaChi = txtDiaChi.Text;
-
-                if (busBN.SuaBenhNhan(bn))
-                {
-                    MessageBox.Show("Sửa thành công");
-                    busBN.SuaBenhNhan(bn);
-                    busBN.LayDSBenhNhan(gVBN);
-                    CapNhatDG();
-                }
+                DateTime d = DateTime.Now;
+                if (d.Year - dtpNgaySinh.Value.Year < 18 || d.Year - dtpNgaySinh.Value.Year > 60)
+                    MessageBox.Show("Độ tuổi hợp lệ từ 18 đến 60!\n(Tuổi đã nhập " + (d.Year - dtpNgaySinh.Value.Year) + ")");
+                else if (txtDienThoai.Text.Trim().Length != 10)
+                    MessageBox.Show("Số điện thoại Không hợp lệ");
                 else
-                    MessageBox.Show("Sửa thất bại");
+                {
+                    BenhNhan bn = new BenhNhan();
+
+                    bn.MaBN = int.Parse(txtMaBN.Text);
+                    bn.HoTenBN = txtTenBN.Text;
+                    bn.NgaySinh = dtpNgaySinh.Value;
+                    bn.MaLGT = int.Parse(cbGioiTinh.SelectedValue.ToString());
+                    bn.DienThoai = txtDienThoai.Text;
+                    bn.DiaChi = txtDiaChi.Text;
+
+                    if (busBN.SuaBenhNhan(bn))
+                    {
+                        MessageBox.Show("Sửa thành công");
+                        busBN.SuaBenhNhan(bn);
+                        busBN.LayDSBenhNhan(gVBN);
+                        CapNhatDG();
+                    }
+                    else
+                        MessageBox.Show("Sửa thất bại");
+                }
             }
         }
 
@@ -145,5 +162,24 @@ namespace QLPM
             }
         }
 
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            busBN.TimKiemBenhNhan(gVBN, txtTimKiem.Text.ToString());
+        }
+
+        private void btThongKe_Click(object sender, EventArgs e)
+        {
+            ThongKeBenhNhan t = new ThongKeBenhNhan();
+            FReport f = new FReport();
+            t.SetDataSource(busBN.LayDSBN().ToList());
+            f.Report.ReportSource = t;
+            f.Show();
+        }
+
+        private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

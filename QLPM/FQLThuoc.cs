@@ -1,4 +1,5 @@
 ﻿using QLPM.BUS;
+using QLPM.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -127,6 +128,20 @@ namespace QLPM
                 txtTenThuoc.Text = gVThuoc.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtMoTa.Text = gVThuoc.Rows[e.RowIndex].Cells[2].Value.ToString();
             }
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            busThuoc.TimKiemThuoc(gVThuoc, txtTimKiem.Text.ToString());
+        }
+
+        private void btThongKe_Click(object sender, EventArgs e)
+        {
+            ThongKeThuoc t = new ThongKeThuoc();
+            FReport f = new FReport();
+            t.SetDataSource(busThuoc.LayDST().ToList());
+            f.Report.ReportSource = t;
+            f.Show();
         }
     }
 }

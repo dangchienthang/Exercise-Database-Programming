@@ -68,5 +68,41 @@ namespace QLPM
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_KiemTraXetNghiem", maPKParameter, maXNParameter);
         }
+    
+        public virtual ObjectResult<timKiemBacSi_Result> timKiemBacSi(string chuoi)
+        {
+            var chuoiParameter = chuoi != null ?
+                new ObjectParameter("chuoi", chuoi) :
+                new ObjectParameter("chuoi", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<timKiemBacSi_Result>("timKiemBacSi", chuoiParameter);
+        }
+    
+        public virtual ObjectResult<timKiemBenhNhan_Result> timKiemBenhNhan(string chuoi)
+        {
+            var chuoiParameter = chuoi != null ?
+                new ObjectParameter("chuoi", chuoi) :
+                new ObjectParameter("chuoi", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<timKiemBenhNhan_Result>("timKiemBenhNhan", chuoiParameter);
+        }
+    
+        public virtual ObjectResult<timKiemThuoc_Result> timKiemThuoc(string chuoi)
+        {
+            var chuoiParameter = chuoi != null ?
+                new ObjectParameter("chuoi", chuoi) :
+                new ObjectParameter("chuoi", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<timKiemThuoc_Result>("timKiemThuoc", chuoiParameter);
+        }
+    
+        public virtual ObjectResult<timKiemYTa_Result> timKiemYTa(string chuoi)
+        {
+            var chuoiParameter = chuoi != null ?
+                new ObjectParameter("chuoi", chuoi) :
+                new ObjectParameter("chuoi", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<timKiemYTa_Result>("timKiemYTa", chuoiParameter);
+        }
     }
 }

@@ -183,5 +183,10 @@ namespace QLPM.BUS
             cb.DisplayMember = "HoTenBN";
             cb.ValueMember = "MaBN";
         }
+
+        public void ThongKePK(DataGridView dg, DateTime mocBD, DateTime mocKT)
+        {
+            dg.DataSource = dPK.ThongKePK(mocBD, mocKT);
+        }
     }
 }

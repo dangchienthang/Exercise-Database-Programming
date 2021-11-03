@@ -93,5 +93,18 @@ namespace QLPM.DAO
             }
             return tinhTrang;
         }
+
+        public dynamic TimKiemBacSi(string chuoi)
+        {
+            var ds = db.timKiemBacSi(chuoi).Select(s => s).ToList();
+            return ds;
+        }
+
+        public dynamic LayDSBS()
+        {
+            var ds = db.BacSis.Select(s => s).ToList();
+
+            return ds;
+        }
     }
 }

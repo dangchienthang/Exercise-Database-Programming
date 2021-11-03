@@ -35,6 +35,7 @@ namespace QLPM
             this.txtMK = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btDangNhap = new System.Windows.Forms.Button();
+            this.checkBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -85,12 +86,24 @@ namespace QLPM
             this.btDangNhap.UseVisualStyleBackColor = true;
             this.btDangNhap.Click += new System.EventHandler(this.btDangNhap_Click);
             // 
+            // checkBox
+            // 
+            this.checkBox.AutoSize = true;
+            this.checkBox.Location = new System.Drawing.Point(104, 119);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(95, 17);
+            this.checkBox.TabIndex = 4;
+            this.checkBox.Text = "Hiện mật khẩu";
+            this.checkBox.UseVisualStyleBackColor = true;
+            this.checkBox.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
             // FDangNhap
             // 
             this.AcceptButton = this.btDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 167);
+            this.Controls.Add(this.checkBox);
             this.Controls.Add(this.btDangNhap);
             this.Controls.Add(this.txtMK);
             this.Controls.Add(this.label2);
@@ -104,6 +117,7 @@ namespace QLPM
             this.Name = "FDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.Activated += new System.EventHandler(this.FDangNhap_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,6 +130,7 @@ namespace QLPM
         private System.Windows.Forms.TextBox txtMK;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btDangNhap;
+        private System.Windows.Forms.CheckBox checkBox;
     }
 }
 

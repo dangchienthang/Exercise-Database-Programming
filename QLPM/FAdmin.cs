@@ -21,6 +21,7 @@ namespace QLPM
         {
             InitializeComponent();
             random = new Random();
+            btQuayLai.Visible = false;
         }
 
         private Color ChonMau()
@@ -52,7 +53,7 @@ namespace QLPM
                     panelLogo.BackColor = Mau.ChinhDoSangMau(mau, -0.3);
                     Mau.MauChinh = mau;
                     Mau.MauPhu = Mau.ChinhDoSangMau(mau, -0.3);
-                    //btnCloseChildForm.Visible = true;
+                    btQuayLai.Visible = true;
                 }
             }
         }
@@ -108,12 +109,42 @@ namespace QLPM
 
         private void btTK_Click(object sender, EventArgs e)
         {
-            MoFormCon(new FQLBenhNhan(), sender);
+            MoFormCon(new FThongKe(), sender);
         }
 
         private void btThoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Reset()
+        {
+            VoHieuButton();
+            labelTieuDe.Text = "QUẢN TRỊ VIÊN";
+            panelTieuDe.BackColor = Color.FromArgb(69, 69, 69);
+            panelLogo.BackColor = Color.FromArgb(39, 39, 39);
+            labelTieuDe.BackColor = Color.FromArgb(69, 69, 69);
+            nutHienTai = null;
+            btQuayLai.Visible = false;
+        }
+
+        private void btQuayLai_Click(object sender, EventArgs e)
+        {
+            if (kichHoatForm != null)
+                kichHoatForm.Close();
+            Reset();
+        }
+
+        private void FQuanTri_Load(object sender, EventArgs e)
+        {
+            panelLogo.BackColor = Color.FromArgb(39, 39, 39);
+        }
+
+        private void FQuanTri_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+                e.Cancel = MessageBox.Show("Bạn muốn đăng xuất?", "Xác nhận",
+                                           MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No;
         }
     }
 }

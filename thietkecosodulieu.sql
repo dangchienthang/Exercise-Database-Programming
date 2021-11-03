@@ -171,3 +171,42 @@ begin
 	select @sl as alias
 end
 GO
+
+create proc timKiemBacSi @chuoi nvarchar(30)
+as
+begin
+	select MaBS, HoTenBS, NgaySinh, TenLoaiGT, DienThoai, MaLNV
+	from BacSi
+	inner join LoaiGioiTinh
+	on (MaBS like CONCAT('%', @chuoi, '%') or HoTenBS like CONCAT('%', @chuoi, '%')) and LoaiGioiTinh.MaLGT = BacSi.MaLGT
+	order by MaBS asc
+end
+
+create proc timKiemYTa @chuoi nvarchar(30)
+as
+begin
+	select MaYT, HoTenYT, NgaySinh, TenLoaiGT, DienThoai, MaLNV
+	from YTa
+	inner join LoaiGioiTinh
+	on (MaYT like CONCAT('%', @chuoi, '%') or HoTenYT like CONCAT('%', @chuoi, '%')) and LoaiGioiTinh.MaLGT = YTa.MaLGT
+	order by MaYT asc
+end
+
+create proc timKiemBenhNhan @chuoi nvarchar(30)
+as
+begin
+	select MaBN, HoTenBN, NgaySinh, TenLoaiGT, DienThoai, DiaChi
+	from BenhNhan
+	inner join LoaiGioiTinh
+	on (MaBN like CONCAT('%', @chuoi, '%') or HoTenBN like CONCAT('%', @chuoi, '%')) and LoaiGioiTinh.MaLGT = BenhNhan.MaLGT
+	order by MaBN asc
+end
+
+create proc timKiemThuoc @chuoi nvarchar(30)
+as
+begin
+	select MaThuoc, TenThuoc, MoTa
+	from Thuoc
+	where MaThuoc like CONCAT('%', @chuoi, '%') or TenThuoc like CONCAT('%', @chuoi, '%')
+	order by MaThuoc asc
+end

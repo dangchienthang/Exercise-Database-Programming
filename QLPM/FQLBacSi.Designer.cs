@@ -44,6 +44,9 @@
             this.btSuaBS = new System.Windows.Forms.Button();
             this.btXoaBS = new System.Windows.Forms.Button();
             this.gVBS = new System.Windows.Forms.DataGridView();
+            this.btTimKiem = new System.Windows.Forms.Button();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btThongKe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gVBS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,6 +116,7 @@
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(237, 20);
             this.txtDienThoai.TabIndex = 5;
+            this.txtDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDienThoai_KeyPress);
             // 
             // label2
             // 
@@ -162,9 +166,9 @@
             // 
             this.btThemBS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThemBS.Image = global::QLPM.Properties.Resources.Button_Add_icon;
-            this.btThemBS.Location = new System.Drawing.Point(561, 168);
+            this.btThemBS.Location = new System.Drawing.Point(515, 168);
             this.btThemBS.Name = "btThemBS";
-            this.btThemBS.Size = new System.Drawing.Size(95, 58);
+            this.btThemBS.Size = new System.Drawing.Size(99, 58);
             this.btThemBS.TabIndex = 7;
             this.btThemBS.Text = "Thêm bác sĩ";
             this.btThemBS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -175,9 +179,9 @@
             // 
             this.btSuaBS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSuaBS.Image = global::QLPM.Properties.Resources.fix_it_icon;
-            this.btSuaBS.Location = new System.Drawing.Point(792, 168);
+            this.btSuaBS.Location = new System.Drawing.Point(701, 168);
             this.btSuaBS.Name = "btSuaBS";
-            this.btSuaBS.Size = new System.Drawing.Size(75, 58);
+            this.btSuaBS.Size = new System.Drawing.Size(74, 58);
             this.btSuaBS.TabIndex = 9;
             this.btSuaBS.Text = "Sửa";
             this.btSuaBS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -188,7 +192,7 @@
             // 
             this.btXoaBS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btXoaBS.Image = global::QLPM.Properties.Resources.delete_file_icon;
-            this.btXoaBS.Location = new System.Drawing.Point(688, 168);
+            this.btXoaBS.Location = new System.Drawing.Point(620, 168);
             this.btXoaBS.Name = "btXoaBS";
             this.btXoaBS.Size = new System.Drawing.Size(75, 58);
             this.btXoaBS.TabIndex = 8;
@@ -208,14 +212,51 @@
             this.gVBS.RowHeadersWidth = 62;
             this.gVBS.RowTemplate.Height = 28;
             this.gVBS.Size = new System.Drawing.Size(835, 270);
-            this.gVBS.TabIndex = 10;
+            this.gVBS.TabIndex = 11;
             this.gVBS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVBS_CellClick);
+            // 
+            // btTimKiem
+            // 
+            this.btTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTimKiem.Image = global::QLPM.Properties.Resources.Start_Menu_Search_icon;
+            this.btTimKiem.Location = new System.Drawing.Point(296, 168);
+            this.btTimKiem.Name = "btTimKiem";
+            this.btTimKiem.Size = new System.Drawing.Size(91, 58);
+            this.btTimKiem.TabIndex = 11;
+            this.btTimKiem.Text = "Tìm kiếm";
+            this.btTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btTimKiem.UseVisualStyleBackColor = true;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(32, 188);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(237, 20);
+            this.txtTimKiem.TabIndex = 51;
+            // 
+            // btThongKe
+            // 
+            this.btThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThongKe.Image = global::QLPM.Properties.Resources.list_icon;
+            this.btThongKe.Location = new System.Drawing.Point(781, 168);
+            this.btThongKe.Name = "btThongKe";
+            this.btThongKe.Size = new System.Drawing.Size(86, 58);
+            this.btThongKe.TabIndex = 10;
+            this.btThongKe.Text = "Thống kê";
+            this.btThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btThongKe.UseVisualStyleBackColor = true;
+            this.btThongKe.Click += new System.EventHandler(this.btThongKe_Click);
             // 
             // FQLBacSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 570);
+            this.Controls.Add(this.btThongKe);
+            this.Controls.Add(this.txtTimKiem);
+            this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.txtMaLNV);
             this.Controls.Add(this.btSuaBS);
             this.Controls.Add(this.hoTenNhanVienLabel);
@@ -258,5 +299,8 @@
         private System.Windows.Forms.Button btSuaBS;
         private System.Windows.Forms.Button btXoaBS;
         private System.Windows.Forms.DataGridView gVBS;
+        private System.Windows.Forms.Button btTimKiem;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Button btThongKe;
     }
 }

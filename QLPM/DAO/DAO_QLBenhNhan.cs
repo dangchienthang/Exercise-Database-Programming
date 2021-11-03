@@ -93,5 +93,18 @@ namespace QLPM.BUS
             }
             return tinhTrang;
         }
+
+        public dynamic TimKiemBenhNhan(string chuoi)
+        {
+            var ds = db.timKiemBenhNhan(chuoi).Select(s => s).ToList();
+            return ds;
+        }
+
+        public dynamic LayDSBN()
+        {
+            var ds = db.BenhNhans.Select(s => s).ToList();
+
+            return ds;
+        }
     }
 }

@@ -74,5 +74,15 @@ namespace QLPM.BUS
                 MessageBox.Show("Không thấy bệnh nhân để xóa");
             }
         }
+
+        public void TimKiemBenhNhan(DataGridView dg, string chuoi)
+        {
+            dg.DataSource = dBenhNhan.TimKiemBenhNhan(chuoi);
+        }
+
+        public List<BenhNhan> LayDSBN()
+        {
+            return dBenhNhan.LayDSBN();
+        }
     }
 }

@@ -75,5 +75,15 @@ namespace QLPM.BUS
                 MessageBox.Show("Không thấy bác sĩ để xóa");
             }
         }
+
+        public void TimKiemBacSi(DataGridView dg, string chuoi)
+        {
+            dg.DataSource = dBacSi.TimKiemBacSi(chuoi);
+        }
+
+        public List<BacSi> LayDSBS()
+        {
+            return dBacSi.LayDSBS();
+        }
     }
 }

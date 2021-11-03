@@ -40,9 +40,12 @@ namespace QLPM
             this.btLK = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelFormCon = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelTieuDe = new System.Windows.Forms.Label();
             this.panelTieuDe = new System.Windows.Forms.Panel();
             this.panelDanhMuc.SuspendLayout();
+            this.panelFormCon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTieuDe.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -162,6 +165,7 @@ namespace QLPM
             this.btQuayLai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btQuayLai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btQuayLai.UseVisualStyleBackColor = false;
+            this.btQuayLai.Click += new System.EventHandler(this.btQuayLai_Click);
             // 
             // btThoat
             // 
@@ -177,7 +181,7 @@ namespace QLPM
             this.btThoat.Name = "btThoat";
             this.btThoat.Size = new System.Drawing.Size(170, 53);
             this.btThoat.TabIndex = 6;
-            this.btThoat.Text = "  Thoát";
+            this.btThoat.Text = "  Đăng xuất";
             this.btThoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btThoat.UseVisualStyleBackColor = false;
@@ -218,10 +222,21 @@ namespace QLPM
             this.panelFormCon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelFormCon.Controls.Add(this.pictureBox1);
             this.panelFormCon.Location = new System.Drawing.Point(170, 93);
             this.panelFormCon.Name = "panelFormCon";
             this.panelFormCon.Size = new System.Drawing.Size(1064, 568);
             this.panelFormCon.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1064, 568);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // labelTieuDe
             // 
@@ -232,9 +247,9 @@ namespace QLPM
             this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelTieuDe.Location = new System.Drawing.Point(448, 29);
             this.labelTieuDe.Name = "labelTieuDe";
-            this.labelTieuDe.Size = new System.Drawing.Size(112, 25);
+            this.labelTieuDe.Size = new System.Drawing.Size(80, 25);
             this.labelTieuDe.TabIndex = 1;
-            this.labelTieuDe.Text = "XIN CHÀO";
+            this.labelTieuDe.Text = "BÁC SĨ";
             // 
             // panelTieuDe
             // 
@@ -260,7 +275,11 @@ namespace QLPM
             this.Name = "FBacSi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang bác sĩ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FBacSi_FormClosing);
+            this.Load += new System.EventHandler(this.FBacSi_Load);
             this.panelDanhMuc.ResumeLayout(false);
+            this.panelFormCon.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTieuDe.ResumeLayout(false);
             this.panelTieuDe.PerformLayout();
             this.ResumeLayout(false);
@@ -281,5 +300,6 @@ namespace QLPM
         private System.Windows.Forms.Button btXN;
         private System.Windows.Forms.Button btLXN;
         private System.Windows.Forms.Button btPK;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
