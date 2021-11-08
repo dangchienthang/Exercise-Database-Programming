@@ -34,8 +34,8 @@ namespace QLPM
 
             gVBS.Columns[0].HeaderText = "Mã bác sĩ";
             gVBS.Columns[1].HeaderText = "Tên bác sĩ";
-            gVBS.Columns[2].HeaderText = "Ngày sinh";
-            gVBS.Columns[3].HeaderText = "Giới tính";
+            gVBS.Columns[2].HeaderText = "Giới tính";
+            gVBS.Columns[3].HeaderText = "Ngày sinh";
             gVBS.Columns[4].HeaderText = "Điện thoại";
         }
 
@@ -43,7 +43,9 @@ namespace QLPM
         {
             //Cập nhật lại textbox sau khi thực hiện hành động thêm, sửa hoặc xóa
             txtMaBS.Text = "";
+            txtTenBS.Text = "";
             txtDienThoai.Text = "";
+            cbGioiTinh.Text = "";
 
             //Cập nhật DataGridView
             gVBS.Columns.Clear();
@@ -56,8 +58,8 @@ namespace QLPM
             {
                 txtMaBS.Text = gVBS.Rows[e.RowIndex].Cells["MaBS"].Value.ToString();
                 txtTenBS.Text = gVBS.Rows[e.RowIndex].Cells[1].Value.ToString();
-                dtpNgaySinh.Text = gVBS.Rows[e.RowIndex].Cells[2].Value.ToString();
-                cbGioiTinh.Text = gVBS.Rows[e.RowIndex].Cells[3].Value.ToString();
+                cbGioiTinh.Text = gVBS.Rows[e.RowIndex].Cells[2].Value.ToString();
+                dtpNgaySinh.Text = gVBS.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtDienThoai.Text = gVBS.Rows[e.RowIndex].Cells[4].Value.ToString();
             }
         }
@@ -80,8 +82,8 @@ namespace QLPM
                     BacSi bs = new BacSi();
 
                     bs.HoTenBS = txtTenBS.Text.Trim();
+                    bs.GioiTinh = cbGioiTinh.SelectedItem.ToString();
                     bs.NgaySinh = dtpNgaySinh.Value;
-                    bs.MaLGT = Int32.Parse(cbGioiTinh.SelectedValue.ToString());
                     bs.DienThoai = txtDienThoai.Text;
                     bs.MaLNV = int.Parse(txtMaLNV.Text);
 
@@ -116,8 +118,8 @@ namespace QLPM
 
                     bs.MaBS = int.Parse(txtMaBS.Text);
                     bs.HoTenBS = txtTenBS.Text;
+                    bs.GioiTinh = cbGioiTinh.SelectedItem.ToString();
                     bs.NgaySinh = dtpNgaySinh.Value;
-                    bs.MaLGT = int.Parse(cbGioiTinh.SelectedValue.ToString());
                     bs.DienThoai = txtDienThoai.Text;
                     bs.MaLNV = int.Parse(txtMaLNV.Text);
 
@@ -167,8 +169,12 @@ namespace QLPM
         private void FQLBacSi_Load(object sender, EventArgs e)
         {
             HienThiDSBacSi();
-            busBacSi.LayDSLoaiGioiTinh(cbGioiTinh);
             DoiMauNut();
+            string[] gt = { "Nam", "Nữ", "Khác"};
+            foreach (string x in gt)
+            {
+                cbGioiTinh.Items.Add(x);
+            }
         }
 
         private void btTimKiem_Click(object sender, EventArgs e)

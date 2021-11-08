@@ -22,21 +22,10 @@ namespace QLPM.DAO
             {
                 s.MaBS,
                 s.HoTenBS,
+                s.GioiTinh,
                 s.NgaySinh,
-                s.LoaiGioiTinh.TenLoaiGT,
                 s.DienThoai
             }).ToList();
-            return ds;
-        }
-
-        public dynamic LayDSLoaiGioiTinh()
-        {
-            var ds = db.LoaiGioiTinhs.Select(s => new
-            {
-                s.MaLGT,
-                s.TenLoaiGT
-            }).ToList();
-
             return ds;
         }
 
@@ -62,8 +51,8 @@ namespace QLPM.DAO
             BacSi bs = db.BacSis.Find(bacsi.MaBS);
 
             bs.HoTenBS = bacsi.HoTenBS;
+            bs.GioiTinh = bacsi.GioiTinh;
             bs.NgaySinh = bacsi.NgaySinh;
-            bs.MaLGT = bacsi.MaLGT;
             bs.DienThoai = bacsi.DienThoai;
             bs.MaLNV = bacsi.MaLNV;
 

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -70,6 +71,33 @@ namespace QLPM
                 gVPK.Columns[5].HeaderText = "Chuẩn đoán";
                 gVPK.Columns[6].HeaderText = "Ngày tái khám";
             }
+        }
+
+        private void btThongKe_Click(object sender, EventArgs e)
+        {
+            SqlDataAdapter da = new SqlDataAdapter();
+            string connectionString = QLPM.Properties.Resources.connectionString;
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand command = con.CreateCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "ThongKeLichSuKham";
+            command.Parameters.Clear();
+            command.Parameters.AddWithValue("@NgayBatDau", dtpMocBatDau.Value);
+            command.Parameters.AddWithValue("@NgayKetThuc", dtpMocKetThuc.Value);
+            con.Open();
+            DataTable dt = new DataTable();
+
+            da.SelectCommand = command;
+            da.Fill(dt);
+
+            ThongKeLichKham t = new ThongKeLichKham();
+            t.SetDataSource(dt);
+
+            FReport f = new FReport();
+            f.Report.ReportSource = t;
+            f.Show();
+
+            con.Close();
         }
     }
 }

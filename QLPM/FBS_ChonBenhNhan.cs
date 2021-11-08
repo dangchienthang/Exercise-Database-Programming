@@ -24,12 +24,18 @@ namespace QLPM
         public void HienThiDSLichKham()
         {
             gVLK.DataSource = null;
-            busLK.LayDSLichKham(gVLK);
+            busLK.LayDSLK(gVLK);
             gVLK.Columns[0].Width = (int)(gVLK.Width * 0.12);
             gVLK.Columns[1].Width = (int)(gVLK.Width * 0.22);
             gVLK.Columns[2].Width = (int)(gVLK.Width * 0.22);
             gVLK.Columns[3].Width = (int)(gVLK.Width * 0.22);
             gVLK.Columns[4].Width = (int)(gVLK.Width * 0.22);
+
+            gVLK.Columns[0].HeaderText = "Mã lịch khám";
+            gVLK.Columns[1].HeaderText = "Mã bệnh nhân";
+            gVLK.Columns[2].HeaderText = "Mã y tá";
+            gVLK.Columns[3].HeaderText = "Mã bác sĩ";
+            gVLK.Columns[4].HeaderText = "Ngày hẹn";
         }
 
         private void DoiMauNut()

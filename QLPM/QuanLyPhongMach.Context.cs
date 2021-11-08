@@ -31,7 +31,6 @@ namespace QLPM
         public virtual DbSet<BenhNhan> BenhNhans { get; set; }
         public virtual DbSet<ChiTietToaThuoc> ChiTietToaThuocs { get; set; }
         public virtual DbSet<LichKham> LichKhams { get; set; }
-        public virtual DbSet<LoaiGioiTinh> LoaiGioiTinhs { get; set; }
         public virtual DbSet<LoaiNhanVien> LoaiNhanViens { get; set; }
         public virtual DbSet<LoaiXetNghiem> LoaiXetNghiems { get; set; }
         public virtual DbSet<NguoiDung> NguoiDungs { get; set; }
@@ -43,7 +42,7 @@ namespace QLPM
         public virtual DbSet<XetNghiem_PhieuKham> XetNghiem_PhieuKham { get; set; }
         public virtual DbSet<YTa> YTas { get; set; }
     
-        public virtual ObjectResult<Nullable<int>> sp_KiemTraThuoc(Nullable<int> maToa, Nullable<int> maThuoc)
+        public virtual ObjectResult<Nullable<int>> KiemTraThuoc(Nullable<int> maToa, Nullable<int> maThuoc)
         {
             var maToaParameter = maToa.HasValue ?
                 new ObjectParameter("MaToa", maToa) :
@@ -53,10 +52,10 @@ namespace QLPM
                 new ObjectParameter("MaThuoc", maThuoc) :
                 new ObjectParameter("MaThuoc", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_KiemTraThuoc", maToaParameter, maThuocParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("KiemTraThuoc", maToaParameter, maThuocParameter);
         }
     
-        public virtual ObjectResult<Nullable<int>> sp_KiemTraXetNghiem(Nullable<int> maPK, Nullable<int> maXN)
+        public virtual ObjectResult<Nullable<int>> KiemTraXetNghiem(Nullable<int> maPK, Nullable<int> maXN)
         {
             var maPKParameter = maPK.HasValue ?
                 new ObjectParameter("MaPK", maPK) :
@@ -66,7 +65,7 @@ namespace QLPM
                 new ObjectParameter("MaXN", maXN) :
                 new ObjectParameter("MaXN", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_KiemTraXetNghiem", maPKParameter, maXNParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("KiemTraXetNghiem", maPKParameter, maXNParameter);
         }
     
         public virtual ObjectResult<timKiemBacSi_Result> timKiemBacSi(string chuoi)
@@ -103,6 +102,19 @@ namespace QLPM
                 new ObjectParameter("chuoi", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<timKiemYTa_Result>("timKiemYTa", chuoiParameter);
+        }
+    
+        public virtual ObjectResult<thongKeLichSuKham_Result> thongKeLichSuKham(Nullable<System.DateTime> ngayBatDau, Nullable<System.DateTime> ngayKetThuc)
+        {
+            var ngayBatDauParameter = ngayBatDau.HasValue ?
+                new ObjectParameter("NgayBatDau", ngayBatDau) :
+                new ObjectParameter("NgayBatDau", typeof(System.DateTime));
+    
+            var ngayKetThucParameter = ngayKetThuc.HasValue ?
+                new ObjectParameter("NgayKetThuc", ngayKetThuc) :
+                new ObjectParameter("NgayKetThuc", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<thongKeLichSuKham_Result>("thongKeLichSuKham", ngayBatDauParameter, ngayKetThucParameter);
         }
     }
 }

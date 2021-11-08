@@ -4,7 +4,6 @@ go
 use QuanLyPhongMach
 go
 
-
 create table LoaiNhanVien(
 	MaLNV int identity primary key not null,
 	TenLoaiNV nvarchar(10) not null
@@ -27,46 +26,35 @@ create table TaiKhoan(
 	foreign key (MaLNV) references dbo.LoaiNhanVien(MaLNV)
 )
 
- create table LoaiGioiTinh(
-	MaLGT int identity primary key not null,
-	TenLoaiGT nvarchar(10) not null
- )
-
 create table BacSi(
 	MaBS int identity primary key not null,
 	HoTenBS nvarchar(30) not null,
+	GioiTinh nvarchar(10) not null,
 	NgaySinh date not null,
 	DienThoai varchar(15) not null,
-	MaLGT int not null,
-	MaLNV int not null default '1'
+	MaLNV int not null default '2'
 
-	foreign key (MaLGT) references dbo.LoaiGioiTinh(MaLGT),
 	foreign key (MaLNV) references dbo.LoaiNhanVien(MaLNV)
-
 )
 
 create table YTa(
 	MaYT int identity primary key not null,
 	HoTenYT nvarchar(30) not null,
+	GioiTinh nvarchar(10) not null,
 	NgaySinh date not null,
 	DienThoai varchar(15) not null,
-	MaLGT int not null,
-	MaLNV int not null default '2'
+	MaLNV int not null default '3'
 
-	foreign key (MaLGT) references dbo.LoaiGioiTinh(MaLGT),
 	foreign key (MaLNV) references dbo.LoaiNhanVien(MaLNV)
-
 )
 
 create table BenhNhan(
 	MaBN int identity primary key not null,
 	HoTenBN nvarchar(30) not null,
+	GioiTinh nvarchar(10) not null,
 	NgaySinh date not null,
 	DienThoai varchar(15) not null,
 	DiaChi nvarchar(100) not null,
-	MaLGT int not null,
-
-	foreign key (MaLGT) references dbo.LoaiGioiTinh(MaLGT)
 )
 
 create table LichKham(
@@ -110,9 +98,18 @@ create table ChiTietToaThuoc(
 
 create table LoaiXetNghiem(
 	MaLXN int identity primary key not null,
-	TenLXN nvarchar(50) not null
+	TenLXN nvarchar(50) not null,
+	MoTa nvarchar(100) not null
 )
 
+create table XetNghiem(
+	MaXN int identity primary key not null,
+	TenXN nvarchar(100) not null,
+	MaLXN int not null,
+	MoTa nvarchar(100) not null
+
+	foreign key (MaLXN) references dbo.LoaiXetNghiem(MaLXN)
+)
 
 create table PhieuKham(
 	MaPK int identity primary key not null,
@@ -125,15 +122,6 @@ create table PhieuKham(
 
 	foreign key (MaBS) references dbo.BacSi(MaBS),
 	foreign key (MaBN) references dbo.BenhNhan(MaBN),
-)
-
-create table XetNghiem(
-	MaXN int identity primary key not null,
-	TenXN nvarchar(100) not null,
-	MaLXN int not null,
-	MoTa nvarchar(100) not null
-
-	foreign key (MaLXN) references dbo.LoaiXetNghiem(MaLXN)
 )
 
 create table XetNghiem_PhieuKham
@@ -150,23 +138,23 @@ create table XetNghiem_PhieuKham
 	foreign key (MaPK) references dbo.PhieuKham(MaPK)
 )
 
-CREATE proc [dbo].[sp_KiemTraThuoc] @MaToa int, @MaThuoc int
+CREATE proc KiemTraThuoc @MaToa int, @MaThuoc int
 as
 begin
 	SET NOCOUNT ON
 	declare @sl int
-	select @sl = COUNT(*) from [ChiTietToaThuoc]
+	select @sl = COUNT(*) from ChiTietToaThuoc
 	where MaToa=@MaToa and MaThuoc=@MaThuoc
 	select @sl as alias
 end
 GO
 
-CREATE proc [dbo].[sp_KiemTraXetNghiem] @MaPK int, @MaXN int
+CREATE proc KiemTraXetNghiem @MaPK int, @MaXN int
 as
 begin
 	SET NOCOUNT ON
 	declare @sl int
-	select @sl = COUNT(*) from [XetNghiem_PhieuKham]
+	select @sl = COUNT(*) from XetNghiem_PhieuKham
 	where MaPK=@MaPK and MaXN=@MaXN
 	select @sl as alias
 end
@@ -175,38 +163,48 @@ GO
 create proc timKiemBacSi @chuoi nvarchar(30)
 as
 begin
-	select MaBS, HoTenBS, NgaySinh, TenLoaiGT, DienThoai, MaLNV
+	select *
 	from BacSi
-	inner join LoaiGioiTinh
-	on (MaBS like CONCAT('%', @chuoi, '%') or HoTenBS like CONCAT('%', @chuoi, '%')) and LoaiGioiTinh.MaLGT = BacSi.MaLGT
+	where MaBS like CONCAT('%', @chuoi, '%') or HoTenBS like CONCAT('%', @chuoi, '%') or GioiTinh like CONCAT('%', @chuoi, '%')
 	order by MaBS asc
 end
 
 create proc timKiemYTa @chuoi nvarchar(30)
 as
 begin
-	select MaYT, HoTenYT, NgaySinh, TenLoaiGT, DienThoai, MaLNV
+	select *
 	from YTa
-	inner join LoaiGioiTinh
-	on (MaYT like CONCAT('%', @chuoi, '%') or HoTenYT like CONCAT('%', @chuoi, '%')) and LoaiGioiTinh.MaLGT = YTa.MaLGT
+	where MaYT like CONCAT('%', @chuoi, '%') or HoTenYT like CONCAT('%', @chuoi, '%') or GioiTinh like CONCAT('%', @chuoi, '%')
 	order by MaYT asc
 end
 
 create proc timKiemBenhNhan @chuoi nvarchar(30)
 as
 begin
-	select MaBN, HoTenBN, NgaySinh, TenLoaiGT, DienThoai, DiaChi
+	select *
 	from BenhNhan
-	inner join LoaiGioiTinh
-	on (MaBN like CONCAT('%', @chuoi, '%') or HoTenBN like CONCAT('%', @chuoi, '%')) and LoaiGioiTinh.MaLGT = BenhNhan.MaLGT
+	where MaBN like CONCAT('%', @chuoi, '%') or HoTenBN like CONCAT('%', @chuoi, '%') or GioiTinh like CONCAT('%', @chuoi, '%')
 	order by MaBN asc
 end
 
 create proc timKiemThuoc @chuoi nvarchar(30)
 as
 begin
-	select MaThuoc, TenThuoc, MoTa
+	select *
 	from Thuoc
-	where MaThuoc like CONCAT('%', @chuoi, '%') or TenThuoc like CONCAT('%', @chuoi, '%')
+	where MaThuoc like CONCAT('%', @chuoi, '%') or TenThuoc like CONCAT('%', @chuoi, '%') or MoTa like CONCAT('%', @chuoi, '%')
 	order by MaThuoc asc
+end
+
+create proc thongKeLichSuKham
+(
+	@NgayBatDau date,
+	@NgayKetThuc date
+)
+as
+begin
+	select PhieuKham.*, HoTenBS, HoTenBN
+	from PhieuKham inner join BacSi on PhieuKham.MaBS = BacSi.MaBS inner join BenhNhan on PhieuKham.MaBN = BenhNhan.MaBN
+	where NgayKham between @NgayBatDau and @NgayKetThuc
+	order by MaPK asc
 end

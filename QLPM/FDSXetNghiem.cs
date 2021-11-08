@@ -29,12 +29,18 @@ namespace QLPM
             gVXN.Columns[1].Width = (int)(gVXN.Width * 0.2);
             gVXN.Columns[2].Width = (int)(gVXN.Width * 0.3);
             gVXN.Columns[3].Width = (int)(gVXN.Width * 0.4);
+
+            gVXN.Columns[0].HeaderText = "Mã xét nghiệm";
+            gVXN.Columns[1].HeaderText = "Tên xét nghiệm";
+            gVXN.Columns[2].HeaderText = "Loại xét nghiệm";
+            gVXN.Columns[3].HeaderText = "Mô tả xét nghiệm";
         }
 
         public void CapNhatDG()
         {
             //Cập nhật lại textbox sau khi thực hiện hành động thêm, sửa hoặc xóa
             txtMaXN.Text = "";
+            cbLXN.Text = "";
             txtMoTa.Text = "";
 
             //Cập nhật DataGridView
@@ -76,7 +82,7 @@ namespace QLPM
 
         private void btThemXN_Click(object sender, EventArgs e)
         {
-            if (txtTenXN.Text == "" || txtMoTa.Text == "")
+            if (txtTenXN.Text == "" || txtMoTa.Text == "" || cbLXN.Text == "")
                 MessageBox.Show("Điền đầy đủ thông tin trước khi thêm");
             else
             {
@@ -115,7 +121,7 @@ namespace QLPM
 
         private void btSuaXN_Click(object sender, EventArgs e)
         {
-            if (txtMaXN.Text == "")
+            if (txtMaXN.Text == "" || txtMoTa.Text == "" || cbLXN.Text == "")
                 MessageBox.Show("Vui lòng chọn hàng dữ liệu cần sửa!");
             else
             {

@@ -23,16 +23,14 @@ namespace QLPM.BUS
             dg.DataSource = dLK.LayDSBenhNhan();
         }
 
-        public void LayDSLoaiGioiTinh(ComboBox cb)
-        {
-            cb.DataSource = dLK.LayDSLoaiGioiTinh();
-            cb.DisplayMember = "TenLoaiGT";
-            cb.ValueMember = "MaLGT";
-        }
-
         public void LayDSLichKham(DataGridView dg)
         {
             dg.DataSource = dLK.LayDSLichKham();
+        }
+
+        public void LayDSLK(DataGridView dg)
+        {
+            dg.DataSource = dLK.LayDSLK();
         }
 
         public void LayDSTenBenhNhan(ComboBox cb)

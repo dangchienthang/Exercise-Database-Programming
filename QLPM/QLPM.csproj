@@ -234,9 +234,6 @@
     <Compile Include="LichKham.cs">
       <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
-    <Compile Include="LoaiGioiTinh.cs">
-      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
-    </Compile>
     <Compile Include="LoaiNhanVien.cs">
       <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
@@ -285,6 +282,12 @@
       <DependentUpon>ThongKeBenhNhan.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report\ThongKeLichKham.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThongKeLichKham.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\ThongKeThuoc.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -298,6 +301,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="TaiKhoan.cs">
+      <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="thongKeLichSuKham_Result.cs">
       <DependentUpon>QuanLyPhongMach.tt</DependentUpon>
     </Compile>
     <Compile Include="Thuoc.cs">
@@ -407,6 +413,10 @@
     <EmbeddedResource Include="Report\ThongKeBenhNhan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ThongKeBenhNhan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ThongKeLichKham.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ThongKeLichKham.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ThongKeThuoc.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

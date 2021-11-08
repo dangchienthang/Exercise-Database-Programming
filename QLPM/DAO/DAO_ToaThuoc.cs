@@ -76,6 +76,10 @@ namespace QLPM.DAO
             bool tinhTrang = true;
             try
             {
+                var ds = db.ChiTietToaThuocs.Where(s => s.MaToa == maToa).Select(s => s);
+                db.ChiTietToaThuocs.RemoveRange(ds);
+                db.SaveChanges();
+
                 // Xoa toa thuoc co MaToa = maToa
                 ToaThuoc t = db.ToaThuocs.Find(maToa);
                 if (t != null)

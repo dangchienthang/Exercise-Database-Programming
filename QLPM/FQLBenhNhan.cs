@@ -32,12 +32,24 @@ namespace QLPM
             gVBN.Columns[3].Width = (int)(gVBN.Width * 0.1);
             gVBN.Columns[4].Width = (int)(gVBN.Width * 0.15);
             gVBN.Columns[5].Width = (int)(gVBN.Width * 0.4);
+
+            gVBN.Columns[0].HeaderText = "Mã bệnh nhân";
+            gVBN.Columns[1].HeaderText = "Tên bác sĩ";
+            gVBN.Columns[2].HeaderText = "Giới tính";
+            gVBN.Columns[3].HeaderText = "Ngày sinh";
+            gVBN.Columns[4].HeaderText = "Điện thoại";
+            gVBN.Columns[5].HeaderText = "Địa chỉ";
+
         }
 
         public void CapNhatDG()
         {
             //Cập nhật lại textbox sau khi thực hiện hành động thêm, sửa hoặc xóa
             txtMaBN.Text = "";
+            txtTenBN.Text = "";
+            txtDienThoai.Text = "";
+            txtDiaChi.Text = "";
+            cbGioiTinh.Text = "";
 
             //Cập nhật DataGridView
             gVBN.Columns.Clear();
@@ -50,8 +62,8 @@ namespace QLPM
             {
                 txtMaBN.Text = gVBN.Rows[e.RowIndex].Cells["MaBN"].Value.ToString();
                 txtTenBN.Text = gVBN.Rows[e.RowIndex].Cells[1].Value.ToString();
-                dtpNgaySinh.Text = gVBN.Rows[e.RowIndex].Cells[2].Value.ToString();
-                cbGioiTinh.Text = gVBN.Rows[e.RowIndex].Cells[3].Value.ToString();
+                cbGioiTinh.Text = gVBN.Rows[e.RowIndex].Cells[2].Value.ToString();
+                dtpNgaySinh.Text = gVBN.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtDienThoai.Text = gVBN.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtDiaChi.Text = gVBN.Rows[e.RowIndex].Cells[5].Value.ToString();
             }
@@ -74,8 +86,12 @@ namespace QLPM
         private void FQLBenhNhan_Load(object sender, EventArgs e)
         {
             HienThiDSBenhNhan();
-            busBN.LayDSLoaiGioiTinh(cbGioiTinh);
             DoiMauNut();
+            string[] gt = { "Nam", "Nữ", "Khác" };
+            foreach (string x in gt)
+            {
+                cbGioiTinh.Items.Add(x);
+            }
         }
 
         private void btThemBN_Click(object sender, EventArgs e)
@@ -95,7 +111,7 @@ namespace QLPM
 
                     bn.HoTenBN = txtTenBN.Text;
                     bn.NgaySinh = dtpNgaySinh.Value;
-                    bn.MaLGT = Int32.Parse(cbGioiTinh.SelectedValue.ToString());
+                    bn.GioiTinh = cbGioiTinh.SelectedItem.ToString();
                     bn.DienThoai = txtDienThoai.Text;
                     bn.DiaChi = txtDiaChi.Text;
 
@@ -130,8 +146,8 @@ namespace QLPM
 
                     bn.MaBN = int.Parse(txtMaBN.Text);
                     bn.HoTenBN = txtTenBN.Text;
+                    bn.GioiTinh = cbGioiTinh.SelectedItem.ToString();
                     bn.NgaySinh = dtpNgaySinh.Value;
-                    bn.MaLGT = int.Parse(cbGioiTinh.SelectedValue.ToString());
                     bn.DienThoai = txtDienThoai.Text;
                     bn.DiaChi = txtDiaChi.Text;
 

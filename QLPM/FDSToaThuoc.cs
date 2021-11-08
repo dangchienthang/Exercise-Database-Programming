@@ -29,6 +29,11 @@ namespace QLPM
             gVToa.Columns[1].Width = (int)(gVToa.Width * 0.3);
             gVToa.Columns[2].Width = (int)(gVToa.Width * 0.3);
             gVToa.Columns[3].Width = (int)(gVToa.Width * 0.3);
+
+            gVToa.Columns[0].HeaderText = "Mã toa thuốc";
+            gVToa.Columns[0].HeaderText = "Ngày kê toa";
+            gVToa.Columns[0].HeaderText = "Mã bác sĩ";
+            gVToa.Columns[0].HeaderText = "Mã bệnh nhân";
         }
 
         public void CapNhatDGThuoc()

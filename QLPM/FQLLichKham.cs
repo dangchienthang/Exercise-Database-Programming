@@ -29,12 +29,21 @@ namespace QLPM
             gVLK.Columns[2].Width = (int)(gVLK.Width * 0.22);
             gVLK.Columns[3].Width = (int)(gVLK.Width * 0.22);
             gVLK.Columns[4].Width = (int)(gVLK.Width * 0.22);
+
+            gVLK.Columns[0].HeaderText = "Mã lịch khám";
+            gVLK.Columns[1].HeaderText = "Tên bệnh nhân";
+            gVLK.Columns[2].HeaderText = "Y tá tạo lịch";
+            gVLK.Columns[3].HeaderText = "Bác sĩ chỉ định";
+            gVLK.Columns[4].HeaderText = "Ngày hẹn";
         }
 
         public void CapNhatDGLK()
         {
             //Cập nhật lại textbox sau khi thực hiện hành động thêm, sửa hoặc xóa
             txtMaLK.Text = "";
+            cbBN.Text = "";
+            cbYT.Text = "";
+            cbBS.Text = "";
 
             //Cập nhật DataGridView
             gVLK.Columns.Clear();
@@ -61,6 +70,9 @@ namespace QLPM
         {
             DoiMauNut();
             HienThiDSLichKham();
+            busLK.LayDSTenBenhNhan(cbBN);
+            busLK.LayDSTenBacSi(cbBS);
+            busLK.LayDSTenYTa(cbYT);
         }
 
         private void btXoaLich_Click(object sender, EventArgs e)
@@ -79,7 +91,7 @@ namespace QLPM
 
         private void btSuaLich_Click(object sender, EventArgs e)
         {
-            if (txtMaLK.Text == "")
+            if (txtMaLK.Text == "" || cbBN.Text == "" || cbBS.Text == "" || cbYT.Text == "")
                 MessageBox.Show("Vui lòng chọn hàng dữ liệu cần sửa!");
             else
             {
@@ -107,7 +119,7 @@ namespace QLPM
 
         private void btThemLich_Click(object sender, EventArgs e)
         {
-            if (txtMaLK.Text == "")
+            if (cbBN.Text == "" || cbBS.Text == "" || cbYT.Text == "")
             {
                 MessageBox.Show("Diền đủ thông tin trước khi thêm");
             }
@@ -135,6 +147,19 @@ namespace QLPM
 
         private void btThongKe_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void gVLK_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < gVLK.Rows.Count)
+            {
+                txtMaLK.Text = gVLK.Rows[e.RowIndex].Cells["MaLK"].Value.ToString();
+                cbBN.Text = gVLK.Rows[e.RowIndex].Cells[1].Value.ToString();
+                cbYT.Text = gVLK.Rows[e.RowIndex].Cells[2].Value.ToString();
+                cbBS.Text = gVLK.Rows[e.RowIndex].Cells[3].Value.ToString();
+                dtpNgayHen.Text = gVLK.Rows[e.RowIndex].Cells[4].Value.ToString();
+            }
 
         }
     }

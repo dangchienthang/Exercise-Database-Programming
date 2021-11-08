@@ -32,6 +32,14 @@ namespace QLPM
             gVPK.Columns[4].Width = (int)(gVPK.Width * 0.15);
             gVPK.Columns[5].Width = (int)(gVPK.Width * 0.15);
             gVPK.Columns[6].Width = (int)(gVPK.Width * 0.15);
+
+            gVPK.Columns[0].HeaderText = "Mã phiếu khám";
+            gVPK.Columns[1].HeaderText = "Mã bác sĩ";
+            gVPK.Columns[2].HeaderText = "Mã bệnh nhân";
+            gVPK.Columns[3].HeaderText = "Ngày khám";
+            gVPK.Columns[4].HeaderText = "Triệu chứng";
+            gVPK.Columns[5].HeaderText = "Chuẩn đoán";
+            gVPK.Columns[6].HeaderText = "Ngày tái khám";
         }
 
         public void CapNhatDG()

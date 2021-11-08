@@ -137,6 +137,7 @@
             // 
             // cbGioiTinh
             // 
+            this.cbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGioiTinh.FormattingEnabled = true;
             this.cbGioiTinh.Location = new System.Drawing.Point(630, 43);
             this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(2);

@@ -66,6 +66,11 @@ namespace QLPM.DAO
             bool tinhTrang = true;
             try
             {
+                //xoa chi tiet phieu kham co MaPK = maPK
+                var ds = db.XetNghiem_PhieuKham.Where(s => s.MaPK == maPK).Select(s => s);
+                db.XetNghiem_PhieuKham.RemoveRange(ds);
+                db.SaveChanges();
+
                 // Xoa phieu kham co MaPK = maPK
                 PhieuKham pk = db.PhieuKhams.Find(maPK);
                 if (pk != null)

@@ -46,21 +46,26 @@ namespace QLPM
             this.label13 = new System.Windows.Forms.Label();
             this.txtMaPK = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btSua = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.btThemCT = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gVCTPK)).BeginInit();
             this.groupBox8.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.gVCTPK);
-            this.groupBox6.Location = new System.Drawing.Point(56, 372);
+            this.groupBox6.Location = new System.Drawing.Point(284, 374);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(876, 289);
+            this.groupBox6.Size = new System.Drawing.Size(876, 274);
             this.groupBox6.TabIndex = 23;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Danh sách:";
@@ -73,7 +78,7 @@ namespace QLPM
             this.gVCTPK.Name = "gVCTPK";
             this.gVCTPK.RowHeadersWidth = 62;
             this.gVCTPK.RowTemplate.Height = 28;
-            this.gVCTPK.Size = new System.Drawing.Size(823, 292);
+            this.gVCTPK.Size = new System.Drawing.Size(823, 240);
             this.gVCTPK.TabIndex = 10;
             this.gVCTPK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVCTPK_CellClick);
             // 
@@ -91,9 +96,9 @@ namespace QLPM
             this.groupBox8.Controls.Add(this.label11);
             this.groupBox8.Controls.Add(this.label13);
             this.groupBox8.Controls.Add(this.txtMaPK);
-            this.groupBox8.Location = new System.Drawing.Point(56, 101);
+            this.groupBox8.Location = new System.Drawing.Point(284, 113);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(876, 187);
+            this.groupBox8.Size = new System.Drawing.Size(876, 162);
             this.groupBox8.TabIndex = 21;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Thông tin";
@@ -219,26 +224,15 @@ namespace QLPM
             this.label17.Size = new System.Drawing.Size(100, 23);
             this.label17.TabIndex = 24;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(418, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 20);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "CHI TIẾT PHIẾU KHÁM";
-            // 
             // btSua
             // 
             this.btSua.BackColor = System.Drawing.SystemColors.Control;
             this.btSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSua.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btSua.Image = global::QLPM.Properties.Resources.fix_it_icon;
-            this.btSua.Location = new System.Drawing.Point(725, 294);
+            this.btSua.Location = new System.Drawing.Point(941, 293);
             this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(75, 58);
+            this.btSua.Size = new System.Drawing.Size(88, 58);
             this.btSua.TabIndex = 8;
             this.btSua.Text = "Sửa";
             this.btSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -251,9 +245,9 @@ namespace QLPM
             this.btXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btXoa.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btXoa.Image = global::QLPM.Properties.Resources.delete_file_icon;
-            this.btXoa.Location = new System.Drawing.Point(832, 294);
+            this.btXoa.Location = new System.Drawing.Point(1053, 293);
             this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(75, 58);
+            this.btXoa.Size = new System.Drawing.Size(83, 58);
             this.btXoa.TabIndex = 9;
             this.btXoa.Text = "Xóa";
             this.btXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -266,24 +260,70 @@ namespace QLPM
             this.btThemCT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThemCT.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btThemCT.Image = global::QLPM.Properties.Resources.Button_Add_icon;
-            this.btThemCT.Location = new System.Drawing.Point(601, 294);
+            this.btThemCT.Location = new System.Drawing.Point(822, 293);
             this.btThemCT.Name = "btThemCT";
-            this.btThemCT.Size = new System.Drawing.Size(84, 58);
+            this.btThemCT.Size = new System.Drawing.Size(92, 58);
             this.btThemCT.TabIndex = 7;
             this.btThemCT.Text = "Thêm chi tiết";
             this.btThemCT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btThemCT.UseVisualStyleBackColor = false;
             this.btThemCT.Click += new System.EventHandler(this.btThemCT_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(170, 661);
+            this.panel2.TabIndex = 37;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(170, 93);
+            this.panel3.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.panel4.Location = new System.Drawing.Point(170, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1064, 93);
+            this.panel4.TabIndex = 38;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label4.Location = new System.Drawing.Point(448, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(234, 25);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "CHI TIẾT PHIẾU KHÁM";
+            // 
             // FChiTietPK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 661);
+            this.ClientSize = new System.Drawing.Size(1234, 661);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btThemCT);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.label17);
@@ -298,8 +338,10 @@ namespace QLPM
             ((System.ComponentModel.ISupportInitialize)(this.gVCTPK)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -313,7 +355,6 @@ namespace QLPM
         private System.Windows.Forms.TextBox txtMaPK;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpNgayXN;
         private System.Windows.Forms.TextBox txtYC;
@@ -325,5 +366,9 @@ namespace QLPM
         private System.Windows.Forms.Button btThemCT;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMaXN;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label4;
     }
 }

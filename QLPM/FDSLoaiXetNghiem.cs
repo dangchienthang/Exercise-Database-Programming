@@ -25,8 +25,13 @@ namespace QLPM
         {
             gVLXN.DataSource = null;
             busXN.LayDSLXN(gVLXN);
-            gVLXN.Columns[0].Width = (int)(gVLXN.Width * 0.1);
-            gVLXN.Columns[1].Width = (int)(gVLXN.Width * 0.9);
+            gVLXN.Columns[0].Width = (int)(gVLXN.Width * 0.2);
+            gVLXN.Columns[1].Width = (int)(gVLXN.Width * 0.4);
+            gVLXN.Columns[2].Width = (int)(gVLXN.Width * 0.4);
+
+            gVLXN.Columns[0].HeaderText = "Mã loại xét nghiệm";
+            gVLXN.Columns[1].HeaderText = "Tên loại xét nghiệm";
+            gVLXN.Columns[2].HeaderText = "Mô tả";
         }
 
         public void CapNhatDG()
@@ -34,6 +39,7 @@ namespace QLPM
             //Cập nhật lại textbox sau khi thực hiện hành động thêm, sửa hoặc xóa
             txtMaLXN.Text = "";
             txtTenLXN.Text = "";
+            txtMoTa.Text = "";
 
             //Cập nhật DataGridView
             gVLXN.Columns.Clear();
@@ -71,13 +77,14 @@ namespace QLPM
 
         private void btThem_Click(object sender, EventArgs e)
         {
-            if (txtTenLXN.Text == "")
+            if (txtTenLXN.Text == "" || txtTenLXN.Text == "" || txtMoTa.Text == "")
                 MessageBox.Show("Điền đầy đủ thông tin trước khi thêm");
             else
             {
                 LoaiXetNghiem lxn = new LoaiXetNghiem();
 
                 lxn.TenLXN = txtTenLXN.Text;
+                lxn.MoTa = txtMoTa.Text;
 
                 if (busXN.ThemLXN(lxn))
                 {
@@ -108,7 +115,7 @@ namespace QLPM
 
         private void btSua_Click(object sender, EventArgs e)
         {
-            if (txtMaLXN.Text == "")
+            if (txtMaLXN.Text == "" || txtTenLXN.Text == "" || txtMoTa.Text == "")
                 MessageBox.Show("Vui lòng chọn hàng dữ liệu cần sửa!");
             else
             {
@@ -116,6 +123,7 @@ namespace QLPM
 
                 lxn.MaLXN = int.Parse(txtMaLXN.Text);
                 lxn.TenLXN = txtTenLXN.Text;
+                lxn.MoTa = txtMoTa.Text;
 
                 if (busXN.SuaLXN(lxn))
                 {
@@ -126,8 +134,6 @@ namespace QLPM
                 }
                 else
                     MessageBox.Show("Sửa thất bại");
-
-
             }
 
         }

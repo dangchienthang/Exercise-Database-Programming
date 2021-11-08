@@ -22,13 +22,6 @@ namespace QLPM.BUS
             dg.DataSource = dBenhNhan.LayDSBenhNhan();
         }
 
-        public void LayDSLoaiGioiTinh(ComboBox cb)
-        {
-            cb.DataSource = dBenhNhan.LayDSLoaiGioiTinh();
-            cb.DisplayMember = "TenLoaiGT";
-            cb.ValueMember = "MaLGT";
-        }
-
         public bool TaoBenhNhan(BenhNhan bn)
         {
             try

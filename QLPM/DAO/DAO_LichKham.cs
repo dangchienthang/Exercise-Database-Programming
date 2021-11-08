@@ -21,22 +21,11 @@ namespace QLPM.DAO
             {
                 s.MaBN,
                 s.HoTenBN,
+                s.GioiTinh,
                 s.NgaySinh,
-                s.LoaiGioiTinh.TenLoaiGT,
                 s.DienThoai,
                 s.DiaChi
             }).ToList();
-            return ds;
-        }
-
-        public dynamic LayDSLoaiGioiTinh()
-        {
-            var ds = db.LoaiGioiTinhs.Select(s => new
-            {
-                s.MaLGT,
-                s.TenLoaiGT
-            }).ToList();
-
             return ds;
         }
 
@@ -45,11 +34,17 @@ namespace QLPM.DAO
             var ds = db.LichKhams.Select(s => new
             {
                 s.MaLK,
-                s.MaBN,
-                s.MaYT,
-                s.MaBS,
+                s.BenhNhan.HoTenBN,
+                s.YTa.HoTenYT,
+                s.BacSi.HoTenBS,
                 s.NgayHen,
             }).ToList();
+            return ds;
+        }
+
+        public dynamic LayDSLK()
+        {
+            var ds = db.LichKhams.Select(s => s).ToList();
             return ds;
         }
 

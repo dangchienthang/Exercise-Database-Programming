@@ -31,12 +31,21 @@ namespace QLPM
             gVYT.Columns[2].Width = (int)(gVYT.Width * 0.22);
             gVYT.Columns[3].Width = (int)(gVYT.Width * 0.22);
             gVYT.Columns[4].Width = (int)(gVYT.Width * 0.22);
+
+            gVYT.Columns[0].HeaderText = "Mã y tá";
+            gVYT.Columns[1].HeaderText = "Tên bác sĩ";
+            gVYT.Columns[2].HeaderText = "Giới tính";
+            gVYT.Columns[3].HeaderText = "Ngày sinh";
+            gVYT.Columns[4].HeaderText = "Điện thoại";
         }
 
         public void CapNhatDG()
         {
             //Cập nhật lại textbox sau khi thực hiện hành động thêm, sửa hoặc xóa
             txtMaYT.Text = "";
+            txtTenYT.Text = "";
+            txtDienThoai.Text = "";
+            cbGioiTinh.Text = "";
 
             //Cập nhật DataGridView
             gVYT.Columns.Clear();
@@ -49,8 +58,8 @@ namespace QLPM
             {
                 txtMaYT.Text = gVYT.Rows[e.RowIndex].Cells["MaYT"].Value.ToString();
                 txtTenYT.Text = gVYT.Rows[e.RowIndex].Cells[1].Value.ToString();
-                dtpNgaySinh.Text = gVYT.Rows[e.RowIndex].Cells[2].Value.ToString();
-                cbGioiTinh.Text = gVYT.Rows[e.RowIndex].Cells[3].Value.ToString();
+                cbGioiTinh.Text = gVYT.Rows[e.RowIndex].Cells[2].Value.ToString();
+                dtpNgaySinh.Text = gVYT.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtDienThoai.Text = gVYT.Rows[e.RowIndex].Cells[4].Value.ToString();
             }
         }
@@ -72,13 +81,17 @@ namespace QLPM
         private void FQLYTa_Load(object sender, EventArgs e)
         {
             HienThiDSYTa();
-            busYTa.LayDSLoaiGioiTinh(cbGioiTinh);
             DoiMauNut();
+            string[] gt = { "Nam", "Nữ", "Khác" };
+            foreach (string x in gt)
+            {
+                cbGioiTinh.Items.Add(x);
+            }
         }
 
         private void btThemYT_Click(object sender, EventArgs e)
         {
-            if (txtTenYT.Text == "" || txtDienThoai.Text == "")
+            if (txtTenYT.Text == "" || txtDienThoai.Text == "" || cbGioiTinh.Text == "")
                 MessageBox.Show("Điền đủ thông tin trước khi thêm");
             else
             {
@@ -92,8 +105,8 @@ namespace QLPM
                     YTa yt = new YTa();
 
                     yt.HoTenYT = txtTenYT.Text;
+                    yt.GioiTinh = cbGioiTinh.SelectedItem.ToString();
                     yt.NgaySinh = dtpNgaySinh.Value;
-                    yt.MaLGT = Int32.Parse(cbGioiTinh.SelectedValue.ToString());
                     yt.DienThoai = txtDienThoai.Text;
                     yt.MaLNV = int.Parse(txtMaLNV.Text);
 
@@ -138,8 +151,8 @@ namespace QLPM
 
                     yt.MaYT = int.Parse(txtMaYT.Text);
                     yt.HoTenYT = txtTenYT.Text;
+                    yt.GioiTinh = cbGioiTinh.SelectedItem.ToString();
                     yt.NgaySinh = dtpNgaySinh.Value;
-                    yt.MaLGT = int.Parse(cbGioiTinh.SelectedValue.ToString());
                     yt.DienThoai = txtDienThoai.Text;
                     yt.MaLNV = int.Parse(txtMaLNV.Text);
 

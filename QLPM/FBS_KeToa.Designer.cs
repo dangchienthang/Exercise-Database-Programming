@@ -48,6 +48,8 @@ namespace QLPM
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dGToa = new System.Windows.Forms.DataGridView();
             this.btTaoToa = new System.Windows.Forms.Button();
+            this.txtMoTa = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -57,6 +59,8 @@ namespace QLPM
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Controls.Add(this.txtMoTa);
+            this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.txtMaThuoc);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.txtLieuDung);
@@ -116,6 +120,7 @@ namespace QLPM
             // 
             // cbThuoc
             // 
+            this.cbThuoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbThuoc.FormattingEnabled = true;
             this.cbThuoc.Location = new System.Drawing.Point(151, 77);
             this.cbThuoc.Margin = new System.Windows.Forms.Padding(2);
@@ -259,6 +264,24 @@ namespace QLPM
             this.btTaoToa.UseVisualStyleBackColor = true;
             this.btTaoToa.Click += new System.EventHandler(this.btTaoToa_Click);
             // 
+            // txtMoTa
+            // 
+            this.txtMoTa.Enabled = false;
+            this.txtMoTa.Location = new System.Drawing.Point(151, 100);
+            this.txtMoTa.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Size = new System.Drawing.Size(214, 20);
+            this.txtMoTa.TabIndex = 33;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(43, 103);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Mô tả:";
+            // 
             // FBS_KeToa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,5 +330,7 @@ namespace QLPM
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dGToa;
         private System.Windows.Forms.Button btTaoToa;
+        private System.Windows.Forms.TextBox txtMoTa;
+        private System.Windows.Forms.Label label5;
     }
 }

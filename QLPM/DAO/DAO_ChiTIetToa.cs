@@ -108,7 +108,7 @@ namespace QLPM.DAO
         public bool KiemTraThuoc(ChiTietToaThuoc c)
         {
             int? sl;
-            sl = db.sp_KiemTraThuoc(c.MaToa, c.MaThuoc).FirstOrDefault();
+            sl = db.KiemTraThuoc(c.MaToa, c.MaThuoc).FirstOrDefault();
             if (sl != 0)
                 return false;
             else

@@ -60,7 +60,8 @@ namespace QLPM
             {
                 ma = int.Parse(cbThuoc.SelectedValue.ToString());
                 t = busToa.HienThiDSThuoc(ma);
-                txtMaThuoc.Text = t.MoTa.ToString();
+                txtMaThuoc.Text = t.MaThuoc.ToString();
+                txtMoTa.Text = t.MoTa.ToString();
             }
         }
 
@@ -139,12 +140,12 @@ namespace QLPM
         {
             if (busToa.ThemToa(maToa, dtToaThuoc))
             {
-                MessageBox.Show("Đặt hàng thành công");
+                MessageBox.Show("Kê toa thuốc thành công");
                 Close();
             }
             else
             {
-                MessageBox.Show("Đặt hàng thất bại");
+                MessageBox.Show("Kê toa thuốc thất bại");
             }
         }
 

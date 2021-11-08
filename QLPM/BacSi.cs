@@ -24,12 +24,11 @@ namespace QLPM
     
         public int MaBS { get; set; }
         public string HoTenBS { get; set; }
+        public string GioiTinh { get; set; }
         public System.DateTime NgaySinh { get; set; }
         public string DienThoai { get; set; }
-        public int MaLGT { get; set; }
         public int MaLNV { get; set; }
     
-        public virtual LoaiGioiTinh LoaiGioiTinh { get; set; }
         public virtual LoaiNhanVien LoaiNhanVien { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LichKham> LichKhams { get; set; }

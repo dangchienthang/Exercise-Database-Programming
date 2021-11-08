@@ -23,13 +23,6 @@ namespace QLPM.BUS
             dg.DataSource = dYTa.LayDSYTa();
         }
 
-        public void LayDSLoaiGioiTinh(ComboBox cb)
-        {
-            cb.DataSource = dYTa.LayDSLoaiGioiTinh();
-            cb.DisplayMember = "TenLoaiGT";
-            cb.ValueMember = "MaLGT";
-        }
-
         public bool TaoYTa(YTa yt)
         {
             try

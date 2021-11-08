@@ -116,9 +116,11 @@ namespace QLPM
             this.gVLK.RowTemplate.Height = 28;
             this.gVLK.Size = new System.Drawing.Size(835, 270);
             this.gVLK.TabIndex = 10;
+            this.gVLK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVLK_CellClick);
             // 
             // cbBN
             // 
+            this.cbBN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBN.FormattingEnabled = true;
             this.cbBN.Location = new System.Drawing.Point(146, 77);
             this.cbBN.Margin = new System.Windows.Forms.Padding(2);
@@ -137,6 +139,7 @@ namespace QLPM
             // 
             // cbYT
             // 
+            this.cbYT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbYT.FormattingEnabled = true;
             this.cbYT.Location = new System.Drawing.Point(146, 113);
             this.cbYT.Margin = new System.Windows.Forms.Padding(2);
@@ -155,6 +158,7 @@ namespace QLPM
             // 
             // cbBS
             // 
+            this.cbBS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBS.FormattingEnabled = true;
             this.cbBS.Location = new System.Drawing.Point(146, 151);
             this.cbBS.Margin = new System.Windows.Forms.Padding(2);

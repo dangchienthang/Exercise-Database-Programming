@@ -151,6 +151,7 @@ namespace QLPM
             // 
             // cbLXN
             // 
+            this.cbLXN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLXN.FormattingEnabled = true;
             this.cbLXN.Location = new System.Drawing.Point(134, 112);
             this.cbLXN.Margin = new System.Windows.Forms.Padding(2);

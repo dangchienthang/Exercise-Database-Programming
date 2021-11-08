@@ -21,22 +21,11 @@ namespace QLPM.BUS
             {
                 s.MaBN,
                 s.HoTenBN,
+                s.GioiTinh,
                 s.NgaySinh,
-                s.LoaiGioiTinh.TenLoaiGT,
                 s.DienThoai,
                 s.DiaChi
             }).ToList();
-            return ds;
-        }
-
-        public dynamic LayDSLoaiGioiTinh()
-        {
-            var ds = db.LoaiGioiTinhs.Select(s => new
-            {
-                s.MaLGT,
-                s.TenLoaiGT
-            }).ToList();
-
             return ds;
         }
 
@@ -62,8 +51,8 @@ namespace QLPM.BUS
             BenhNhan bn = db.BenhNhans.Find(benhnhan.MaBN);
 
             bn.HoTenBN = benhnhan.HoTenBN;
+            bn.GioiTinh = benhnhan.GioiTinh;
             bn.NgaySinh = benhnhan.NgaySinh;
-            bn.MaLGT = benhnhan.MaLGT;
             bn.DienThoai = benhnhan.DienThoai;
             bn.DiaChi = benhnhan.DiaChi;
 

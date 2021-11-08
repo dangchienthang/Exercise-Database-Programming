@@ -108,7 +108,7 @@ namespace QLPM.DAO
         public bool KiemTraXetNghiem(XetNghiem_PhieuKham xn)
         {
             int? sl;
-            sl = db.sp_KiemTraXetNghiem(xn.MaPK, xn.MaXN).FirstOrDefault();
+            sl = db.KiemTraXetNghiem(xn.MaPK, xn.MaXN).FirstOrDefault();
             if (sl != 0)
                 return false;
             else

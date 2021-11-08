@@ -23,13 +23,6 @@ namespace QLPM.BUS
             dg.DataSource = dBacSi.LayDSBacSi();
         }
 
-        public void LayDSLoaiGioiTinh(ComboBox cb)
-        {
-            cb.DataSource = dBacSi.LayDSLoaiGioiTinh();
-            cb.DisplayMember = "TenLoaiGT";
-            cb.ValueMember = "MaLGT";
-        }
-
         public bool TaoBacSi(BacSi bs)
         {
             try

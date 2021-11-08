@@ -21,21 +21,10 @@ namespace QLPM.DAO
             {
                 s.MaYT,
                 s.HoTenYT,
+                s.GioiTinh,
                 s.NgaySinh,
-                s.LoaiGioiTinh.TenLoaiGT,
                 s.DienThoai
             }).ToList();
-            return ds;
-        }
-
-        public dynamic LayDSLoaiGioiTinh()
-        {
-            var ds = db.LoaiGioiTinhs.Select(s => new
-            {
-                s.MaLGT,
-                s.TenLoaiGT
-            }).ToList();
-
             return ds;
         }
 
@@ -61,8 +50,8 @@ namespace QLPM.DAO
             YTa yt = db.YTas.Find(yta.MaYT);
 
             yt.HoTenYT = yta.HoTenYT;
+            yt.GioiTinh = yta.GioiTinh;
             yt.NgaySinh = yta.NgaySinh;
-            yt.MaLGT = yta.MaLGT;
             yt.DienThoai = yta.DienThoai;
             yt.MaLNV = yta.MaLNV;
 

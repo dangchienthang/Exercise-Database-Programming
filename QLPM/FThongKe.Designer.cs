@@ -120,6 +120,7 @@ namespace QLPM
             this.btThongKe.Text = "Thống kê";
             this.btThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btThongKe.UseVisualStyleBackColor = true;
+            this.btThongKe.Click += new System.EventHandler(this.btThongKe_Click);
             // 
             // FThongKe
             // 

@@ -15,8 +15,8 @@ namespace QLPM
     {
         public int MaYT { get; set; }
         public string HoTenYT { get; set; }
+        public string GioiTinh { get; set; }
         public System.DateTime NgaySinh { get; set; }
-        public string TenLoaiGT { get; set; }
         public string DienThoai { get; set; }
         public int MaLNV { get; set; }
     }

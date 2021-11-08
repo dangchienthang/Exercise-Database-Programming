@@ -37,6 +37,8 @@ namespace QLPM
             this.btSua = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.gVLXN = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMoTa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gVLXN)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@ namespace QLPM
             // txtMaLXN
             // 
             this.txtMaLXN.Enabled = false;
-            this.txtMaLXN.Location = new System.Drawing.Point(134, 43);
+            this.txtMaLXN.Location = new System.Drawing.Point(152, 43);
             this.txtMaLXN.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaLXN.Name = "txtMaLXN";
             this.txtMaLXN.Size = new System.Drawing.Size(237, 20);
@@ -69,7 +71,7 @@ namespace QLPM
             // 
             // txtTenLXN
             // 
-            this.txtTenLXN.Location = new System.Drawing.Point(134, 77);
+            this.txtTenLXN.Location = new System.Drawing.Point(152, 77);
             this.txtTenLXN.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenLXN.Name = "txtTenLXN";
             this.txtTenLXN.Size = new System.Drawing.Size(237, 20);
@@ -128,11 +130,30 @@ namespace QLPM
             this.gVLXN.TabIndex = 6;
             this.gVLXN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVLXN_CellClick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 118);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Mô tả";
+            // 
+            // txtMoTa
+            // 
+            this.txtMoTa.Location = new System.Drawing.Point(152, 115);
+            this.txtMoTa.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Size = new System.Drawing.Size(237, 20);
+            this.txtMoTa.TabIndex = 13;
+            // 
             // FDSLoaiXetNghiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 570);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtMoTa);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.hoTenNhanVienLabel);
             this.Controls.Add(this.gVLXN);
@@ -159,5 +180,7 @@ namespace QLPM
         private System.Windows.Forms.Button btSua;
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.DataGridView gVLXN;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtMoTa;
     }
 }

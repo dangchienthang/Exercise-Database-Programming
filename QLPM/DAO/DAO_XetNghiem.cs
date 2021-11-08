@@ -96,6 +96,7 @@ namespace QLPM.DAO
             {
                 s.MaLXN,
                 s.TenLXN,
+                s.MoTa
             }).ToList();
             return ds;
         }
