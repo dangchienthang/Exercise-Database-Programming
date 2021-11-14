@@ -87,5 +87,10 @@ namespace QLPM
             else
                 txtMK.PasswordChar = '*';
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hệ thông quản lý phòng mạch tư Datha\n\nHọ tên: Đặng Chiến Thắng\nMSSV: 1851050133\nGVHD: Ths.Hồ Quang Khải");
+        }
     }
 }

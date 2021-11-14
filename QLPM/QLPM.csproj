@@ -270,16 +270,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyPhongMach.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Report\ThongKeBacSi.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ThongKeBacSi.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Report\ThongKeBenhNhan.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ThongKeBenhNhan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ThongKeBacSi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThongKeBacSi.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\ThongKeLichKham.cs">
@@ -406,13 +406,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Report\ThongKeBacSi.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ThongKeBacSi.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Report\ThongKeBenhNhan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ThongKeBenhNhan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ThongKeBacSi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ThongKeBacSi.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ThongKeLichKham.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -492,6 +492,9 @@
       <DependentUpon>QuanLyPhongMach.edmx</DependentUpon>
       <LastGenOutput>QuanLyPhongMach.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\unnamed.png" />
+    <None Include="Resources\preview-525251-NmTTLT8GgtDzOt6F-large.jpg" />
+    <None Include="Resources\thiet-ke-phong-kham-nhu-the-nao-1024x576.jpg" />
     <None Include="Resources\Start-Menu-Search-icon.png" />
   </ItemGroup>
   <ItemGroup />

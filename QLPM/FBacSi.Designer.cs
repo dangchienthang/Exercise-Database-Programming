@@ -43,7 +43,9 @@ namespace QLPM
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelTieuDe = new System.Windows.Forms.Label();
             this.panelTieuDe = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelDanhMuc.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             this.panelFormCon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTieuDe.SuspendLayout();
@@ -210,6 +212,7 @@ namespace QLPM
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.panelLogo.Controls.Add(this.label1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
@@ -262,6 +265,17 @@ namespace QLPM
             this.panelTieuDe.Size = new System.Drawing.Size(1064, 93);
             this.panelTieuDe.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Ravie", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(32, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 30);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Datha";
+            // 
             // FBacSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -272,12 +286,15 @@ namespace QLPM
             this.Controls.Add(this.panelDanhMuc);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FBacSi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang bác sĩ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FBacSi_FormClosing);
             this.Load += new System.EventHandler(this.FBacSi_Load);
             this.panelDanhMuc.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             this.panelFormCon.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTieuDe.ResumeLayout(false);
@@ -301,5 +318,6 @@ namespace QLPM
         private System.Windows.Forms.Button btLXN;
         private System.Windows.Forms.Button btPK;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -115,6 +115,7 @@ namespace QLPM
             this.gVPK.Size = new System.Drawing.Size(835, 270);
             this.gVPK.TabIndex = 10;
             this.gVPK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVPK_CellClick);
+            this.gVPK.DoubleClick += new System.EventHandler(this.gVPK_DoubleClick);
             // 
             // label3
             // 

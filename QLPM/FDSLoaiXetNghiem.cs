@@ -25,9 +25,9 @@ namespace QLPM
         {
             gVLXN.DataSource = null;
             busXN.LayDSLXN(gVLXN);
-            gVLXN.Columns[0].Width = (int)(gVLXN.Width * 0.2);
-            gVLXN.Columns[1].Width = (int)(gVLXN.Width * 0.4);
-            gVLXN.Columns[2].Width = (int)(gVLXN.Width * 0.4);
+            gVLXN.Columns[0].Width = (int)(gVLXN.Width * 0.1);
+            gVLXN.Columns[1].Width = (int)(gVLXN.Width * 0.2);
+            gVLXN.Columns[2].Width = (int)(gVLXN.Width * 0.7);
 
             gVLXN.Columns[0].HeaderText = "Mã loại xét nghiệm";
             gVLXN.Columns[1].HeaderText = "Tên loại xét nghiệm";
@@ -72,6 +72,7 @@ namespace QLPM
             {
                 txtMaLXN.Text = gVLXN.Rows[e.RowIndex].Cells["MaLXN"].Value.ToString();
                 txtTenLXN.Text = gVLXN.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtMoTa.Text = gVLXN.Rows[e.RowIndex].Cells[2].Value.ToString();
             }
         }
 

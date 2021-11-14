@@ -32,6 +32,10 @@ namespace QLPM
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FKhamBenh));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panelTieuDe = new System.Windows.Forms.Panel();
+            this.labelTieuDe = new System.Windows.Forms.Label();
+            this.panelDanhMuc = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btSuaPK = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gVPK = new System.Windows.Forms.DataGridView();
@@ -53,6 +57,10 @@ namespace QLPM
             this.label7 = new System.Windows.Forms.Label();
             this.diaChiLabel = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btHoanTat = new System.Windows.Forms.Button();
             this.btSuaTT = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -68,27 +76,21 @@ namespace QLPM
             this.txtMaToa = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.panelDanhMuc = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelTieuDe = new System.Windows.Forms.Panel();
-            this.labelTieuDe = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panelTieuDe.SuspendLayout();
+            this.panelDanhMuc.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gVPK)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gVToa)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.panelDanhMuc.SuspendLayout();
-            this.panelTieuDe.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -119,12 +121,58 @@ namespace QLPM
             this.tabPage1.Text = "Phiếu khám bệnh";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // panelTieuDe
+            // 
+            this.panelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.panelTieuDe.Controls.Add(this.labelTieuDe);
+            this.panelTieuDe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.panelTieuDe.Location = new System.Drawing.Point(173, 3);
+            this.panelTieuDe.Name = "panelTieuDe";
+            this.panelTieuDe.Size = new System.Drawing.Size(1070, 93);
+            this.panelTieuDe.TabIndex = 22;
+            // 
+            // labelTieuDe
+            // 
+            this.labelTieuDe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTieuDe.AutoSize = true;
+            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.labelTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelTieuDe.Location = new System.Drawing.Point(451, 29);
+            this.labelTieuDe.Name = "labelTieuDe";
+            this.labelTieuDe.Size = new System.Drawing.Size(137, 25);
+            this.labelTieuDe.TabIndex = 1;
+            this.labelTieuDe.Text = "KHÁM BỆNH";
+            // 
+            // panelDanhMuc
+            // 
+            this.panelDanhMuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.panelDanhMuc.Controls.Add(this.panel1);
+            this.panelDanhMuc.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelDanhMuc.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.panelDanhMuc.Location = new System.Drawing.Point(3, 3);
+            this.panelDanhMuc.Name = "panelDanhMuc";
+            this.panelDanhMuc.Size = new System.Drawing.Size(170, 666);
+            this.panelDanhMuc.TabIndex = 21;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(170, 93);
+            this.panel1.TabIndex = 0;
+            // 
             // btSuaPK
             // 
             this.btSuaPK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSuaPK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSuaPK.Image = global::QLPM.Properties.Resources.fix_it_icon;
-            this.btSuaPK.Location = new System.Drawing.Point(916, 262);
+            this.btSuaPK.Location = new System.Drawing.Point(913, 271);
             this.btSuaPK.Name = "btSuaPK";
             this.btSuaPK.Size = new System.Drawing.Size(75, 58);
             this.btSuaPK.TabIndex = 9;
@@ -163,7 +211,7 @@ namespace QLPM
             this.btXoaPK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btXoaPK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaPK.Image = global::QLPM.Properties.Resources.delete_file_icon;
-            this.btXoaPK.Location = new System.Drawing.Point(1031, 262);
+            this.btXoaPK.Location = new System.Drawing.Point(1030, 271);
             this.btXoaPK.Name = "btXoaPK";
             this.btXoaPK.Size = new System.Drawing.Size(75, 58);
             this.btXoaPK.TabIndex = 10;
@@ -177,7 +225,7 @@ namespace QLPM
             this.btThemPK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThemPK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemPK.Image = global::QLPM.Properties.Resources.Button_Add_icon;
-            this.btThemPK.Location = new System.Drawing.Point(753, 262);
+            this.btThemPK.Location = new System.Drawing.Point(752, 271);
             this.btThemPK.Name = "btThemPK";
             this.btThemPK.Size = new System.Drawing.Size(110, 58);
             this.btThemPK.TabIndex = 8;
@@ -204,7 +252,7 @@ namespace QLPM
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.diaChiLabel);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(254, 101);
+            this.groupBox5.Location = new System.Drawing.Point(254, 117);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(876, 148);
             this.groupBox5.TabIndex = 17;
@@ -360,6 +408,51 @@ namespace QLPM
             this.tabPage3.TabIndex = 5;
             this.tabPage3.Text = "Kê toa thuốc";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.panel4.Location = new System.Drawing.Point(173, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1070, 93);
+            this.panel4.TabIndex = 31;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Location = new System.Drawing.Point(451, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(169, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "KÊ TOA THUỐC";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(170, 666);
+            this.panel2.TabIndex = 30;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(170, 93);
+            this.panel3.TabIndex = 0;
             // 
             // btHoanTat
             // 
@@ -536,95 +629,16 @@ namespace QLPM
             this.label16.TabIndex = 4;
             this.label16.Text = "Ngày kê toa:";
             // 
-            // panelDanhMuc
+            // label8
             // 
-            this.panelDanhMuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.panelDanhMuc.Controls.Add(this.panel1);
-            this.panelDanhMuc.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelDanhMuc.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.panelDanhMuc.Location = new System.Drawing.Point(3, 3);
-            this.panelDanhMuc.Name = "panelDanhMuc";
-            this.panelDanhMuc.Size = new System.Drawing.Size(170, 666);
-            this.panelDanhMuc.TabIndex = 21;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(170, 93);
-            this.panel1.TabIndex = 0;
-            // 
-            // panelTieuDe
-            // 
-            this.panelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.panelTieuDe.Controls.Add(this.labelTieuDe);
-            this.panelTieuDe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.panelTieuDe.Location = new System.Drawing.Point(173, 3);
-            this.panelTieuDe.Name = "panelTieuDe";
-            this.panelTieuDe.Size = new System.Drawing.Size(1070, 93);
-            this.panelTieuDe.TabIndex = 22;
-            // 
-            // labelTieuDe
-            // 
-            this.labelTieuDe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTieuDe.AutoSize = true;
-            this.labelTieuDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.labelTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTieuDe.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelTieuDe.Location = new System.Drawing.Point(451, 29);
-            this.labelTieuDe.Name = "labelTieuDe";
-            this.labelTieuDe.Size = new System.Drawing.Size(137, 25);
-            this.labelTieuDe.TabIndex = 1;
-            this.labelTieuDe.Text = "KHÁM BỆNH";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(170, 666);
-            this.panel2.TabIndex = 30;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(170, 93);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.panel4.Location = new System.Drawing.Point(173, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1070, 93);
-            this.panel4.TabIndex = 31;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(451, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "KÊ TOA THUỐC";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Ravie", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(33, 29);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 30);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Datha";
             // 
             // FKhamBenh
             // 
@@ -640,21 +654,23 @@ namespace QLPM
             this.Load += new System.EventHandler(this.FKhamBenh_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.panelTieuDe.ResumeLayout(false);
+            this.panelTieuDe.PerformLayout();
+            this.panelDanhMuc.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gVPK)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gVToa)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.panelDanhMuc.ResumeLayout(false);
-            this.panelTieuDe.ResumeLayout(false);
-            this.panelTieuDe.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -706,5 +722,6 @@ namespace QLPM
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
     }
 }

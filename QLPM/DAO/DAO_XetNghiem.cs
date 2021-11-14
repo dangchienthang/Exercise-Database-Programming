@@ -123,6 +123,7 @@ namespace QLPM.DAO
             LoaiXetNghiem x = db.LoaiXetNghiems.Find(xn.MaLXN);
 
             x.TenLXN = xn.TenLXN;
+            x.MoTa = xn.MoTa;
 
             db.SaveChanges();
         }

@@ -19,6 +19,7 @@ namespace QLPM
             InitializeComponent();
             MaTK = ma;
             random = new Random();
+            btQuayLai.Visible = false;
         }
 
         private Button nutHienTai;
@@ -55,7 +56,7 @@ namespace QLPM
                     panelLogo.BackColor = Mau.ChinhDoSangMau(mau, -0.3);
                     Mau.MauChinh = mau;
                     Mau.MauPhu = Mau.ChinhDoSangMau(mau, -0.3);
-                    //btnCloseChildForm.Visible = true;
+                    btQuayLai.Visible = true;
                 }
             }
         }

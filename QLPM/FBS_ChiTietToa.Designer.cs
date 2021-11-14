@@ -48,10 +48,12 @@ namespace QLPM
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gVToa)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +63,7 @@ namespace QLPM
             this.btSuaTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSuaTT.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btSuaTT.Image = global::QLPM.Properties.Resources.fix_it_icon;
-            this.btSuaTT.Location = new System.Drawing.Point(948, 215);
+            this.btSuaTT.Location = new System.Drawing.Point(992, 215);
             this.btSuaTT.Name = "btSuaTT";
             this.btSuaTT.Size = new System.Drawing.Size(75, 58);
             this.btSuaTT.TabIndex = 6;
@@ -74,9 +76,9 @@ namespace QLPM
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.gVToa);
-            this.groupBox1.Location = new System.Drawing.Point(282, 354);
+            this.groupBox1.Location = new System.Drawing.Point(206, 349);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(876, 300);
+            this.groupBox1.Size = new System.Drawing.Size(996, 300);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Toa thuốc:";
@@ -84,12 +86,12 @@ namespace QLPM
             // gVToa
             // 
             this.gVToa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gVToa.Location = new System.Drawing.Point(23, 17);
+            this.gVToa.Location = new System.Drawing.Point(23, 33);
             this.gVToa.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.gVToa.Name = "gVToa";
             this.gVToa.RowHeadersWidth = 62;
             this.gVToa.RowTemplate.Height = 28;
-            this.gVToa.Size = new System.Drawing.Size(837, 267);
+            this.gVToa.Size = new System.Drawing.Size(957, 251);
             this.gVToa.TabIndex = 8;
             this.gVToa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVToa_CellClick);
             // 
@@ -99,7 +101,7 @@ namespace QLPM
             this.btXoaTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btXoaTT.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btXoaTT.Image = global::QLPM.Properties.Resources.delete_file_icon;
-            this.btXoaTT.Location = new System.Drawing.Point(1067, 215);
+            this.btXoaTT.Location = new System.Drawing.Point(1111, 215);
             this.btXoaTT.Name = "btXoaTT";
             this.btXoaTT.Size = new System.Drawing.Size(75, 58);
             this.btXoaTT.TabIndex = 7;
@@ -114,7 +116,7 @@ namespace QLPM
             this.btThemTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThemTT.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btThemTT.Image = global::QLPM.Properties.Resources.Button_Add_icon;
-            this.btThemTT.Location = new System.Drawing.Point(742, 215);
+            this.btThemTT.Location = new System.Drawing.Point(786, 215);
             this.btThemTT.Name = "btThemTT";
             this.btThemTT.Size = new System.Drawing.Size(166, 58);
             this.btThemTT.TabIndex = 5;
@@ -134,7 +136,7 @@ namespace QLPM
             this.groupBox3.Controls.Add(this.txtMaToa);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Location = new System.Drawing.Point(282, 131);
+            this.groupBox3.Location = new System.Drawing.Point(206, 113);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(409, 160);
             this.groupBox3.TabIndex = 34;
@@ -226,6 +228,7 @@ namespace QLPM
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.panel3.Controls.Add(this.label4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -257,6 +260,17 @@ namespace QLPM
             this.label1.TabIndex = 1;
             this.label1.Text = "CHI TIẾT TOA THUỐC";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Ravie", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(36, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 30);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Datha";
+            // 
             // FChiTietToa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,6 +296,8 @@ namespace QLPM
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
@@ -308,5 +324,6 @@ namespace QLPM
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }

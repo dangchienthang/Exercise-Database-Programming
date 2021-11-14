@@ -29,6 +29,7 @@ namespace QLPM
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBS_XetNghiem));
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.gVCTPK = new System.Windows.Forms.DataGridView();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -54,6 +55,7 @@ namespace QLPM
             this.btXoa = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.btThemChiTiet = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gVCTPK)).BeginInit();
             this.groupBox8.SuspendLayout();
@@ -268,7 +270,7 @@ namespace QLPM
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.ForeColor = System.Drawing.Color.Gray;
             this.label1.Location = new System.Drawing.Point(418, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 20);
@@ -335,11 +337,23 @@ namespace QLPM
             this.btThemChiTiet.UseVisualStyleBackColor = false;
             this.btThemChiTiet.Click += new System.EventHandler(this.btThemChiTiet_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Ravie", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.Location = new System.Drawing.Point(12, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 30);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Datha";
+            // 
             // FBS_XetNghiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 811);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btThemChiTiet);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btXoa);
@@ -348,6 +362,7 @@ namespace QLPM
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.label17);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FBS_XetNghiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -389,5 +404,6 @@ namespace QLPM
         private System.Windows.Forms.TextBox txtMaXN;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btThemChiTiet;
+        private System.Windows.Forms.Label label5;
     }
 }

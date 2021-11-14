@@ -143,17 +143,18 @@ namespace QLPM
             // 
             this.txtMoTa.Location = new System.Drawing.Point(152, 115);
             this.txtMoTa.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(237, 20);
-            this.txtMoTa.TabIndex = 13;
+            this.txtMoTa.Size = new System.Drawing.Size(237, 53);
+            this.txtMoTa.TabIndex = 3;
             // 
             // FDSLoaiXetNghiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 570);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMoTa);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.hoTenNhanVienLabel);
             this.Controls.Add(this.gVLXN);

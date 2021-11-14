@@ -31,6 +31,11 @@ namespace QLPM
             gVToa.Columns[1].Width = (int)(0.2 * gVToa.Width);
             gVToa.Columns[2].Width = (int)(0.3 * gVToa.Width);
             gVToa.Columns[3].Width = (int)(0.3 * gVToa.Width);
+
+            gVToa.Columns[0].HeaderText = "Mã toa";
+            gVToa.Columns[1].HeaderText = "Mã thuốc";
+            gVToa.Columns[2].HeaderText = "Số lượng";
+            gVToa.Columns[3].HeaderText = "Liều dùng";
         }
 
         public void CapNhatDG()
@@ -108,4 +113,5 @@ namespace QLPM
                 e.Handled = true;
         }
     }   
+
 }

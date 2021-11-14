@@ -118,6 +118,7 @@ namespace QLPM
             this.gVToa.Size = new System.Drawing.Size(835, 270);
             this.gVToa.TabIndex = 7;
             this.gVToa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVToa_CellClick);
+            this.gVToa.DoubleClick += new System.EventHandler(this.gVToa_DoubleClick);
             // 
             // label3
             // 
@@ -159,7 +160,7 @@ namespace QLPM
             this.cbBN.Size = new System.Drawing.Size(237, 21);
             this.cbBN.TabIndex = 4;
             // 
-            // FToaThuoc
+            // FDSToaThuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -175,7 +176,7 @@ namespace QLPM
             this.Controls.Add(this.btXoaToa);
             this.Controls.Add(this.txtMaToa);
             this.Controls.Add(this.label2);
-            this.Name = "FToaThuoc";
+            this.Name = "FDSToaThuoc";
             this.Text = "DANH SÁCH TOA THUỐC";
             this.Load += new System.EventHandler(this.FToaThuoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gVToa)).EndInit();

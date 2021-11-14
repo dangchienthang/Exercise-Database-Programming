@@ -31,9 +31,9 @@ namespace QLPM
             gVToa.Columns[3].Width = (int)(gVToa.Width * 0.3);
 
             gVToa.Columns[0].HeaderText = "Mã toa thuốc";
-            gVToa.Columns[0].HeaderText = "Ngày kê toa";
-            gVToa.Columns[0].HeaderText = "Mã bác sĩ";
-            gVToa.Columns[0].HeaderText = "Mã bệnh nhân";
+            gVToa.Columns[1].HeaderText = "Ngày kê toa";
+            gVToa.Columns[2].HeaderText = "Tên bác sĩ";
+            gVToa.Columns[3].HeaderText = "Tên bệnh nhân";
         }
 
         public void CapNhatDGThuoc()
@@ -114,6 +114,17 @@ namespace QLPM
                 cbBS.Text = gVToa.Rows[e.RowIndex].Cells[2].Value.ToString();
                 cbBN.Text = gVToa.Rows[e.RowIndex].Cells[3].Value.ToString();
             }
+        }
+
+        private void gVToa_DoubleClick(object sender, EventArgs e)
+        {
+            int maToa;
+            maToa = int.Parse(gVToa.CurrentRow.Cells["MaToa"].Value.ToString());
+            //goi Form
+            FChiTietToa f = new FChiTietToa();
+            //truyen bien
+            f.maToa = maToa;
+            f.ShowDialog();
         }
     }
 }

@@ -41,6 +41,13 @@ namespace QLPM
             gVCTPK.Columns[3].Width = (int)(0.2 * gVCTPK.Width);
             gVCTPK.Columns[4].Width = (int)(0.2 * gVCTPK.Width);
             gVCTPK.Columns[5].Width = (int)(0.2 * gVCTPK.Width);
+
+            gVCTPK.Columns[0].HeaderText = "Mã phiếu khám";
+            gVCTPK.Columns[1].HeaderText = "Mã xét nghiệm";
+            gVCTPK.Columns[2].HeaderText = "Ngày xét nghiệm";
+            gVCTPK.Columns[3].HeaderText = "Ngày hẹn lấy kết quả";
+            gVCTPK.Columns[4].HeaderText = "Yêu cầu xét nghiệm";
+            gVCTPK.Columns[5].HeaderText = "Kết quả xét nghiệm";
         }
 
         public void CapNhatDG()
@@ -75,7 +82,7 @@ namespace QLPM
 
                 x.MaPK = int.Parse(txtMaPK.Text);
                 x.MaXN = int.Parse(txtMaXN.Text);
-                x.NgayXN = dtpNgayXN.Value; ;
+                x.NgayXN = dtpNgayXN.Value;
                 x.NgayHenLayKQ = dtpNgayHen.Value;
                 x.YeuCauXN = txtYC.Text;
                 x.KetQuaXN = txtKQ.Text;

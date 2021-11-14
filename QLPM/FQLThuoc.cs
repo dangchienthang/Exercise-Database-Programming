@@ -15,6 +15,7 @@ namespace QLPM
     public partial class FQLThuoc : Form
     {
         BUS_QLThuoc busThuoc;
+
         public FQLThuoc()
         {
             InitializeComponent();

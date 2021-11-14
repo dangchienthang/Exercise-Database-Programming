@@ -47,6 +47,12 @@ namespace QLPM
             gVCTPK.Columns[2].Width = (int)(0.2 * gVCTPK.Width);
             gVCTPK.Columns[3].Width = (int)(0.2 * gVCTPK.Width);
             gVCTPK.Columns[4].Width = (int)(0.2 * gVCTPK.Width);
+
+            gVCTPK.Columns[0].HeaderText = "Mã xét nghiệm";
+            gVCTPK.Columns[1].HeaderText = "Ngày xét nghiệm";
+            gVCTPK.Columns[2].HeaderText = "Ngày hẹn lấy kết quả";
+            gVCTPK.Columns[3].HeaderText = "Yêu cầu xét nghiệm";
+            gVCTPK.Columns[4].HeaderText = "Kết quả xét nghiệm";
         }
 
         void HienThiThongTinXetNghiem(string maXN)
@@ -95,7 +101,7 @@ namespace QLPM
 
             if (kiemtra)
             {
-                if (txtYC.Text != "" || txtKQ.Text == "")
+                if (txtYC.Text != "" || txtKQ.Text != "")
                 {
                     DataRow r = dtCTPK.NewRow();
 

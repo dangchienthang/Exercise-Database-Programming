@@ -202,6 +202,16 @@ namespace QLPM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap preview_525251_NmTTLT8GgtDzOt6F_large {
+            get {
+                object obj = ResourceManager.GetObject("preview-525251-NmTTLT8GgtDzOt6F-large", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Refresh_icon {
             get {
                 object obj = ResourceManager.GetObject("Refresh-icon", resourceCulture);
@@ -235,6 +245,26 @@ namespace QLPM.Properties {
         internal static System.Drawing.Bitmap Start_Menu_Search_icon {
             get {
                 object obj = ResourceManager.GetObject("Start-Menu-Search-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thiet_ke_phong_kham_nhu_the_nao_1024x576 {
+            get {
+                object obj = ResourceManager.GetObject("thiet-ke-phong-kham-nhu-the-nao-1024x576", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unnamed {
+            get {
+                object obj = ResourceManager.GetObject("unnamed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

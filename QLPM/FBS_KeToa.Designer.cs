@@ -31,6 +31,8 @@ namespace QLPM
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBS_KeToa));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtMoTa = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtMaThuoc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtLieuDung = new System.Windows.Forms.TextBox();
@@ -48,12 +50,17 @@ namespace QLPM
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dGToa = new System.Windows.Forms.DataGridView();
             this.btTaoToa = new System.Windows.Forms.Button();
-            this.txtMoTa = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btTimKiem = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gVThuoc = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGToa)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gVThuoc)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -71,12 +78,30 @@ namespace QLPM
             this.groupBox3.Controls.Add(this.txtMaToa);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Location = new System.Drawing.Point(94, 96);
+            this.groupBox3.Location = new System.Drawing.Point(49, 96);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(776, 132);
+            this.groupBox3.Size = new System.Drawing.Size(893, 132);
             this.groupBox3.TabIndex = 29;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin";
+            // 
+            // txtMoTa
+            // 
+            this.txtMoTa.Enabled = false;
+            this.txtMoTa.Location = new System.Drawing.Point(151, 100);
+            this.txtMoTa.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Size = new System.Drawing.Size(214, 20);
+            this.txtMoTa.TabIndex = 33;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(43, 103);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Mô tả:";
             // 
             // txtMaThuoc
             // 
@@ -98,7 +123,7 @@ namespace QLPM
             // 
             // txtLieuDung
             // 
-            this.txtLieuDung.Location = new System.Drawing.Point(538, 59);
+            this.txtLieuDung.Location = new System.Drawing.Point(661, 57);
             this.txtLieuDung.Margin = new System.Windows.Forms.Padding(2);
             this.txtLieuDung.Name = "txtLieuDung";
             this.txtLieuDung.Size = new System.Drawing.Size(216, 20);
@@ -106,7 +131,7 @@ namespace QLPM
             // 
             // numSoLuong
             // 
-            this.numSoLuong.Location = new System.Drawing.Point(538, 31);
+            this.numSoLuong.Location = new System.Drawing.Point(661, 29);
             this.numSoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.numSoLuong.Name = "numSoLuong";
             this.numSoLuong.Size = new System.Drawing.Size(216, 20);
@@ -132,7 +157,7 @@ namespace QLPM
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(423, 59);
+            this.label2.Location = new System.Drawing.Point(546, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 17;
@@ -168,7 +193,7 @@ namespace QLPM
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(423, 31);
+            this.label16.Location = new System.Drawing.Point(546, 29);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(52, 13);
             this.label16.TabIndex = 4;
@@ -178,7 +203,7 @@ namespace QLPM
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.ForeColor = System.Drawing.Color.Gray;
             this.label1.Location = new System.Drawing.Point(427, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 20);
@@ -191,7 +216,7 @@ namespace QLPM
             this.btSuaTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSuaTT.ForeColor = System.Drawing.Color.Black;
             this.btSuaTT.Image = global::QLPM.Properties.Resources.fix_it_icon;
-            this.btSuaTT.Location = new System.Drawing.Point(678, 263);
+            this.btSuaTT.Location = new System.Drawing.Point(756, 279);
             this.btSuaTT.Name = "btSuaTT";
             this.btSuaTT.Size = new System.Drawing.Size(75, 58);
             this.btSuaTT.TabIndex = 7;
@@ -206,7 +231,7 @@ namespace QLPM
             this.btXoaTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btXoaTT.ForeColor = System.Drawing.Color.Black;
             this.btXoaTT.Image = global::QLPM.Properties.Resources.delete_file_icon;
-            this.btXoaTT.Location = new System.Drawing.Point(775, 263);
+            this.btXoaTT.Location = new System.Drawing.Point(853, 279);
             this.btXoaTT.Name = "btXoaTT";
             this.btXoaTT.Size = new System.Drawing.Size(73, 58);
             this.btXoaTT.TabIndex = 8;
@@ -221,7 +246,7 @@ namespace QLPM
             this.btThemTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThemTT.ForeColor = System.Drawing.Color.Black;
             this.btThemTT.Image = global::QLPM.Properties.Resources.Button_Add_icon;
-            this.btThemTT.Location = new System.Drawing.Point(575, 263);
+            this.btThemTT.Location = new System.Drawing.Point(653, 279);
             this.btThemTT.Name = "btThemTT";
             this.btThemTT.Size = new System.Drawing.Size(80, 58);
             this.btThemTT.TabIndex = 6;
@@ -234,12 +259,12 @@ namespace QLPM
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.dGToa);
-            this.groupBox1.Location = new System.Drawing.Point(94, 348);
+            this.groupBox1.Location = new System.Drawing.Point(471, 348);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 221);
+            this.groupBox1.Size = new System.Drawing.Size(483, 221);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách:";
+            this.groupBox1.Text = "Chi tiết toa thuốc:";
             // 
             // dGToa
             // 
@@ -248,14 +273,14 @@ namespace QLPM
             this.dGToa.Margin = new System.Windows.Forms.Padding(2);
             this.dGToa.Name = "dGToa";
             this.dGToa.RowTemplate.Height = 24;
-            this.dGToa.Size = new System.Drawing.Size(733, 188);
+            this.dGToa.Size = new System.Drawing.Size(434, 188);
             this.dGToa.TabIndex = 9;
             this.dGToa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGToa_CellClick);
             // 
             // btTaoToa
             // 
             this.btTaoToa.Image = global::QLPM.Properties.Resources.Accept_icon;
-            this.btTaoToa.Location = new System.Drawing.Point(781, 596);
+            this.btTaoToa.Location = new System.Drawing.Point(837, 586);
             this.btTaoToa.Name = "btTaoToa";
             this.btTaoToa.Size = new System.Drawing.Size(89, 55);
             this.btTaoToa.TabIndex = 10;
@@ -264,29 +289,72 @@ namespace QLPM
             this.btTaoToa.UseVisualStyleBackColor = true;
             this.btTaoToa.Click += new System.EventHandler(this.btTaoToa_Click);
             // 
-            // txtMoTa
+            // txtTimKiem
             // 
-            this.txtMoTa.Enabled = false;
-            this.txtMoTa.Location = new System.Drawing.Point(151, 100);
-            this.txtMoTa.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(214, 20);
-            this.txtMoTa.TabIndex = 33;
+            this.txtTimKiem.Location = new System.Drawing.Point(49, 299);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(237, 20);
+            this.txtTimKiem.TabIndex = 58;
             // 
-            // label5
+            // btTimKiem
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 103);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Mô tả:";
+            this.btTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTimKiem.Image = global::QLPM.Properties.Resources.Start_Menu_Search_icon;
+            this.btTimKiem.Location = new System.Drawing.Point(313, 279);
+            this.btTimKiem.Name = "btTimKiem";
+            this.btTimKiem.Size = new System.Drawing.Size(91, 58);
+            this.btTimKiem.TabIndex = 57;
+            this.btTimKiem.Text = "Tìm kiếm";
+            this.btTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btTimKiem.UseVisualStyleBackColor = true;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.gVThuoc);
+            this.groupBox2.Location = new System.Drawing.Point(31, 348);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(398, 221);
+            this.groupBox2.TabIndex = 56;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Danh sách thuốc:";
+            // 
+            // gVThuoc
+            // 
+            this.gVThuoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.gVThuoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gVThuoc.Location = new System.Drawing.Point(18, 18);
+            this.gVThuoc.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.gVThuoc.Name = "gVThuoc";
+            this.gVThuoc.RowHeadersWidth = 62;
+            this.gVThuoc.RowTemplate.Height = 28;
+            this.gVThuoc.Size = new System.Drawing.Size(355, 188);
+            this.gVThuoc.TabIndex = 9;
+            this.gVThuoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVThuoc_CellClick);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Ravie", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.Location = new System.Drawing.Point(12, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 30);
+            this.label6.TabIndex = 59;
+            this.label6.Text = "Datha";
             // 
             // FBS_KeToa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 691);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtTimKiem);
+            this.Controls.Add(this.btTimKiem);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btTaoToa);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btSuaTT);
@@ -305,6 +373,8 @@ namespace QLPM
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dGToa)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gVThuoc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,5 +402,10 @@ namespace QLPM
         private System.Windows.Forms.Button btTaoToa;
         private System.Windows.Forms.TextBox txtMoTa;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Button btTimKiem;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView gVThuoc;
+        private System.Windows.Forms.Label label6;
     }
 }

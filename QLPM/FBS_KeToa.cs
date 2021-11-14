@@ -16,6 +16,7 @@ namespace QLPM
         public int maToa;
 
         BUS_ChiTietToa busToa;
+        BUS_QLThuoc busThuoc;
 
         bool co = false;
         DataTable dtToaThuoc;
@@ -24,6 +25,16 @@ namespace QLPM
         {
             InitializeComponent();
             busToa = new BUS_ChiTietToa();
+            busThuoc = new BUS_QLThuoc();
+        }
+
+        public void HienThiDSThuoc()
+        {
+            gVThuoc.DataSource = null;
+            busThuoc.LayDSThuoc(gVThuoc);
+            gVThuoc.Columns[0].Width = (int)(gVThuoc.Width * 0.1);
+            gVThuoc.Columns[1].Width = (int)(gVThuoc.Width * 0.2);
+            gVThuoc.Columns[2].Width = (int)(gVThuoc.Width * 0.7);
         }
 
         private void FKeToa_Load(object sender, EventArgs e)
@@ -43,14 +54,13 @@ namespace QLPM
             dGToa.Columns[0].Width = (int)(0.2 * dGToa.Width);
             dGToa.Columns[1].Width = (int)(0.3 * dGToa.Width);
             dGToa.Columns[2].Width = (int)(0.5 * dGToa.Width);
-        }
 
-        //void HienThiThongTinThuoc(string maThuoc)
-        //{
-        //    int ma = int.Parse(maThuoc);
-        //    Thuoc t = busToa.HienThiDSThuoc(ma);
-        //    txtMaThuoc.Text = t.MaThuoc.ToString();
-        //}
+            dGToa.Columns[0].HeaderText = "Mã thuốc";
+            dGToa.Columns[1].HeaderText = "Số lượng";
+            dGToa.Columns[2].HeaderText = "Liều dùng";
+
+            HienThiDSThuoc();
+        }
 
         private void cbThuoc_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -153,6 +163,19 @@ namespace QLPM
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void gVThuoc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < gVThuoc.Rows.Count)
+            {
+                cbThuoc.SelectedIndex = int.Parse(gVThuoc.Rows[e.RowIndex].Cells["MaThuoc"].Value.ToString()) - 1;
+            }
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            busThuoc.TimKiemThuoc(gVThuoc, txtTimKiem.Text.ToString());
         }
     }
 }

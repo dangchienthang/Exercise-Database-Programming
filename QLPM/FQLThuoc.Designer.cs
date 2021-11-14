@@ -48,7 +48,7 @@ namespace QLPM
             // hoTenNhanVienLabel
             // 
             this.hoTenNhanVienLabel.AutoSize = true;
-            this.hoTenNhanVienLabel.Location = new System.Drawing.Point(29, 46);
+            this.hoTenNhanVienLabel.Location = new System.Drawing.Point(29, 25);
             this.hoTenNhanVienLabel.Name = "hoTenNhanVienLabel";
             this.hoTenNhanVienLabel.Size = new System.Drawing.Size(55, 13);
             this.hoTenNhanVienLabel.TabIndex = 2;
@@ -57,7 +57,7 @@ namespace QLPM
             // txtMaThuoc
             // 
             this.txtMaThuoc.Enabled = false;
-            this.txtMaThuoc.Location = new System.Drawing.Point(134, 43);
+            this.txtMaThuoc.Location = new System.Drawing.Point(134, 22);
             this.txtMaThuoc.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaThuoc.Name = "txtMaThuoc";
             this.txtMaThuoc.Size = new System.Drawing.Size(237, 20);
@@ -65,16 +65,17 @@ namespace QLPM
             // 
             // txtMoTa
             // 
-            this.txtMoTa.Location = new System.Drawing.Point(134, 113);
+            this.txtMoTa.Location = new System.Drawing.Point(134, 87);
             this.txtMoTa.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(237, 20);
+            this.txtMoTa.Size = new System.Drawing.Size(237, 66);
             this.txtMoTa.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 80);
+            this.label2.Location = new System.Drawing.Point(29, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 12;
@@ -82,7 +83,7 @@ namespace QLPM
             // 
             // txtTenThuoc
             // 
-            this.txtTenThuoc.Location = new System.Drawing.Point(134, 77);
+            this.txtTenThuoc.Location = new System.Drawing.Point(134, 56);
             this.txtTenThuoc.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenThuoc.Name = "txtTenThuoc";
             this.txtTenThuoc.Size = new System.Drawing.Size(237, 20);
@@ -91,7 +92,7 @@ namespace QLPM
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 116);
+            this.label1.Location = new System.Drawing.Point(29, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 6;

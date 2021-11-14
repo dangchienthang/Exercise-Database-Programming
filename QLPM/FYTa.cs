@@ -13,17 +13,18 @@ namespace QLPM
     public partial class FYTa : Form
     {
         int MaTK;
+        private Button nutHienTai;
+        private Random random;
+        private int s;
+        private Form kichHoatForm;
+
         public FYTa(int ma)
         {
             InitializeComponent();
             random = new Random();
             MaTK = ma;
+            btQuayLai.Visible = false;
         }
-
-        private Button nutHienTai;
-        private Random random;
-        private int s;
-        private Form kichHoatForm;
 
         private Color ChonMau()
         {
@@ -54,7 +55,7 @@ namespace QLPM
                     panelLogo.BackColor = Mau.ChinhDoSangMau(mau, -0.3);
                     Mau.MauChinh = mau;
                     Mau.MauPhu = Mau.ChinhDoSangMau(mau, -0.3);
-                    //btnCloseChildForm.Visible = true;
+                    btQuayLai.Visible = true;
                 }
             }
         }
