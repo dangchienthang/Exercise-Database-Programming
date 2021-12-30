@@ -1,1 +1,1 @@
-Exercise Database Programming using C# EntityFramework DatabaseFirst and SQL Server
+Desktop Application: Clinic Management using C# EntityFramework DatabaseFirst, SQL Server
